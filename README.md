@@ -58,14 +58,14 @@ ________________________________________________________________________________
 
 ##  Taxonomy file
 
-Example file: 'SimpleDemo/GMT_Demo_UseCase.owl'
+#####Demo file: 'SimpleDemo/GMT_Demo_UseCase.owl'
 
 Used to classify tools and data types into 2 different categories. General structure is that the main class "thing" has 2 subclasses: 
-thing
-	Tools Taxonomy (name provided as modulesTaxonomyRoot in config file)
-	Data Taxonomy (name provided as dataTaxonomyRoot in config file)
-		Type Taxonomy (name provided under dataSubTaxonomyRoot in config file)
-		Format Taxonomy (name provided under dataSubTaxonomyRoot in config file) [optional]
+- **thing**
+- **Tools Taxonomy** (name provided as modulesTaxonomyRoot in config file)
+- **Data Taxonomy** (name provided as dataTaxonomyRoot in config file)
+-  **Type Taxonomy** (name provided under dataSubTaxonomyRoot in config file)
+- **Format Taxonomy** (name provided under dataSubTaxonomyRoot in config file) [optional]
 
 Tools Taxonomy consists of actual tools from the domain, as well as their abstraction classes.
 Type Taxonomy consists of actual data types from the domain, as well as their abstraction classes.
@@ -82,7 +82,7 @@ ________________________________________________________________________________
 
 ## Tool Annotations file
 
-Example file: 'SimpleDemo/tool_annotations.json'
+#####Demo file: 'SimpleDemo/tool_annotations.json'
 The file has the following structure:
 
     functions
@@ -93,7 +93,7 @@ The file has the following structure:
     		?inputs[]
     			+input
     				+dataSubTaxonomyRoot:[taxonomyTerm]
-    		?outputs
+    		?outputs[]
     			+output
     				+dataSubTaxonomyRoot:[taxonomyTerm]
     		?implementation
@@ -117,6 +117,31 @@ ________________________________________________________________________________
 
 ## Constraints File
 
-Example file: 'SimpleDemo/constraints.json' and the list of all the natural language templates is provided in 'SimpleDemo/constraints templates.json'
+#####Demo file: 'SimpleDemo/constraints.json'
+
+The list of all the natural language templates is provided in 'SimpleDemo/constraints templates.json'. As an example we will present one of the constraint templates, namely "if then generate type" is represented as follows:
+
+	{
+	   "constraintid": "gen_ite_t",
+	   "description": "If we have generated data type ${parameter_1}, then generate type ${parameter_2} subsequently.",
+	   "parameters": [
+		  ["${parameter_1}"],
+		  ["${parameter_2}"]
+	   ]
+	}
+
+where both `"${parameter_1}" `and `"${parameter_1}"` represent a sequence of one or more data terms. The following encoding represents a use of such constraint in practice (tag `"description"` is not obligatory):
+
+```json
+{
+   "constraintid": "gen_ite_t",
+   "parameters": [
+      ["article","docx"],
+      ["article","pdf"]
+   ]
+}
+```
+The constraint is interpreted as: 
+*"If an **article** in **docx** format was generated, then an **article** in **pdf** format has to be generated subsequently."*
 
 _______________________________________________________________________________________________________________________________________________
