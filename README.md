@@ -142,6 +142,6 @@ where both `"${parameter_1}" `and `"${parameter_1}"` represent a sequence of one
 }
 ```
 The constraint is interpreted as: 
-*"If an **article** in **docx** format was generated, then an **article** in **pdf** format has to be generated subsequently."*
+> "If an *article* in *docx* format was generated, then an *article* in *pdf* format has to be generated subsequently."
 
 _______________________________________________________________________________________________________________________________________________

@@ -1,0 +1,111 @@
+{
+  "constraints": [
+{
+   "constraintid": "ngen_t",
+   "description": "Do not generate type ${parameter_1} in the solution.",
+   "parameters": [["${parameter_1}"]]
+},
+{
+   "constraintid": "gen_ite_t",
+   "description": "If we have generated data type ${parameter_1}, then generate type ${parameter_2} subsequently.",
+   "parameters": [
+      ["${parameter_1}"],
+      ["${parameter_2}"]
+   ]
+},
+{
+   "constraintid": "use_ite_t",
+   "description": "If we have used data type ${parameter_1}, then use type ${parameter_2} subsequently.",
+   "parameters": [
+      ["${parameter_1}"],
+      ["${parameter_2}"]
+   ]
+},
+{
+   "constraintid": "gen_itn_t",
+   "description": "If we have generated data type ${parameter_1}, then do not generate type ${parameter_2} subsequently.",
+   "parameters": [
+      ["${parameter_1}"],
+      ["${parameter_2}"]
+   ]
+},
+{
+   "constraintid": "itn_m",
+   "description": "If we use module ${parameter_1}, then do not use ${parameter_2} subsequently.",
+   "parameters": [
+      ["${parameter_1}"],
+      ["${parameter_2}"]
+   ]
+},
+{
+   "constraintid": "use_m",
+   "description": "Use module ${parameter_1} in the solution.",
+   "parameters": [["${parameter_1}"]]
+},
+{
+   "constraintid": "ite_m",
+   "description": "If we use module ${parameter_1}, then use ${parameter_2} subsequently.",
+   "parameters": [
+      ["${parameter_1}"],
+      ["${parameter_2}"]
+   ]
+},
+{
+   "constraintid": "prev_m",
+   "description": "If we use module ${parameter_1}, then we must have used ${parameter_2} as a previous module in the sequence.",
+   "parameters": [
+      ["${parameter_1}"],
+      ["${parameter_2}"]
+   ]
+},
+{
+   "constraintid": "nuse_t",
+   "description": "Do not use type ${parameter_1} in the solution.",
+   "parameters": [["${parameter_1}"]]
+},
+{
+   "constraintid": "depend_m",
+   "description": "If we use module ${parameter_1}, then we must have used ${parameter_2} prior to it.",
+   "parameters": [
+      ["${parameter_1}"],
+      ["${parameter_2}"]
+   ]
+},
+{
+   "constraintid": "use_t",
+   "description": "Use type ${parameter_1} in the solution.",
+   "parameters": [["${parameter_1}"]]
+},
+{
+   "constraintid": "nuse_m",
+   "description": "Do not use module ${parameter_1} in the solution.",
+   "parameters": [["${parameter_1}"]]
+},
+{
+   "constraintid": "last_m",
+   "description": "Use ${parameter_1} as last module in the solution.",
+   "parameters": [["${parameter_1}"]]
+},
+{
+   "constraintid": "next_m",
+   "description": "If we use module ${parameter_1}, then use ${parameter_2} as a next module in the sequence.",
+   "parameters": [
+      ["${parameter_1}"],
+      ["${parameter_2}"]
+   ]
+},
+{
+   "constraintid": "use_itn_t",
+   "description": "If we have used data type ${parameter_1}, then do not use type ${parameter_2} subsequently.",
+   "parameters": [
+      ["${parameter_1}"],
+      ["${parameter_2}"]
+   ]
+},
+{
+   "constraintid": "gen_t",
+   "description": "Generate type ${parameter_1} in the solution.",
+   "parameters": [["${parameter_1}"]]
+},
+    ]
+}

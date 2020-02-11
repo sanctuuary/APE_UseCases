@@ -1,0 +1,25 @@
+{
+  "ontology_path": "./GeoGMT[E1]/GMT_UseCase_taxonomy.owl",
+  "toolsTaxonomyRoot": "ToolsTaxonomy",
+  "dataTaxonomyRoot": "DataTaxonomy",
+  "dataSubTaxonomyRoot": "TypesTaxonomy",
+  "tool_annotations_path": "./GeoGMT[E1]/tool_annotations.json",
+  "constraints_path": "./GeoGMT[E1]/constraints_e1.json",
+  "shared_memory": "true",
+  "solutions_path": "./GeoGMT[E1]/sat_solutions.txt",
+  "solution_min_length": "1",
+  "solution_max_length": "18",
+  "max_solutions": "100",
+  "execution_scripts_folder": "./GeoGMT[E1]/Implementations/",
+  "number_of_execution_scripts": "6",
+  "solution_graphs_folder": "./GeoGMT[E1]/Figures",
+  "number_of_generated_graphs": "10",
+  "inputs": [
+    {
+      "TypesTaxonomy": ["XYZ_table_file"]
+    }
+  ],
+  "debug_mode": "false",
+  "use_workflow_input": "all",
+  "use_all_generated_data": "all"
+}
