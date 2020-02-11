@@ -1,0 +1,17 @@
+{
+    "constraints": [
+      {
+        "constraintid": "use_m",
+        "parameters": [["Peptide_identification"]]
+      },
+	{
+        "constraintid": "use_m",
+        "parameters": [["Validation_of_peptide-spectrum_matches"]]
+      },
+	{
+        "constraintid": "use_m",
+        "parameters": [["Retention_time_prediction"]]
+      }
+    ]
+
+}

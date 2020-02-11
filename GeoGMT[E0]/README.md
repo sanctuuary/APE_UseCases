@@ -1,6 +1,6 @@
 
 
-# Geo GMT [E0]
+# A Geovisualization Case Study using GMT [E0]
 
 This is a project used to demonstrate the sysnthesis functionality provided by APE (the Automated Pipeline Explorer). 
 

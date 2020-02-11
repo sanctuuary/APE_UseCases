@@ -1,0 +1,956 @@
+{
+  "functions": [
+    {
+      "name": "GeneTrail2",
+      "taxonomyTerms": "Gene-set_enrichment_analysis",
+      "outputs": [{
+        "Data": ["Pathway_or_network"],
+        "Format": ["HTML"]
+      }],
+      "inputs": [{
+        "Format": "plain_text_format_(unformatted)",
+        "Data": ["UniProt_accession"]
+      }],
+      "operation": "GeneTrail2"
+    },
+    {
+      "name": "PeptideProphet",
+      "taxonomyTerms": "PeptideProphet",
+      "outputs": [{
+        "Data": ["Peptide_identification"],
+        "Format": ["pepXML"]
+      }],
+      "inputs": [{
+        "Data": ["Peptide_identification"],
+        "Format": ["pepXML"]
+      }],
+      "operation": "PeptideProphet_(format_3655-format_3655)"
+    },
+    {
+      "name": "SearchGUI",
+      "taxonomyTerms": "SearchGUI",
+      "outputs": [{
+        "Data": ["Peptide_identification"],
+        "Format": ["pepXML"]
+      }],
+      "inputs": [{
+        "Data": ["Mass_spectrometry_spectra"],
+        "Format": ["MGF"]
+      }],
+      "operation": "SearchGUI_(format_3651-format_3655)"
+    },
+    {
+      "name": "isobar",
+      "taxonomyTerms": "isobar",
+      "outputs": [{
+        "Format": "PDF",
+        "Data": ["Gene_expression_profile"]
+      }],
+      "inputs": [{
+        "Data": ["Peptide_identification"],
+        "Format": ["MGF"]
+      }],
+      "operation": "isobar_(format_3651-format_3508)"
+    },
+    {
+      "name": "isobar",
+      "taxonomyTerms": "isobar",
+      "outputs": [{
+        "Format": "PDF",
+        "Data": ["Gene_expression_profile"]
+      }],
+      "inputs": [{
+        "Format": "TSV",
+        "Data": ["Peptide_identification"]
+      }],
+      "operation": "isobar_(format_3475-format_3508)"
+    },
+    {
+      "name": "msconvert",
+      "taxonomyTerms": "msconvert",
+      "outputs": [{
+        "Data": ["Mass_spectrometry_spectra"],
+        "Format": ["MGF"]
+      }],
+      "inputs": [{
+        "Format": "Thermo_RAW",
+        "Data": ["Mass_spectrometry_spectra"]
+      }],
+      "operation": "msconvert_(format_3712-format_3651)"
+    },
+    {
+      "name": "rt4",
+      "taxonomyTerms": "rt4",
+      "outputs": [{
+        "Format": "TSV",
+        "Data": ["Amino_acid_index_(hydropathy)"]
+      }],
+      "inputs": [{
+        "Format": "TSV",
+        "Data": ["Peptide_property"]
+      }],
+      "operation": "rt4_(format_3475-format_3475)"
+    },
+    {
+      "name": "Pep3D",
+      "taxonomyTerms": "Pep3D",
+      "outputs": [{
+        "Format": "PNG",
+        "Data": ["Image"]
+      }],
+      "inputs": [{
+        "Format": "mzXML",
+        "Data": ["Mass_spectrometry_spectra"]
+      }],
+      "operation": "Pep3D_(format_3654-format_3603)"
+    },
+    {
+      "name": "msconvert",
+      "taxonomyTerms": "msconvert",
+      "outputs": [{
+        "Format": "mzXML",
+        "Data": ["Mass_spectrometry_spectra"]
+      }],
+      "inputs": [{
+        "Data": ["Mass_spectrometry_spectra"],
+        "Format": ["MGF"]
+      }],
+      "operation": "msconvert_(format_3651-format_3654)"
+    },
+    {
+      "name": "X!Tandem",
+      "taxonomyTerms": "X!Tandem",
+      "outputs": [{
+        "Format": "mzIdentML",
+        "Data": ["Peptide_identification"]
+      }],
+      "inputs": [{
+        "Data": ["Mass_spectrometry_spectra"],
+        "Format": ["mzML"]
+      }],
+      "operation": "X!Tandem_(format_3244-format_3247)"
+    },
+    {
+      "name": "Tandem2XML",
+      "taxonomyTerms": "Conversion",
+      "outputs": [{
+        "Data": ["Peptide_identification"],
+        "Format": ["pepXML"]
+      }],
+      "inputs": [{
+        "Format": "X!Tandem_XML",
+        "Data": ["Peptide_identification"]
+      }],
+      "operation": "Tandem2XML"
+    },
+    {
+      "name": "isobar",
+      "taxonomyTerms": "isobar",
+      "outputs": [{
+        "Format": "PDF",
+        "Data": ["Gene_expression_profile"]
+      }],
+      "inputs": [{
+        "Format": "CSV",
+        "Data": ["Peptide_identification"]
+      }],
+      "operation": "isobar_(format_3752-format_3508)"
+    },
+    {
+      "name": "Comet",
+      "taxonomyTerms": "Comet",
+      "outputs": [{
+        "Data": ["Peptide_identification"],
+        "Format": ["pepXML"]
+      }],
+      "inputs": [{
+        "Format": "mzXML",
+        "Data": ["Mass_spectrometry_spectra"]
+      }],
+      "operation": "Comet_(format_3654-format_3655)"
+    },
+    {
+      "name": "Show_PathwayOrNetwork",
+      "taxonomyTerms": "Show_PathwayOrNetwork",
+      "outputs": [
+        
+      ],
+      "inputs": [{
+        "Data": ["Pathway_or_network"],
+        "Format": ["Format"]
+      }],
+      "operation": "Show_PathwayOrNetwork"
+    },
+    {
+      "name": "Show_AnyFile",
+      "taxonomyTerms": "Show_AnyFile",
+      "outputs": [
+        
+      ],
+      "inputs": [{
+        "Data": ["Data"],
+        "Format": ["Format"]
+      }],
+      "operation": "Show_AnyFile"
+    },
+    {
+      "name": "msconvert",
+      "taxonomyTerms": "msconvert",
+      "outputs": [{
+        "Data": ["Mass_spectrometry_spectra"],
+        "Format": ["mzML"]
+      }],
+      "inputs": [{
+        "Format": "Thermo_RAW",
+        "Data": ["Mass_spectrometry_spectra"]
+      }],
+      "operation": "msconvert_(format_3712-format_3244)"
+    },
+    {
+      "name": "SearchGUI",
+      "taxonomyTerms": "SearchGUI",
+      "outputs": [{
+        "Data": ["Peptide_identification"],
+        "Format": ["pepXML"]
+      }],
+      "inputs": [{
+        "Data": ["Mass_spectrometry_spectra"],
+        "Format": ["FASTA"]
+      }],
+      "operation": "SearchGUI_(format_1929-format_3655)"
+    },
+    {
+      "name": "msconvert",
+      "taxonomyTerms": "msconvert",
+      "outputs": [{
+        "Format": "mzXML",
+        "Data": ["Mass_spectrometry_spectra"]
+      }],
+      "inputs": [{
+        "Data": ["Mass_spectrometry_spectra"],
+        "Format": ["mzML"]
+      }],
+      "operation": "msconvert_(format_3244-format_3654)"
+    },
+    {
+      "name": "extract_protein_operations",
+      "taxonomyTerms": "extract_protein_operations",
+      "outputs": [{
+        "Format": "plain_text_format_(unformatted)",
+        "Data": ["UniProt_accession"]
+      }],
+      "inputs": [{
+        "Format": "protXML",
+        "Data": ["Peptide_identification"]
+      }],
+      "operation": "extract_protein_operations"
+    },
+    {
+      "name": "SearchGUI",
+      "taxonomyTerms": "SearchGUI",
+      "outputs": [{
+        "Format": "mzIdentML",
+        "Data": ["Peptide_identification"]
+      }],
+      "inputs": [{
+        "Data": ["Mass_spectrometry_spectra"],
+        "Format": ["MGF"]
+      }],
+      "operation": "SearchGUI_(format_3651-format_3247)"
+    },
+    {
+      "name": "X!Tandem",
+      "taxonomyTerms": "X!Tandem",
+      "outputs": [{
+        "Format": "X!Tandem_XML",
+        "Data": ["Peptide_identification"]
+      }],
+      "inputs": [{
+        "Data": ["Mass_spectrometry_spectra"],
+        "Format": ["mzML"]
+      }],
+      "operation": "X!Tandem_(format_3244-format_3711)"
+    },
+    {
+      "name": "msconvert",
+      "taxonomyTerms": "msconvert",
+      "outputs": [{
+        "Data": ["Mass_spectrometry_spectra"],
+        "Format": ["MGF"]
+      }],
+      "inputs": [{
+        "Data": ["Mass_spectrometry_spectra"],
+        "Format": ["MGF"]
+      }],
+      "operation": "msconvert_(format_3651-format_3651)"
+    },
+    {
+      "name": "Show_ProteinIdentification",
+      "taxonomyTerms": "Show_ProteinIdentification",
+      "outputs": [
+        
+      ],
+      "inputs": [{
+        "Format": "Format",
+        "Data": ["Peptide_identification"]
+      }],
+      "operation": "Show_ProteinIdentification"
+    },
+    {
+      "name": "idconvert",
+      "taxonomyTerms": "idconvert",
+      "outputs": [{
+        "Format": "mzIdentML",
+        "Data": ["Peptide_identification"]
+      }],
+      "inputs": [{
+        "Data": ["Peptide_identification"],
+        "Format": ["pepXML"]
+      }],
+      "operation": "idconvert_(format_3655-format_3247)"
+    },
+    {
+      "name": "Show_GeneExpressionProfile",
+      "taxonomyTerms": "Show_GeneExpressionProfile",
+      "outputs": [
+        
+      ],
+      "inputs": [{
+        "Format": "Format",
+        "Data": ["Gene_expression_profile"]
+      }],
+      "operation": "Show_GeneExpressionProfile"
+    },
+    {
+      "name": "PeptideShaker_VPSM",
+      "taxonomyTerms": "PeptideShaker_VPSM",
+      "outputs": [{
+        "Format": "TSV",
+        "Data": ["Peptide_identification"]
+      }],
+      "inputs": [{
+        "Format": "mzIdentML",
+        "Data": ["Peptide_identification"]
+      }],
+      "operation": "PeptideShaker_VPSM_(format_3247-format_3475)"
+    },
+    {
+      "name": "SearchGUI",
+      "taxonomyTerms": "SearchGUI",
+      "outputs": [{
+        "Format": "mzIdentML",
+        "Data": ["Peptide_identification"]
+      }],
+      "inputs": [{
+        "Data": ["Mass_spectrometry_spectra"],
+        "Format": ["FASTA"]
+      }],
+      "operation": "SearchGUI_(format_1929-format_3247)"
+    },
+    {
+      "name": "CompassXport",
+      "taxonomyTerms": "CompassXport",
+      "outputs": [{
+        "Format": "mzXML",
+        "Data": ["Mass_spectrometry_spectra"]
+      }],
+      "inputs": [{
+        "Format": "mzXML",
+        "Data": ["Mass_spectrometry_spectra"]
+      }],
+      "operation": "CompassXport_(format_3654-format_3654)"
+    },
+    {
+      "name": "PeptideProphet",
+      "taxonomyTerms": "PeptideProphet",
+      "outputs": [{
+        "Data": ["Peptide_identification"],
+        "Format": ["pepXML"]
+      }],
+      "inputs": [{
+        "Format": "mzIdentML",
+        "Data": ["Peptide_identification"]
+      }],
+      "operation": "PeptideProphet_(format_3247-format_3655)"
+    },
+    {
+      "name": "SSRCalc",
+      "taxonomyTerms": "SSRCalc",
+      "outputs": [{
+        "Format": "Textual_format",
+        "Data": ["Amino_acid_index_(hydropathy)"]
+      }],
+      "inputs": [{
+        "Format": "TSV",
+        "Data": ["Peptide_property"]
+      }],
+      "operation": "SSRCalc_(format_3475-format_2330)"
+    },
+    {
+      "name": "Pep3D",
+      "taxonomyTerms": "Pep3D",
+      "outputs": [{
+        "Format": "PNG",
+        "Data": ["Image"]
+      }],
+      "inputs": [{
+        "Data": ["Mass_spectrometry_spectra"],
+        "Format": ["mzML"]
+      }],
+      "operation": "Pep3D_(format_3244-format_3603)"
+    },
+    {
+      "name": "Show_AminoAcidIndex_hydropathy",
+      "taxonomyTerms": "Show_AminoAcidIndex_hydropathy",
+      "outputs": [
+        
+      ],
+      "inputs": [{
+        "Format": "Format",
+        "Data": ["Amino_acid_index_(hydropathy)"]
+      }],
+      "operation": "Show_AminoAcidIndex_hydropathy"
+    },
+    {
+      "name": "rt4",
+      "taxonomyTerms": "rt4",
+      "outputs": [{
+        "Format": "XML",
+        "Data": ["Amino_acid_index_(hydropathy)"]
+      }],
+      "inputs": [{
+        "Data": ["pepXML"],
+        "Format": ["Peptide_property"]
+      }],
+      "operation": "rt4_(format_3655-format_2332)"
+    },
+    {
+      "name": "idconvert",
+      "taxonomyTerms": "idconvert",
+      "outputs": [{
+        "Format": "mzIdentML",
+        "Data": ["Peptide_identification"]
+      }],
+      "inputs": [{
+        "Format": "mzIdentML",
+        "Data": ["Peptide_identification"]
+      }],
+      "operation": "idconvert_(format_3247-format_3247)"
+    },
+    {
+      "name": "PTMProphet",
+      "taxonomyTerms": "PTM_localisation",
+      "outputs": [{
+        "Data": ["Peptide_identification"],
+        "Format": ["pepXML"]
+      }],
+      "inputs": [{
+        "Data": ["Peptide_identification"],
+        "Format": ["pepXML"]
+      }],
+      "operation": "PTMProphet"
+    },
+    {
+      "name": "rt",
+      "taxonomyTerms": "rt",
+      "outputs": [{
+        "Format": "Textual_format",
+        "Data": ["Amino_acid_index_(hydropathy)"]
+      }],
+      "inputs": [{
+        "Data": ["pepXML"],
+        "Format": ["Peptide_property"]
+      }],
+      "operation": "rt_(format_3655-format_2330)"
+    },
+    {
+      "name": "xml2tsv",
+      "taxonomyTerms": "xml2tsv",
+      "outputs": [{
+        "Format": "TSV",
+        "Data": ["Peptide_identification"]
+      }],
+      "inputs": [{
+        "Format": "mzIdentML",
+        "Data": ["Peptide_identification"]
+      }],
+      "operation": "xml2tsv_(format_3247-format_3475)"
+    },
+    {
+      "name": "ProteinProphet",
+      "taxonomyTerms": "Validation_of_peptide-spectrum_matches",
+      "outputs": [{
+        "Format": "protXML",
+        "Data": ["Peptide_identification"]
+      }],
+      "inputs": [{
+        "Data": ["Peptide_identification"],
+        "Format": ["pepXML"]
+      }],
+      "operation": "ProteinProphet"
+    },
+    {
+      "name": "Load_MSData_ThermoRAW",
+      "taxonomyTerms": "Load_MSData_ThermoRAW",
+      "outputs": [{
+        "Format": "Thermo_RAW",
+        "Data": ["Mass_spectrometry_spectra"]
+      }],
+      "operation": "Load_MSData_ThermoRAW"
+    },
+    {
+      "name": "PeptideShaker_VPSM",
+      "taxonomyTerms": "PeptideShaker_VPSM",
+      "outputs": [{
+        "Data": ["Peptide_identification"],
+        "Format": ["pepXML"]
+      }],
+      "inputs": [{
+        "Format": "mzIdentML",
+        "Data": ["Peptide_identification"]
+      }],
+      "operation": "PeptideShaker_VPSM_(format_3247-format_3655)"
+    },
+    {
+      "name": "msconvert",
+      "taxonomyTerms": "msconvert",
+      "outputs": [{
+        "Format": "mzXML",
+        "Data": ["Mass_spectrometry_spectra"]
+      }],
+      "inputs": [{
+        "Format": "mzXML",
+        "Data": ["Mass_spectrometry_spectra"]
+      }],
+      "operation": "msconvert_(format_3654-format_3654)"
+    },
+    {
+      "name": "mzXMLplot",
+      "taxonomyTerms": "Chromatogram_visualisation",
+      "outputs": [{
+        "Format": "PNG",
+        "Data": ["Image"]
+      }],
+      "inputs": [{
+        "Format": "mzXML",
+        "Data": ["Mass_spectrometry_spectra"]
+      }],
+      "operation": "mzXMLplot"
+    },
+    {
+      "name": "msconvert",
+      "taxonomyTerms": "msconvert",
+      "outputs": [{
+        "Data": ["Mass_spectrometry_spectra"],
+        "Format": ["mzML"]
+      }],
+      "inputs": [{
+        "Data": ["Mass_spectrometry_spectra"],
+        "Format": ["mzML"]
+      }],
+      "operation": "msconvert_(format_3244-format_3244)"
+    },
+    {
+      "name": "Comet",
+      "taxonomyTerms": "Comet",
+      "outputs": [{
+        "Data": ["Peptide_identification"],
+        "Format": ["pepXML"]
+      }],
+      "inputs": [{
+        "Data": ["Mass_spectrometry_spectra"],
+        "Format": ["mzML"]
+      }],
+      "operation": "Comet_(format_3244-format_3655)"
+    },
+    {
+      "name": "idconvert",
+      "taxonomyTerms": "idconvert",
+      "outputs": [{
+        "Data": ["Peptide_identification"],
+        "Format": ["pepXML"]
+      }],
+      "inputs": [{
+        "Format": "protXML",
+        "Data": ["Peptide_identification"]
+      }],
+      "operation": "idconvert_(format_3747-format_3655)"
+    },
+    {
+      "name": "rt4",
+      "taxonomyTerms": "rt4",
+      "outputs": [{
+        "Format": "TSV",
+        "Data": ["Amino_acid_index_(hydropathy)"]
+      }],
+      "inputs": [{
+        "Data": ["pepXML"],
+        "Format": ["Peptide_property"]
+      }],
+      "operation": "rt4_(format_3655-format_3475)"
+    },
+    {
+      "name": "CompassXport",
+      "taxonomyTerms": "CompassXport",
+      "outputs": [{
+        "Format": "mzXML",
+        "Data": ["Mass_spectrometry_spectra"]
+      }],
+      "inputs": [{
+        "Data": ["Mass_spectrometry_spectra"],
+        "Format": ["mzML"]
+      }],
+      "operation": "CompassXport_(format_3244-format_3654)"
+    },
+    {
+      "name": "idconvert",
+      "taxonomyTerms": "idconvert",
+      "outputs": [{
+        "Format": "mzIdentML",
+        "Data": ["Peptide_identification"]
+      }],
+      "inputs": [{
+        "Format": "protXML",
+        "Data": ["Peptide_identification"]
+      }],
+      "operation": "idconvert_(format_3747-format_3247)"
+    },
+    {
+      "name": "PeptideShaker_PTMI",
+      "taxonomyTerms": "PeptideShaker_PTMI",
+      "outputs": [{
+        "Data": ["Peptide_identification"],
+        "Format": ["pepXML"]
+      }],
+      "inputs": [{
+        "Format": "mzIdentML",
+        "Data": ["Peptide_identification"]
+      }],
+      "operation": "PeptideShaker_PTMI_(format_3247-format_3655)"
+    },
+    {
+      "name": "idconvert",
+      "taxonomyTerms": "idconvert",
+      "outputs": [{
+        "Data": ["Peptide_identification"],
+        "Format": ["pepXML"]
+      }],
+      "inputs": [{
+        "Data": ["Peptide_identification"],
+        "Format": ["pepXML"]
+      }],
+      "operation": "idconvert_(format_3655-format_3655)"
+    },
+    {
+      "name": "xml2tsv",
+      "taxonomyTerms": "xml2tsv",
+      "outputs": [{
+        "Format": "TSV",
+        "Data": ["Peptide_identification"]
+      }],
+      "inputs": [{
+        "Data": ["Peptide_identification"],
+        "Format": ["pepXML"]
+      }],
+      "operation": "xml2tsv_(format_3655-format_3475)"
+    },
+    {
+      "name": "gProfiler",
+      "taxonomyTerms": "Gene-set_enrichment_analysis",
+      "outputs": [{
+        "Data": ["Pathway_or_network"],
+        "Format": ["TSV"]
+      }],
+      "inputs": [{
+        "Format": "plain_text_format_(unformatted)",
+        "Data": ["UniProt_accession"]
+      }],
+      "operation": "gProfiler"
+    },
+    {
+      "name": "Libra",
+      "taxonomyTerms": "Libra",
+      "outputs": [{
+        "Format": "TSV",
+        "Data": ["Gene_expression_profile"]
+      }],
+      "inputs": [{
+        "Data": ["Peptide_identification"],
+        "Format": ["pepXML"]
+      }],
+      "operation": "Libra_(format_3655-format_3475)"
+    },
+    {
+      "name": "protk",
+      "taxonomyTerms": "Formatting",
+      "outputs": [{
+        "Format": "TSV",
+        "Data": ["Peptide_identification"]
+      }],
+      "inputs": [{
+        "Data": ["Peptide_identification"],
+        "Format": ["pepXML"]
+      }],
+      "operation": "protk"
+    },
+    {
+      "name": "CompassXport",
+      "taxonomyTerms": "CompassXport",
+      "outputs": [{
+        "Format": "mzXML",
+        "Data": ["Mass_spectrometry_spectra"]
+      }],
+      "inputs": [{
+        "Data": ["Mass_spectrometry_spectra"],
+        "Format": ["MGF"]
+      }],
+      "operation": "CompassXport_(format_3651-format_3654)"
+    },
+    {
+      "name": "msconvert",
+      "taxonomyTerms": "msconvert",
+      "outputs": [{
+        "Format": "mzXML",
+        "Data": ["Mass_spectrometry_spectra"]
+      }],
+      "inputs": [{
+        "Format": "Thermo_RAW",
+        "Data": ["Mass_spectrometry_spectra"]
+      }],
+      "operation": "msconvert_(format_3712-format_3654)"
+    },
+    {
+      "name": "PeptideShaker_PTMI",
+      "taxonomyTerms": "PeptideShaker_PTMI",
+      "outputs": [{
+        "Format": "mzIdentML",
+        "Data": ["Peptide_identification"]
+      }],
+      "inputs": [{
+        "Format": "mzIdentML",
+        "Data": ["Peptide_identification"]
+      }],
+      "operation": "PeptideShaker_PTMI_(format_3247-format_3247)"
+    },
+    {
+      "name": "msconvert",
+      "taxonomyTerms": "msconvert",
+      "outputs": [{
+        "Data": ["Mass_spectrometry_spectra"],
+        "Format": ["MGF"]
+      }],
+      "inputs": [{
+        "Format": "mzXML",
+        "Data": ["Mass_spectrometry_spectra"]
+      }],
+      "operation": "msconvert_(format_3654-format_3651)"
+    },
+    {
+      "name": "SSRCalc",
+      "taxonomyTerms": "SSRCalc",
+      "outputs": [{
+        "Format": "Textual_format",
+        "Data": ["Amino_acid_index_(hydropathy)"]
+      }],
+      "inputs": [{
+        "Format": "Textual_format",
+        "Data": ["Peptide_property"]
+      }],
+      "operation": "SSRCalc_(format_2330-format_2330)"
+    },
+    {
+      "name": "rt",
+      "taxonomyTerms": "rt",
+      "outputs": [{
+        "Format": "Textual_format",
+        "Data": ["Amino_acid_index_(hydropathy)"]
+      }],
+      "inputs": [{
+        "Format": "TSV",
+        "Data": ["Peptide_property"]
+      }],
+      "operation": "rt_(format_3475-format_2330)"
+    },
+    {
+      "name": "Show_KEGGPathwayIDs",
+      "taxonomyTerms": "Show_KEGGPathwayIDs",
+      "outputs": [
+        
+      ],
+      "inputs": [{
+        "Format": "Format",
+        "Data": ["Pathway_ID_(KEGG)"]
+      }],
+      "operation": "Show_KEGGPathwayIDs"
+    },
+    {
+      "name": "EnrichNet",
+      "taxonomyTerms": "Gene-set_enrichment_analysis",
+      "outputs": [{
+        "Data": ["Pathway_or_network"],
+        "Format": ["HTML"]
+      }],
+      "inputs": [{
+        "Format": "plain_text_format_(unformatted)",
+        "Data": ["UniProt_accession"]
+      }],
+      "operation": "EnrichNet"
+    },
+    {
+      "name": "msconvert",
+      "taxonomyTerms": "msconvert",
+      "outputs": [{
+        "Data": ["Mass_spectrometry_spectra"],
+        "Format": ["mzML"]
+      }],
+      "inputs": [{
+        "Data": ["Mass_spectrometry_spectra"],
+        "Format": ["MGF"]
+      }],
+      "operation": "msconvert_(format_3651-format_3244)"
+    },
+    {
+      "name": "CompassXport",
+      "taxonomyTerms": "CompassXport",
+      "outputs": [{
+        "Data": ["Mass_spectrometry_spectra"],
+        "Format": ["mzML"]
+      }],
+      "inputs": [{
+        "Data": ["Mass_spectrometry_spectra"],
+        "Format": ["mzML"]
+      }],
+      "operation": "CompassXport_(format_3244-format_3244)"
+    },
+    {
+      "name": "Libra",
+      "taxonomyTerms": "Libra",
+      "outputs": [{
+        "Format": "mzIdentML",
+        "Data": ["Gene_expression_profile"]
+      }],
+      "inputs": [{
+        "Data": ["Peptide_identification"],
+        "Format": ["pepXML"]
+      }],
+      "operation": "Libra_(format_3655-format_3247)"
+    },
+    {
+      "name": "PeptideShaker_PTMI",
+      "taxonomyTerms": "PeptideShaker_PTMI",
+      "outputs": [{
+        "Format": "TSV",
+        "Data": ["Peptide_identification"]
+      }],
+      "inputs": [{
+        "Format": "mzIdentML",
+        "Data": ["Peptide_identification"]
+      }],
+      "operation": "PeptideShaker_PTMI_(format_3247-format_3475)"
+    },
+    {
+      "name": "rt4",
+      "taxonomyTerms": "rt4",
+      "outputs": [{
+        "Format": "XML",
+        "Data": ["Amino_acid_index_(hydropathy)"]
+      }],
+      "inputs": [{
+        "Format": "TSV",
+        "Data": ["Peptide_property"]
+      }],
+      "operation": "rt4_(format_3475-format_2332)"
+    },
+    {
+      "name": "CompassXport",
+      "taxonomyTerms": "CompassXport",
+      "outputs": [{
+        "Data": ["Mass_spectrometry_spectra"],
+        "Format": ["mzML"]
+      }],
+      "inputs": [{
+        "Format": "mzXML",
+        "Data": ["Mass_spectrometry_spectra"]
+      }],
+      "operation": "CompassXport_(format_3654-format_3244)"
+    },
+    {
+      "name": "msconvert",
+      "taxonomyTerms": "msconvert",
+      "outputs": [{
+        "Data": ["Mass_spectrometry_spectra"],
+        "Format": ["MGF"]
+      }],
+      "inputs": [{
+        "Data": ["Mass_spectrometry_spectra"],
+        "Format": ["mzML"]
+      }],
+      "operation": "msconvert_(format_3244-format_3651)"
+    },
+    {
+      "name": "msconvert",
+      "taxonomyTerms": "msconvert",
+      "outputs": [{
+        "Data": ["Mass_spectrometry_spectra"],
+        "Format": ["mzML"]
+      }],
+      "inputs": [{
+        "Format": "mzXML",
+        "Data": ["Mass_spectrometry_spectra"]
+      }],
+      "operation": "msconvert_(format_3654-format_3244)"
+    },
+    {
+      "name": "CompassXport",
+      "taxonomyTerms": "CompassXport",
+      "outputs": [{
+        "Data": ["Mass_spectrometry_spectra"],
+        "Format": ["mzML"]
+      }],
+      "inputs": [{
+        "Data": ["Mass_spectrometry_spectra"],
+        "Format": ["MGF"]
+      }],
+      "operation": "CompassXport_(format_3651-format_3244)"
+    },
+    {
+      "name": "GeneTrail",
+      "taxonomyTerms": "Gene-set_enrichment_analysis",
+      "outputs": [{
+        "Data": ["Pathway_or_network"],
+        "Format": ["HTML"]
+      }],
+      "inputs": [{
+        "Format": "plain_text_format_(unformatted)",
+        "Data": ["UniProt_accession"]
+      }],
+      "operation": "GeneTrail"
+    },
+    {
+      "name": "idconvert",
+      "taxonomyTerms": "idconvert",
+      "outputs": [{
+        "Data": ["Peptide_identification"],
+        "Format": ["pepXML"]
+      }],
+      "inputs": [{
+        "Format": "mzIdentML",
+        "Data": ["Peptide_identification"]
+      }],
+      "operation": "idconvert_(format_3247-format_3655)"
+    },
+    {
+      "name": "PeptideShaker_VPSM",
+      "taxonomyTerms": "PeptideShaker_VPSM",
+      "outputs": [{
+        "Format": "mzIdentML",
+        "Data": ["Peptide_identification"]
+      }],
+      "inputs": [{
+        "Format": "mzIdentML",
+        "Data": ["Peptide_identification"]
+      }],
+      "operation": "PeptideShaker_VPSM_(format_3247-format_3247)"
+    }
+  ]
+}
