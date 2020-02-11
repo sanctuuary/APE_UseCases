@@ -14,13 +14,32 @@ while ape.config file needs to be provided in the same folder or
 If you want to be able to run the executable shell scipts of the demo examples, GMT set of tools needs to be installed .
 http://gmt.soest.hawaii.edu/projects/gmt/wiki/Installing
 
-Note: 
+#### Note: 
 Errors regarding SLF4J will not affect the synthesis execution and can be ignored. The same goes for possible warnings.
-_______________________________________________________________________________________________________________________________________________
+
+------------
+
+
+### APE API
 
 The library support API usage as well, and the corresponding documentation is provided in "APE-<version>-sources.jar".
 
-_______________________________________________________________________________________________________________________________________________
+
+------------
+
+## List of use cases
+
+Each of the uses cases represent a different scenario 
+
+- /**SimpleDemo** -- a basic demonstration case of generating maps using automaticaly synthesised scripts
+- /**GeoGMT[E0]** -- case of solving a problem of map creation presented it [[Kasalica and Lamprecht, 2020]][kasalicalamprecht2019], focusing on the initial workflow sinthesys step, labeled as **E0** in the paper.
+- /**GeoGMT[E1]** -- case of solving a problem of map creation presented it [[Kasalica and Lamprecht, 2020]][kasalicalamprecht2019], focusing on synthesis of an extended workflow (w.r.t. *E0*), labeled as **E1** in the paper (Extension 1: Annotations).
+- /**BioTools_No1** -- case of automated workflow composition in bioinformatics. more specifically mass spectrometry-based proteomics  [[Palmblad et al., 2019]][lamprecht2019]. The use case describes the 1st Use Case described in the paper, labeled as **No. 1**.
+------------
+
+
+
+## Configuration file
 
 ape.config is the main configuration file for the library and it consists of the following elements:
 
@@ -53,7 +72,9 @@ ape.config is the main configuration file for the library and it consists of the
 	use_all_generated_data  [optional]	- 'ALL' if all the generated data has to be used, 'ONE' if one of the data instances 
 						that are generated as output, per tool, has to be used or 'NONE' if none of the data
 						instances is obligatory to use (default value is ONE)
-_______________________________________________________________________________________________________________________________________________
+
+------------
+
 
 
 ##  Taxonomy file
@@ -78,7 +99,9 @@ Note:
 Encoding supports explicit subclass relations in RDF format. The rest of the OWL file annotations will be omitted.
 
 
-_______________________________________________________________________________________________________________________________________________
+
+------------
+
 
 ## Tool Annotations file
 
@@ -113,7 +136,10 @@ Regarding the semantics:
     code		-	code that will be used to implement the workflow as a script
 
 Simplified table representation of our tool annotations is provided in 'res/tool_annotations.png'
-_______________________________________________________________________________________________________________________________________________
+
+------------
+
+
 
 ## Constraints File
 
@@ -145,4 +171,9 @@ The constraint is interpreted as:
 "If an **article** in **docx** format was generated, then an **article** in **pdf** format has to be generated subsequently."
 
 
-_______________________________________________________________________________________________________________________________________________
+
+------------
+
+[kasalicalamprecht2019]: https://doi.org/10.1007/978-3-030-24302-9_34 "Workflow Discovery Through Semantic Constraints: A Geovisualization Case Study"
+[lamprecht2019]: https://doi.org/10.1093/bioinformatics/bty646 "Automated workflow composition in mass spectrometry-based proteomics."
+
