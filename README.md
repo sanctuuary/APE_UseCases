@@ -58,14 +58,14 @@ ________________________________________________________________________________
 
 ##  Taxonomy file
 
-#####Demo file: 'SimpleDemo/GMT_Demo_UseCase.owl'
+##### Demo file: 'SimpleDemo/GMT_Demo_UseCase.owl'
 
-Used to classify tools and data types into 2 different categories. General structure is that the main class "thing" has 2 subclasses: 
-- **thing**
-- **Tools Taxonomy** (name provided as modulesTaxonomyRoot in config file)
-- **Data Taxonomy** (name provided as dataTaxonomyRoot in config file)
--  **Type Taxonomy** (name provided under dataSubTaxonomyRoot in config file)
-- **Format Taxonomy** (name provided under dataSubTaxonomyRoot in config file) [optional]
+Used to classify tools and data types into 2 different categories. General structure is that the main class "thing" has 2 subclasses, **Tools** and **Data** taxonomies. Furthermore, Data taxonomy consists of multiple subtaxpnpmies, where each represents a **dimension** of data, in the following example we discuss 2 different dimensions of data, namely, data *type* and data *format*.
+- **thing** (root class in the OWL file)
+  - **Tools Taxonomy** (name provided as modulesTaxonomyRoot in config file)
+  - **Data Taxonomy** (name provided as dataTaxonomyRoot in config file)
+     -  **Type Taxonomy** (name provided under dataSubTaxonomyRoot in config file)
+     - **Format Taxonomy** (name provided under dataSubTaxonomyRoot in config file) [optional]
 
 Tools Taxonomy consists of actual tools from the domain, as well as their abstraction classes.
 Type Taxonomy consists of actual data types from the domain, as well as their abstraction classes.
@@ -82,7 +82,7 @@ ________________________________________________________________________________
 
 ## Tool Annotations file
 
-#####Demo file: 'SimpleDemo/tool_annotations.json'
+##### Demo file: 'SimpleDemo/tool_annotations.json'
 The file has the following structure:
 
     functions
@@ -117,7 +117,7 @@ ________________________________________________________________________________
 
 ## Constraints File
 
-#####Demo file: 'SimpleDemo/constraints.json'
+##### Demo file: 'SimpleDemo/constraints.json'
 
 The list of all the natural language templates is provided in 'SimpleDemo/constraints templates.json'. As an example we will present one of the constraint templates, namely "if then generate type" is represented as follows:
 
@@ -142,6 +142,6 @@ where both `"${parameter_1}" `and `"${parameter_1}"` represent a sequence of one
 }
 ```
 The constraint is interpreted as: 
-*"If an **article** in **docx** format was generated, then an **article** in **pdf** format has to be generated subsequently."*
+> "If an **article** in **docx** format was generated, then an **article** in **pdf** format has to be generated subsequently."
 
 _______________________________________________________________________________________________________________________________________________
