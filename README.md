@@ -110,9 +110,9 @@ The file has the following structure:
 
     functions
     	+function
-    		name
-    		operation
-        taxonomyTerms[]
+    		ID
+    		label
+       		taxonomyOperations[]
     		?inputs[]
     			+input
     				+dataSubTaxonomyRoot:[taxonomyTerm]
