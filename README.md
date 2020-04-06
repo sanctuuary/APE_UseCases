@@ -35,7 +35,7 @@ Each of the uses cases represent a different scenario
 - /**GeoGMT** - case of solving a problem of map creation presented it [[Kasalica and Lamprecht, 2020]][kasalicalamprecht2019]
   - /**E0** - focuses on the initial workflow sinthesys step, labeled as **E0** in the paper.
   - /**E1** - focuses on synthesis of an extended workflow (w.r.t. *E0*), labeled as **E1** in the paper (Extension 1: Annotations).
-- /**BioTools** - case of automated workflow composition in bioinformatics. more specifically mass spectrometry-based proteomics  [[Palmblad et al., 2019]][lamprecht2019]. 
+- /**MassPectometry** - case of automated workflow composition in bioinformatics. more specifically mass spectrometry-based proteomics  [[Palmblad et al., 2019]][lamprecht2019]. 
   - /**No1** - use case describes the 1st Use Case described in the paper, labeled as **No. 1**.
 ------------
 
