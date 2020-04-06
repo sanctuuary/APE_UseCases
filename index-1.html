@@ -1,0 +1,131 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Unknown </title></head><body>
+<h1 id="ape_usecases">APE_UseCases</h1>
+<p>The project cointains different scenarios where APE (the Automated Pipeline Explorer) can be used to automate the workflow composition. Most of the UseCases are modeling and trying to solve real-life problems in diferent domains (e.g. bioinformatisc, GIS).</p>
+<p>In order to use the APE library from the command line, simple run the APE-<version>.jar file using command:</p>
+<pre><code>java -jar APE-&lt;version&gt;.jar
+</code></pre>
+<p>while ape.config file needs to be provided in the same folder or </p>
+<pre><code>java -jar APE-&lt;version&gt;.jar [path_to_ape.config_file]
+</code></pre>
+<p>If you want to be able to run the executable shell scipts of the demo examples, GMT set of tools needs to be installed .
+http://gmt.soest.hawaii.edu/projects/gmt/wiki/Installing</p>
+<h4 id="note">Note:</h4>
+<p>Errors regarding SLF4J will not affect the synthesis execution and can be ignored. The same goes for possible warnings.</p>
+<hr />
+<h3 id="ape-api">APE API</h3>
+<p>The library support API usage as well, and the corresponding documentation is provided in "APE-<version>-sources.jar".</p>
+<hr />
+<h2 id="list-of-use-cases">List of use cases</h2>
+<p>Each of the uses cases represent a different scenario </p>
+<ul>
+<li>/<strong>SimpleDemo</strong> - a basic demonstration case of generating maps using automaticaly synthesised scripts</li>
+<li>/<strong>GeoGMT</strong> - case of solving a problem of map creation presented it <a href="https://doi.org/10.1007/978-3-030-24302-9_34" title="Workflow Discovery Through Semantic Constraints: A Geovisualization Case Study">[Kasalica and Lamprecht, 2020]</a></li>
+<li>/<strong>E0</strong> - focuses on the initial workflow sinthesys step, labeled as <strong>E0</strong> in the paper.</li>
+<li>/<strong>E1</strong> - focuses on synthesis of an extended workflow (w.r.t. <em>E0</em>), labeled as <strong>E1</strong> in the paper (Extension 1: Annotations).</li>
+<li>/<strong>BioTools</strong> - case of automated workflow composition in bioinformatics. more specifically mass spectrometry-based proteomics  <a href="https://doi.org/10.1093/bioinformatics/bty646" title="Automated workflow composition in mass spectrometry-based proteomics.">[Palmblad et al., 2019]</a>. </li>
+<li>/<strong>No1</strong> - use case describes the 1st Use Case described in the paper, labeled as <strong>No. 1</strong>.</li>
+</ul>
+<hr />
+<h2 id="configuration-file">Configuration file</h2>
+<p>ape.config is the main configuration file for the library and it consists of the following elements:</p>
+<pre><code>ontology_path           -   path to the taxonomy file  (provided demo example taxonomy.owl)
+toolsTaxonomyRoot       -   name of the root tool class
+dataTaxonomyRoot        -   name of the root data taxonomy class
+dataSubTaxonomyRoot[]       -   list of sub-roots within the data taxonomy, each sub-root represents data dimension (e.g.                           data format, data type, etc.)
+tool_annotations_path       -   path to the JSON file that contains basic tool annotation (provided demo example
+                    tool_annotations.json)
+constraints_path      - path to the JSON file containing constraints representing workflow specification 
+                    (optional)
+shared_memory           -   true in a case of shared-memory structure, false if the message passing structure should 
+                    be used
+solutions_path          -   path to the file where the workflow solutions will be written
+solution_min_length     -   minimum length from which solutions should be searched
+solution_max_length     -   maximum length to which solutions should be searched, put 0 in case of no limit
+max_solutions           -   max number of solutions that would be returned
+execution_scripts_folder    -   folder where the executable scripts will be generated
+number_of_execution_scripts -   number of executable scripts that will be generated
+solution_graphs_folder      -   folder where the graphical representation of the workflows will be generated
+number_of_generated_graphs  -   number of workflow figures that will be generated
+inputs []           -   each input represent a single instance that will be an input to the program
+inputs[]/{}         -   each of the inputs can be described using the terms from data taxonomy, the tags used (in                           our example "TypesTaxonomy" reflects the corresponding taxonomy sub-root
+outputs []          -   each output represent a single instance that will be an output of the program
+outputs[]/{}            -   each of the inputs can be described using the terms from data taxonomy, the tags used (in                           our example "TypesTaxonomy" reflects the corresponding taxonomy sub-root
+debug_mode  [optional]      -   true for debug command line output (default value is false)
+use_workflow_input  [optional]  -   'ALL' if all the workflow inputs have to be used, 'ONE' if one of the workflow inputs
+                    should be used or 'NONE' if none of the workflow inputs has to be used 
+                    (default value is ALL)
+use_all_generated_data  [optional]  - 'ALL' if all the generated data has to be used, 'ONE' if one of the data instances 
+                    that are generated as output, per tool, has to be used or 'NONE' if none of the data
+                    instances is obligatory to use (default value is ONE)
+</code></pre>
+<hr />
+<h2 id="taxonomy-file">Taxonomy file</h2>
+<h5 id="demo-file-simpledemogmt_demo_usecaseowl">Demo file: 'SimpleDemo/GMT_Demo_UseCase.owl'</h5>
+<p>Used to classify tools and data types into 2 different categories. General structure is that the main class "thing" has 2 subclasses, <strong>Tools</strong> and <strong>Data</strong> taxonomies. Furthermore, Data taxonomy consists of multiple subtaxpnpmies, where each represents a <strong>dimension</strong> of data, in the following example we discuss 2 different dimensions of data, namely, data <em>type</em> and data <em>format</em>.
+- <strong>thing</strong> (root class in the OWL file)
+  - <strong>Tools Taxonomy</strong> (name provided as modulesTaxonomyRoot in config file)
+  - <strong>Data Taxonomy</strong> (name provided as dataTaxonomyRoot in config file)
+     -  <strong>Type Taxonomy</strong> (name provided under dataSubTaxonomyRoot in config file)
+     - <strong>Format Taxonomy</strong> (name provided under dataSubTaxonomyRoot in config file) [optional]</p>
+<p>Tools Taxonomy consists of actual tools from the domain, as well as their abstraction classes.
+Type Taxonomy consists of actual data types from the domain, as well as their abstraction classes.
+Format Taxonomy consists of actual data Format from the domain, as well as their abstraction classes.</p>
+<p>Idea behind using a Format Taxonomy, is that a certain data instance can be defined using a pair, Data Type and Data Format. Thus, Format Taxonomy is optional. The usage can be generalised and the structure allows arbitrary number of such data dimensions to be described.</p>
+<p>Note:
+Encoding supports explicit subclass relations in RDF format. The rest of the OWL file annotations will be omitted.</p>
+<hr />
+<h2 id="tool-annotations-file">Tool Annotations file</h2>
+<h5 id="demo-file-simpledemotool_annotationsjson">Demo file: 'SimpleDemo/tool_annotations.json'</h5>
+<p>The file has the following structure:</p>
+<pre><code>functions
+    +function
+        ID
+        label
+        taxonomyOperations[]
+        ?inputs[]
+            +input
+                +dataSubTaxonomyRoot:[taxonomyTerm]
+        ?outputs[]
+            +output
+                +dataSubTaxonomyRoot:[taxonomyTerm]
+        ?implementation
+            code
+</code></pre>
+<p>where (+) requires 1 or more, (?) requires 0 or 1 and no sign requires existence of exactly 1 such tag.</p>
+<p>Regarding the semantics:</p>
+<pre><code>function        -   an implementation/instance of a tool
+ID          -   unique identifier of the tool
+label           -   display label of the tool implementation
+taxonomyOperations - operations from the tool taxonomy that the current function implements
+input           -   a single input of the workflow
+output          -   a single output of the workflow
+dataSubTaxonomyRoot -   data type that describes the input/output (each taxonomyTerm from the [taxonomyTerm] list has to belong to the corresponding    subTaxonomy)
+code        -   code that will be used to implement the workflow as a script
+</code></pre>
+<p>Simplified table representation of our tool annotations is provided in 'res/tool_annotations.png'</p>
+<hr />
+<h2 id="constraints-file">Constraints File</h2>
+<h5 id="demo-file-simpledemoconstraintsjson">Demo file: 'SimpleDemo/constraints.json'</h5>
+<p>The list of all the natural language templates is provided in 'SimpleDemo/constraints templates.json'. As an example we will present one of the constraint templates, namely "if then generate type" is represented as follows:</p>
+<pre><code>{
+   "constraintid": "gen_ite_t",
+   "description": "If we have generated data type ${parameter_1}, then generate type ${parameter_2} subsequently.",
+   "parameters": [
+      ["${parameter_1}"],
+      ["${parameter_2}"]
+   ]
+}
+</code></pre>
+<p>where both <code>"${parameter_1}"</code>and <code>"${parameter_1}"</code> represent a sequence of one or more data terms. The following encoding represents a use of such constraint in practice (tag <code>"description"</code> is not obligatory):</p>
+<p><code>json
+{
+   "constraintid": "gen_ite_t",
+   "parameters": [
+      ["article","docx"],
+      ["article","pdf"]
+   ]
+}</code>
+The constraint is interpreted as: 
+"If an <strong>article</strong> in <strong>docx</strong> format was generated, then an <strong>article</strong> in <strong>pdf</strong> format has to be generated subsequently."</p>
+<hr />
+</body></html>

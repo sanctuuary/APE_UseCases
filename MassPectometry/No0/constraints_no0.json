@@ -1,9 +1,0 @@
-{
-    "constraints": [
-      {
-        "constraintid": "use_m",
-        "parameters": [["msconvert1"]]
-      }
-    ]
-
-}
