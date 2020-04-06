@@ -1,0 +1,41 @@
+{
+  "ontology_path": "./MassPectometry/edam.owl",
+  "ontologyPrexifIRI": "http://edamontology.org/",
+  "toolsTaxonomyRoot": "operation_0004",
+  "dataTaxonomyRoot": "",
+  "dataSubTaxonomyRoot": ["data_0006", "format_1915" ],
+  "tool_annotations_path": "./MassPectometry/bio.tools_fragment.json",
+  "constraints_pathx": "./MassPectometry/No0/constraints_no0.json",
+  "shared_memory": "true",
+  "solutions_path": "./MassPectometry/No0/sat_solutions.txt",
+  "solution_min_length": "3",
+  "solution_max_length": "18",
+  "max_solutions": "100",
+  "execution_scripts_folder": "./MassPectometry/No0/Implementations/",
+  "number_of_execution_scripts": "0",
+  "solution_graphs_folder": "./MassPectometry/No0/Figures",
+  "number_of_generated_graphs": "10",
+  "debug_mode": "true",
+  "use_workflow_input": "all",
+  "use_all_generated_data": "one",
+  "inputs": [
+        {
+          "data_0006": [
+            "data_0943"
+          ],
+          "format_1915": [
+            "format_3712"
+          ]
+        }
+      ],
+  "outputs": [
+        {
+          "data_0006": [
+            "data_0006"
+          ],
+	 "format_1915": [
+            "format_1915"
+          ]
+        }
+      ]
+}

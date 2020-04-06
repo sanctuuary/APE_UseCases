@@ -31,10 +31,12 @@ The library support API usage as well, and the corresponding documentation is pr
 
 Each of the uses cases represent a different scenario 
 
-- /**SimpleDemo** -- a basic demonstration case of generating maps using automaticaly synthesised scripts
-- /**GeoGMT[E0]** -- case of solving a problem of map creation presented it [[Kasalica and Lamprecht, 2020]][kasalicalamprecht2019], focusing on the initial workflow sinthesys step, labeled as **E0** in the paper.
-- /**GeoGMT[E1]** -- case of solving a problem of map creation presented it [[Kasalica and Lamprecht, 2020]][kasalicalamprecht2019], focusing on synthesis of an extended workflow (w.r.t. *E0*), labeled as **E1** in the paper (Extension 1: Annotations).
-- /**BioTools_No1** -- case of automated workflow composition in bioinformatics. more specifically mass spectrometry-based proteomics  [[Palmblad et al., 2019]][lamprecht2019]. The use case describes the 1st Use Case described in the paper, labeled as **No. 1**.
+- /**SimpleDemo** - a basic demonstration case of generating maps using automaticaly synthesised scripts
+- /**GeoGMT** - case of solving a problem of map creation presented it [[Kasalica and Lamprecht, 2020]][kasalicalamprecht2019]
+  - /**E0** - focuses on the initial workflow sinthesys step, labeled as **E0** in the paper.
+  - /**E1** - focuses on synthesis of an extended workflow (w.r.t. *E0*), labeled as **E1** in the paper (Extension 1: Annotations).
+- /**BioTools** - case of automated workflow composition in bioinformatics. more specifically mass spectrometry-based proteomics  [[Palmblad et al., 2019]][lamprecht2019]. 
+  - /**No1** - use case describes the 1st Use Case described in the paper, labeled as **No. 1**.
 ------------
 
 

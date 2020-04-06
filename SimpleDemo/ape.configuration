@@ -1,8 +1,9 @@
 {
   "ontology_path": "./SimpleDemo/GMT_Demo_UseCase.owl",
+  "ontologyPrexifIRI": "http://www.co-ode.org/ontologies/ont.owl#",
   "toolsTaxonomyRoot": "ToolsTaxonomy",
   "dataTaxonomyRoot": "DataTaxonomy",
-  "dataSubTaxonomyRoot": [ TypesTaxonomy ],
+  "dataSubTaxonomyRoot": [ "TypesTaxonomy" ],
   "tool_annotations_path": "./SimpleDemo/tool_annotations.json",
   "constraints_path": "./SimpleDemo/constraints.json",
   "shared_memory": "true",
@@ -11,7 +12,7 @@
   "solution_max_length": "8",
   "max_solutions": "100",
   "execution_scripts_folder": "./SimpleDemo/Implementations/",
-  "number_of_execution_scripts": "6",
+  "number_of_execution_scripts": "3",
   "solution_graphs_folder": "./SimpleDemo/Figures",
   "number_of_generated_graphs": "10",
   "inputs": [
