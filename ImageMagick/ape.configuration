@@ -1,0 +1,28 @@
+{
+  "ontology_path": "./ImageMagick.owl",
+  "ontologyPrexifIRI": "http://www.co-ode.org/ontologies/ont.owl#",
+  "toolsTaxonomyRoot": "ToolsTaxonomy",
+  "dataTaxonomyRoot": "DataTaxonomy",
+  "dataSubTaxonomyRoot": [ "TypesTaxonomy", "FormatsTaxonomy", "IOTaxonomy" ],
+  "tool_annotations_path": "./tool_annotations.json",
+  "constraints_path": "./constraints.json",
+  "shared_memory": "true",
+  "solutions_path": "./sat_solutions.txt",
+  "solution_min_length": "8",
+  "solution_max_length": "14",
+  "max_solutions": "3",
+  "execution_scripts_folder": "./output/",
+  "number_of_execution_scripts": "3",
+  "solution_graphs_folder": "./graphs/",
+  "number_of_generated_graphs": "3",
+  "inputs": [
+    { "TypesTaxonomy": ["Image"], "IOTaxonomy":["Input"]  },
+    { "TypesTaxonomy": ["Content"], "IOTaxonomy":["Input"]  }
+  ],
+  "outputs": [
+    { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Output"] }
+  ],
+  "debug_mode": "true",
+  "use_workflow_input": "all",
+  "use_all_generated_data": "one"
+}

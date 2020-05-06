@@ -1,0 +1,538 @@
+{
+    "functions": [
+      {
+        "label": "new_canvas",
+        "id": "new_canvas",
+        "taxonomyOperations": ["Init"],
+        "outputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "implementation": { "code": "Image=\"-size 1080x720 canvas:none\"" }
+      },
+      {
+        "label": "choose_image",
+        "id": "choose_image",
+        "taxonomyOperations": ["Init"],
+        "inputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy":["Input"] }
+        ],
+        "outputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "implementation": { "code": "echo -n \"Choose Image:\"\nread Image" }
+      },
+      {
+        "label": "generate_font",
+        "id": "generate_font",
+        "taxonomyOperations": ["Init"],
+        "outputs": [
+          { "TypesTaxonomy": ["FontFamily"], "IOTaxonomy": ["Variable"] }
+        ],
+        "implementation": { "code": "FontFamily=Helvetica" }
+      },
+      {
+        "label": "choose_font",
+        "id": "choose_font",
+        "taxonomyOperations": ["Init"],
+        "inputs": [
+          { "TypesTaxonomy": ["FontFamily"], "IOTaxonomy":["Input"] }
+        ],
+        "outputs": [
+          { "TypesTaxonomy": ["FontFamily"], "IOTaxonomy": ["Variable"] }
+        ],
+        "implementation": { "code": "echo -n \"Enter FontFamily:\"\nread FontFamily" }
+      },
+      {
+        "label": "generate_color",
+        "id": "generate_color",
+        "taxonomyOperations": ["Init"],
+        "outputs": [
+          { "TypesTaxonomy": ["Color"], "IOTaxonomy": ["Variable"] }
+        ],
+        "implementation": { "code": "Color=Orange" }
+      },
+      {
+        "label": "choose_color",
+        "id": "choose_color",
+        "taxonomyOperations": ["Init"],
+        "inputs": [
+          { "TypesTaxonomy": ["Color"], "IOTaxonomy":["Input"] }
+        ],
+        "outputs": [
+          { "TypesTaxonomy": ["Color"], "IOTaxonomy": ["Variable"] }
+        ],
+        "implementation": { "code": "echo -n \"Enter Color:\"\nread Color" }
+      },
+      {
+        "label": "generate_content",
+        "id": "generate_content",
+        "taxonomyOperations": ["Init"],
+        "outputs": [
+          { "TypesTaxonomy": ["Content"], "IOTaxonomy": ["Variable"] }
+        ],
+        "implementation": { "code": "Content=\"Lorem Ipsum\"" }
+      },
+      {
+        "label": "choose_content",
+        "id": "choose_content",
+        "taxonomyOperations": ["Init"],
+        "inputs": [ 
+          { "TypesTaxonomy": ["Content"], "IOTaxonomy":["Input"] } 
+        ],
+        "outputs": [
+          { "TypesTaxonomy": ["Content"], "IOTaxonomy": ["Variable"] }
+        ],
+        "implementation": { "code": "echo -n \"Enter Text:\"\nread Content" }
+      },
+      {
+        "label": "start_convert",
+        "id": "start_convert",
+        "taxonomyOperations": ["Start"],
+        "inputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "outputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "implementation": { "code": "convert $Image \\" }
+      },
+      {
+        "label": "end_convert",
+        "id": "end_convert",
+        "taxonomyOperations": ["Final"],
+        "inputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "outputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Output"] }
+        ],
+        "implementation": { "code": "-delete 0--2 output.png" }
+      },
+      {
+        "label": "auto_level",
+        "id": "auto_level",
+        "taxonomyOperations": ["Coloring", "Auto"],
+        "inputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "outputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "implementation": { "code": "  \\( +clone -auto-level \\) \\" }
+      },
+      {
+        "label": "mild_contrast",
+        "id": "mild_contrast",
+        "taxonomyOperations": ["Contrast", "Mild"],
+        "inputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "outputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "implementation": { "code": "  \\( +clone -level 4x90% \\) \\" }
+      },
+      {
+        "label": "intense_contrast",
+        "id": "intense_contrast",
+        "taxonomyOperations": ["Contrast", "Intense"],
+        "inputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "outputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "implementation": { "code": "  \\( +clone -level 7x90% \\) \\" }
+      },
+      {
+        "label": "cut",
+        "id": "cut",
+        "taxonomyOperations": ["Layers"],
+        "inputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] },
+          { "TypesTaxonomy": ["Filter"], "IOTaxonomy": ["Variable"] }
+        ],
+        "outputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "implementation": { "code": "  \\( +clone $Filter -compose Multiply -composite \\) \\" }
+      },
+      {
+        "label": "colorspace",
+        "id": "colorspace",
+        "taxonomyOperations": ["Coloring"],
+        "inputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] },
+          { "TypesTaxonomy": ["Color"], "IOTaxonomy": ["Variable"] }
+        ],
+        "outputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "implementation": { "code": "  \\( +clone -colorspace $Color \\) \\" }
+      },
+      {
+        "label": "black_white",
+        "id": "black_white",
+        "taxonomyOperations": ["Coloring"],
+        "inputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "outputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "implementation": { "code": "  \\( +clone -colorspace Gray \\) \\" }
+      },
+      {
+        "label": "negate",
+        "id": "negate",
+        "taxonomyOperations": ["Coloring"],
+        "inputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "outputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "implementation": { "code": "  \\( +clone -negate \\) \\" }
+      },
+      {
+        "label": "mild_bright",
+        "id": "mild_bright",
+        "taxonomyOperations": ["Brightness", "Mild"],
+        "inputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "outputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "implementation": { "code": "  \\( +clone -modulate 125 \\) \\" }
+      },
+      {
+        "label": "intense_bright",
+        "id": "intense_bright",
+        "taxonomyOperations": ["Brightness", "Intense"],
+        "inputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "outputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "implementation": { "code": "  \\( +clone -modulate 250 \\) \\" }
+      },
+      {
+        "label": "mild_dark",
+        "id": "mild_dark",
+        "taxonomyOperations": ["Brightness", "Mild"],
+        "inputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "outputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "implementation": { "code": "  \\( +clone -modulate 80 \\) \\" }
+      },
+      {
+        "label": "intense_dark",
+        "id": "intense_dark",
+        "taxonomyOperations": ["Brightness", "Intense"],
+        "inputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "outputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "implementation": { "code": "  \\( +clone -modulate 40 \\) \\" }
+      },
+      {
+        "label": "hue",
+        "id": "hue",
+        "taxonomyOperations": ["Hue"],
+        "inputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "outputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "implementation": { "code": "  \\( +clone -modulate 100,100,30 \\) \\" }
+      },
+      {
+        "label": "mild_saturate",
+        "id": "mild_saturate",
+        "taxonomyOperations": ["Saturate", "Mild"],
+        "inputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "outputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "implementation": { "code": "  \\( +clone -modulate 100,120 \\) \\" }
+      },
+      {
+        "label": "intense_saturate",
+        "id": "intense_saturate",
+        "taxonomyOperations": ["Saturate", "Intense"],
+        "inputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "outputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "implementation": { "code": "  \\( +clone -modulate 100,200 \\) \\" }
+      },
+      {
+        "label": "mild_blur",
+        "id": "mild_blur",
+        "taxonomyOperations": ["Blur", "Mild"],
+        "inputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "outputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "implementation": { "code": "  \\( +clone -blur 2x1 \\) \\" }
+      },
+      {
+        "label": "intense_blur",
+        "id": "intense_blur",
+        "taxonomyOperations": ["Blur", "Intense"],
+        "inputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "outputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "implementation": { "code": "  \\( +clone -blur 0x3 \\) \\" }
+      },
+      {
+        "label": "mild_sharpen",
+        "id": "mild_sharpen",
+        "taxonomyOperations": ["Sharpen", "Mild"],
+        "inputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "outputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "implementation": { "code": "  \\( +clone -sharpen 2x1 \\) \\" }
+      },
+      {
+        "label": "intense_sharpen",
+        "id": "intense_sharpen",
+        "taxonomyOperations": ["Sharpen", "Intense"],
+        "inputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "outputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "implementation": { "code": "  \\( +clone -sharpen 0x3 \\) \\" }
+      },
+      {
+        "label": "rotate_90",
+        "id": "rotate_90",
+        "taxonomyOperations": ["Transform"],
+        "inputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "outputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "implementation": { "code": "  \\( +clone -rotate 90 \\) \\" }
+      },
+      {
+        "label": "half_size",
+        "id": "half_size",
+        "taxonomyOperations": ["Sizing"],
+        "inputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "outputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "implementation": { "code": "  \\( +clone -resize 50% \\) \\" }
+      },
+      {
+        "label": "double_size",
+        "id": "double_size",
+        "taxonomyOperations": ["Sizing"],
+        "inputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "outputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "implementation": { "code": "  \\( +clone -resize 200% \\) \\" }
+      },
+      {
+        "label": "add_large_border",
+        "id": "add_large_border",
+        "taxonomyOperations": ["Borders"],
+        "inputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] },
+          { "TypesTaxonomy": ["Color"], "IOTaxonomy": ["Variable"] }
+        ],
+        "outputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "implementation": { "code": "  \\( +clone -bordercolor $Color -border 80x80 \\) \\" }
+      },
+      {
+        "label": "add_small_border",
+        "id": "add_small_border",
+        "taxonomyOperations": ["Borders"],
+        "inputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] },
+          { "TypesTaxonomy": ["Color"], "IOTaxonomy": ["Variable"] }
+        ],
+        "outputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "implementation": { "code": "  \\( +clone -bordercolor $Color -border 40x40 \\) \\" }
+      },
+      {
+        "label": "append_horizontally",
+        "id": "append_horizontally",
+        "taxonomyOperations": ["Merging"],
+        "inputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] },
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "outputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "implementation": { "code": "  \\( +clone $Image +append \\) \\" }
+      },
+      {
+        "label": "append_vertically",
+        "id": "append_vertically",
+        "taxonomyOperations": ["Merging"],
+        "inputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] },
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "outputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "implementation": { "code": "  \\( +clone $Image -append \\) \\" }
+      },
+      {
+        "label": "overlap",
+        "id": "overlap",
+        "taxonomyOperations": ["Merging"],
+        "inputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] },
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "outputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "implementation": { "code": "  \\( +clone -compose plus $Image \\) \\" }
+      },
+      {
+        "label": "alpha_filter",
+        "id": "alpha_filter",
+        "taxonomyOperations": ["FilterCreation"],
+        "inputs": [
+          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"], "IOTaxonomy": ["Variable"] }
+        ],
+        "outputs": [
+          { "TypesTaxonomy": ["Filter"], "IOTaxonomy": ["Variable"] }
+        ],
+        "implementation": { "code": "  \\( +clone -alpha extract \\) \\" }
+      },
+      {
+        "label": "color_filter",
+        "id": "color_filter",
+        "taxonomyOperations": ["FilterCreation"],
+        "inputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] },
+          { "TypesTaxonomy": ["Color"], "IOTaxonomy": ["Variable"] }
+        ],
+        "outputs": [
+          { "TypesTaxonomy": ["Filter"], "IOTaxonomy": ["Variable"] }
+        ],
+        "implementation": { "code": "  \\( +clone -fuzz 44% -fill white +opaque $Color -fill black +opaque white \\) \\" }
+      },
+      {
+        "label": "add_caption",
+        "id": "add_caption",
+        "taxonomyOperations": ["Labels"],
+        "inputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] },
+          { "TypesTaxonomy": ["FontFamily"], "IOTaxonomy": ["Variable"] },
+          { "TypesTaxonomy": ["Color"], "IOTaxonomy": ["Variable"] },
+          { "TypesTaxonomy": ["Content"], "IOTaxonomy": ["Variable"] }
+        ],
+        "outputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "implementation": { "code": "  \\( +clone -fill $Color -stroke black -font $FontFamily -pointsize 30 -gravity south -annotate 0 \"$Content\" \\) \\" }
+      },
+      {
+        "label": "add_title",
+        "id": "add_title",
+        "taxonomyOperations": ["Labels"],
+        "inputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] },
+          { "TypesTaxonomy": ["FontFamily"], "IOTaxonomy": ["Variable"] },
+          { "TypesTaxonomy": ["Color"], "IOTaxonomy": ["Variable"] },
+          { "TypesTaxonomy": ["Content"], "IOTaxonomy": ["Variable"] }
+        ],
+        "outputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "implementation": { "code": "  \\( +clone -fill $Color -stroke black -font $FontFamily -pointsize 60 -gravity north -annotate 0 \"$Content\" \\) \\" }
+      },
+      {
+        "label": "draw_rect",
+        "id": "draw_rect",
+        "taxonomyOperations": ["Drawing"],
+        "inputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] },
+          { "TypesTaxonomy": ["Color"], "IOTaxonomy": ["Variable"] }
+        ],
+        "outputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "implementation": { "code": "  \\( +clone -fill none -stroke $Color -draw \"rectangle 20,10 80,50\" \\) \\" }
+      },
+      {
+        "label": "draw_rect_filled",
+        "id": "draw_rect_filled",
+        "taxonomyOperations": ["Drawing"],
+        "inputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] },
+          { "TypesTaxonomy": ["Color"], "IOTaxonomy": ["Variable"] }
+        ],
+        "outputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "implementation": { "code": "  \\( +clone -fill $Color -stroke $Color -draw \"rectangle 540,360 200,200\" \\) \\" }
+      },
+      {
+        "label": "draw_cricle",
+        "id": "draw_cricle",
+        "taxonomyOperations": ["Drawing"],
+        "inputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] },
+          { "TypesTaxonomy": ["Color"], "IOTaxonomy": ["Variable"] }
+        ],
+        "outputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "implementation": { "code": "  \\( +clone -fill none -stroke $Color -draw \"arc 540,360 200,200 0,360\" \\) \\" }
+      },
+      {
+        "label": "draw_cricle_filled",
+        "id": "draw_cricle_filled",
+        "taxonomyOperations": ["Drawing"],
+        "inputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] },
+          { "TypesTaxonomy": ["Color"], "IOTaxonomy": ["Variable"] }
+        ],
+        "outputs": [
+          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+        ],
+        "implementation": { "code": "  \\( +clone -fill $Color -stroke $Color -draw \"arc 540,360 200,200 0,360\" \\) \\" }
+      }
+    ]
+ }
