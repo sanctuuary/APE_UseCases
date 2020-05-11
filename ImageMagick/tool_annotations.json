@@ -1,538 +1,469 @@
 {
     "functions": [
       {
-        "label": "new_canvas",
-        "id": "new_canvas",
-        "taxonomyOperations": ["Init"],
+        "label": "generate_canvas",
+        "id": "generate_canvas",
+        "taxonomyOperations": ["Generate"],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
-        "implementation": { "code": "Image=\"-size 1080x720 canvas:none\"" }
-      },
-      {
-        "label": "choose_image",
-        "id": "choose_image",
-        "taxonomyOperations": ["Init"],
-        "inputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy":["Input"] }
-        ],
-        "outputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
-        ],
-        "implementation": { "code": "echo -n \"Choose Image:\"\nread Image" }
+        "implementation": { "code": "read -p \"Enter canvas size [default:500x500]: \" size\nImage=\"-size \"${size:-500x500}\" canvas:none\"" }
       },
       {
         "label": "generate_font",
         "id": "generate_font",
-        "taxonomyOperations": ["Init"],
+        "taxonomyOperations": ["Generate"],
         "outputs": [
-          { "TypesTaxonomy": ["FontFamily"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["FontFamily"] }
         ],
-        "implementation": { "code": "FontFamily=Helvetica" }
-      },
-      {
-        "label": "choose_font",
-        "id": "choose_font",
-        "taxonomyOperations": ["Init"],
-        "inputs": [
-          { "TypesTaxonomy": ["FontFamily"], "IOTaxonomy":["Input"] }
-        ],
-        "outputs": [
-          { "TypesTaxonomy": ["FontFamily"], "IOTaxonomy": ["Variable"] }
-        ],
-        "implementation": { "code": "echo -n \"Enter FontFamily:\"\nread FontFamily" }
+        "implementation": { "code": "read -p \"Enter FontFamily name [default:Helvetica]: \" FontFamily\nFontFamily=${FontFamily:-Helvetica}" }
       },
       {
         "label": "generate_color",
         "id": "generate_color",
-        "taxonomyOperations": ["Init"],
+        "taxonomyOperations": ["Generate"],
         "outputs": [
-          { "TypesTaxonomy": ["Color"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Color"] }
         ],
-        "implementation": { "code": "Color=Orange" }
-      },
-      {
-        "label": "choose_color",
-        "id": "choose_color",
-        "taxonomyOperations": ["Init"],
-        "inputs": [
-          { "TypesTaxonomy": ["Color"], "IOTaxonomy":["Input"] }
-        ],
-        "outputs": [
-          { "TypesTaxonomy": ["Color"], "IOTaxonomy": ["Variable"] }
-        ],
-        "implementation": { "code": "echo -n \"Enter Color:\"\nread Color" }
+        "implementation": { "code": "read -p \"Enter Color [default:Cyan]: \" Color\nColor=${Color:-Cyan}" }
       },
       {
         "label": "generate_content",
         "id": "generate_content",
-        "taxonomyOperations": ["Init"],
+        "taxonomyOperations": ["Generate"],
         "outputs": [
-          { "TypesTaxonomy": ["Content"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Content"] }
         ],
-        "implementation": { "code": "Content=\"Lorem Ipsum\"" }
-      },
-      {
-        "label": "choose_content",
-        "id": "choose_content",
-        "taxonomyOperations": ["Init"],
-        "inputs": [ 
-          { "TypesTaxonomy": ["Content"], "IOTaxonomy":["Input"] } 
-        ],
-        "outputs": [
-          { "TypesTaxonomy": ["Content"], "IOTaxonomy": ["Variable"] }
-        ],
-        "implementation": { "code": "echo -n \"Enter Text:\"\nread Content" }
-      },
-      {
-        "label": "start_convert",
-        "id": "start_convert",
-        "taxonomyOperations": ["Start"],
-        "inputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
-        ],
-        "outputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
-        ],
-        "implementation": { "code": "convert $Image \\" }
-      },
-      {
-        "label": "end_convert",
-        "id": "end_convert",
-        "taxonomyOperations": ["Final"],
-        "inputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
-        ],
-        "outputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Output"] }
-        ],
-        "implementation": { "code": "-delete 0--2 output.png" }
+        "implementation": { "code": "read -p \"Enter some text [default:Lorem Ipsum]: \" Content\nContent=${Content:-\"Lorem Ipsum\"}" }
       },
       {
         "label": "auto_level",
         "id": "auto_level",
         "taxonomyOperations": ["Coloring", "Auto"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
-        "implementation": { "code": "  \\( +clone -auto-level \\) \\" }
+        "implementation": { "code": "convert $Image -auto-level $Image" }
       },
       {
         "label": "mild_contrast",
         "id": "mild_contrast",
         "taxonomyOperations": ["Contrast", "Mild"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
-        "implementation": { "code": "  \\( +clone -level 4x90% \\) \\" }
+        "implementation": { "code": "convert $Image -level 4x90% $Image" }
       },
       {
         "label": "intense_contrast",
         "id": "intense_contrast",
         "taxonomyOperations": ["Contrast", "Intense"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
-        "implementation": { "code": "  \\( +clone -level 7x90% \\) \\" }
+        "implementation": { "code": "convert $Image -level 7x90% $Image" }
       },
       {
         "label": "cut",
         "id": "cut",
         "taxonomyOperations": ["Layers"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] },
-          { "TypesTaxonomy": ["Filter"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] },
+          { "TypesTaxonomy": ["Filter"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
-        "implementation": { "code": "  \\( +clone $Filter -compose Multiply -composite \\) \\" }
+        "implementation": { "code": "convert $Image $Filter -compose Multiply -composite $Image" }
       },
       {
         "label": "colorspace",
         "id": "colorspace",
         "taxonomyOperations": ["Coloring"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] },
-          { "TypesTaxonomy": ["Color"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] },
+          { "TypesTaxonomy": ["Color"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
-        "implementation": { "code": "  \\( +clone -colorspace $Color \\) \\" }
+        "implementation": { "code": "convert $Image -colorspace $Color $Image" }
       },
       {
         "label": "black_white",
         "id": "black_white",
         "taxonomyOperations": ["Coloring"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
-        "implementation": { "code": "  \\( +clone -colorspace Gray \\) \\" }
+        "implementation": { "code": "convert $Image -colorspace Gray $Image" }
       },
       {
         "label": "negate",
         "id": "negate",
         "taxonomyOperations": ["Coloring"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
-        "implementation": { "code": "  \\( +clone -negate \\) \\" }
+        "implementation": { "code": "convert $Image -negate $Image" }
       },
       {
         "label": "mild_bright",
         "id": "mild_bright",
         "taxonomyOperations": ["Brightness", "Mild"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
-        "implementation": { "code": "  \\( +clone -modulate 125 \\) \\" }
+        "implementation": { "code": "convert $Image -modulate 125 $Image" }
       },
       {
         "label": "intense_bright",
         "id": "intense_bright",
         "taxonomyOperations": ["Brightness", "Intense"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
-        "implementation": { "code": "  \\( +clone -modulate 250 \\) \\" }
+        "implementation": { "code": "convert $Image -modulate 250 $Image" }
       },
       {
         "label": "mild_dark",
         "id": "mild_dark",
         "taxonomyOperations": ["Brightness", "Mild"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
-        "implementation": { "code": "  \\( +clone -modulate 80 \\) \\" }
+        "implementation": { "code": "convert $Image -modulate 80 $Image" }
       },
       {
         "label": "intense_dark",
         "id": "intense_dark",
         "taxonomyOperations": ["Brightness", "Intense"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
-        "implementation": { "code": "  \\( +clone -modulate 40 \\) \\" }
+        "implementation": { "code": "convert $Image -modulate 40 $Image" }
       },
       {
         "label": "hue",
         "id": "hue",
         "taxonomyOperations": ["Hue"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
-        "implementation": { "code": "  \\( +clone -modulate 100,100,30 \\) \\" }
+        "implementation": { "code": "convert $Image -modulate 100,100,30 $Image" }
       },
       {
         "label": "mild_saturate",
         "id": "mild_saturate",
         "taxonomyOperations": ["Saturate", "Mild"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
-        "implementation": { "code": "  \\( +clone -modulate 100,120 \\) \\" }
+        "implementation": { "code": "convert $Image -modulate 100,120 $Image" }
       },
       {
         "label": "intense_saturate",
         "id": "intense_saturate",
         "taxonomyOperations": ["Saturate", "Intense"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
-        "implementation": { "code": "  \\( +clone -modulate 100,200 \\) \\" }
+        "implementation": { "code": "convert $Image -modulate 100,200 $Image" }
       },
       {
         "label": "mild_blur",
         "id": "mild_blur",
         "taxonomyOperations": ["Blur", "Mild"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
-        "implementation": { "code": "  \\( +clone -blur 2x1 \\) \\" }
+        "implementation": { "code": "convert $Image -blur 2x1 $Image" }
       },
       {
         "label": "intense_blur",
         "id": "intense_blur",
         "taxonomyOperations": ["Blur", "Intense"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
-        "implementation": { "code": "  \\( +clone -blur 0x3 \\) \\" }
+        "implementation": { "code": "convert $Image -blur 0x3 $Image" }
       },
       {
         "label": "mild_sharpen",
         "id": "mild_sharpen",
         "taxonomyOperations": ["Sharpen", "Mild"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
-        "implementation": { "code": "  \\( +clone -sharpen 2x1 \\) \\" }
+        "implementation": { "code": "convert $Image -sharpen 2x1 $Image" }
       },
       {
         "label": "intense_sharpen",
         "id": "intense_sharpen",
         "taxonomyOperations": ["Sharpen", "Intense"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
-        "implementation": { "code": "  \\( +clone -sharpen 0x3 \\) \\" }
+        "implementation": { "code": "convert $Image -sharpen 0x3 $Image" }
       },
       {
         "label": "rotate_90",
         "id": "rotate_90",
         "taxonomyOperations": ["Transform"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
-        "implementation": { "code": "  \\( +clone -rotate 90 \\) \\" }
+        "implementation": { "code": "convert $Image -rotate 90 $Image" }
       },
       {
         "label": "half_size",
         "id": "half_size",
         "taxonomyOperations": ["Sizing"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
-        "implementation": { "code": "  \\( +clone -resize 50% \\) \\" }
+        "implementation": { "code": "convert $Image -resize 50% $Image" }
       },
       {
         "label": "double_size",
         "id": "double_size",
         "taxonomyOperations": ["Sizing"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
-        "implementation": { "code": "  \\( +clone -resize 200% \\) \\" }
+        "implementation": { "code": "convert $Image -resize 200% $Image" }
       },
       {
         "label": "add_large_border",
         "id": "add_large_border",
         "taxonomyOperations": ["Borders"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] },
-          { "TypesTaxonomy": ["Color"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] },
+          { "TypesTaxonomy": ["Color"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
-        "implementation": { "code": "  \\( +clone -bordercolor $Color -border 80x80 \\) \\" }
+        "implementation": 
+        { 
+          "code": "convert $Image -bordercolor $Color -border 80x80 @output[0]" 
+        }
       },
       {
         "label": "add_small_border",
         "id": "add_small_border",
         "taxonomyOperations": ["Borders"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] },
-          { "TypesTaxonomy": ["Color"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] },
+          { "TypesTaxonomy": ["Color"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
-        "implementation": { "code": "  \\( +clone -bordercolor $Color -border 40x40 \\) \\" }
+        "implementation": { "code": "convert $Image -bordercolor $Color -border 40x40 $Image" }
       },
       {
         "label": "append_horizontally",
         "id": "append_horizontally",
         "taxonomyOperations": ["Merging"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] },
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] },
+          { "TypesTaxonomy": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
-        "implementation": { "code": "  \\( +clone $Image +append \\) \\" }
+        "implementation": { "code": "convert $Image $Image +append $Image" }
       },
       {
         "label": "append_vertically",
         "id": "append_vertically",
         "taxonomyOperations": ["Merging"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] },
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] },
+          { "TypesTaxonomy": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
-        "implementation": { "code": "  \\( +clone $Image -append \\) \\" }
+        "implementation": { "code": "convert $Image $Image -append $Image" }
       },
       {
         "label": "overlap",
         "id": "overlap",
         "taxonomyOperations": ["Merging"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] },
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] },
+          { "TypesTaxonomy": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
-        "implementation": { "code": "  \\( +clone -compose plus $Image \\) \\" }
+        "implementation": { "code": "convert $Image -compose plus $Image $Image" }
       },
       {
         "label": "alpha_filter",
         "id": "alpha_filter",
         "taxonomyOperations": ["FilterCreation"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Filter"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Filter"] }
         ],
-        "implementation": { "code": "  \\( +clone -alpha extract \\) \\" }
+        "implementation": { "code": "convert $Image -alpha extract $Image" }
       },
       {
         "label": "color_filter",
         "id": "color_filter",
         "taxonomyOperations": ["FilterCreation"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] },
-          { "TypesTaxonomy": ["Color"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] },
+          { "TypesTaxonomy": ["Color"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Filter"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Filter"] }
         ],
-        "implementation": { "code": "  \\( +clone -fuzz 44% -fill white +opaque $Color -fill black +opaque white \\) \\" }
+        "implementation": { "code": "convert $Image -fuzz 44% -fill white +opaque $Color -fill black +opaque white $Image" }
       },
       {
         "label": "add_caption",
         "id": "add_caption",
         "taxonomyOperations": ["Labels"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] },
-          { "TypesTaxonomy": ["FontFamily"], "IOTaxonomy": ["Variable"] },
-          { "TypesTaxonomy": ["Color"], "IOTaxonomy": ["Variable"] },
-          { "TypesTaxonomy": ["Content"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] },
+          { "TypesTaxonomy": ["FontFamily"] },
+          { "TypesTaxonomy": ["Color"] },
+          { "TypesTaxonomy": ["Content"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
-        "implementation": { "code": "  \\( +clone -fill $Color -stroke black -font $FontFamily -pointsize 30 -gravity south -annotate 0 \"$Content\" \\) \\" }
+        "implementation": { "code": "convert $Image -fill $Color -stroke black -font $FontFamily -pointsize 30 -gravity south -annotate 0 \"$Content\" $Image" }
       },
       {
         "label": "add_title",
         "id": "add_title",
         "taxonomyOperations": ["Labels"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] },
-          { "TypesTaxonomy": ["FontFamily"], "IOTaxonomy": ["Variable"] },
-          { "TypesTaxonomy": ["Color"], "IOTaxonomy": ["Variable"] },
-          { "TypesTaxonomy": ["Content"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] },
+          { "TypesTaxonomy": ["FontFamily"] },
+          { "TypesTaxonomy": ["Color"] },
+          { "TypesTaxonomy": ["Content"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
-        "implementation": { "code": "  \\( +clone -fill $Color -stroke black -font $FontFamily -pointsize 60 -gravity north -annotate 0 \"$Content\" \\) \\" }
+        "implementation": { "code": "convert $Image -fill $Color -stroke black -font $FontFamily -pointsize 60 -gravity north -annotate 0 \"$Content\" $Image" }
       },
       {
         "label": "draw_rect",
         "id": "draw_rect",
         "taxonomyOperations": ["Drawing"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] },
-          { "TypesTaxonomy": ["Color"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] },
+          { "TypesTaxonomy": ["Color"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
-        "implementation": { "code": "  \\( +clone -fill none -stroke $Color -draw \"rectangle 20,10 80,50\" \\) \\" }
+        "implementation": { "code": "convert $Image -fill none -stroke $Color -draw \"rectangle 20,10 80,50\" $Image" }
       },
       {
         "label": "draw_rect_filled",
         "id": "draw_rect_filled",
         "taxonomyOperations": ["Drawing"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] },
-          { "TypesTaxonomy": ["Color"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] },
+          { "TypesTaxonomy": ["Color"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
-        "implementation": { "code": "  \\( +clone -fill $Color -stroke $Color -draw \"rectangle 540,360 200,200\" \\) \\" }
+        "implementation": { "code": "convert $Image -fill $Color -stroke $Color -draw \"rectangle 540,360 200,200\" $Image" }
       },
       {
         "label": "draw_cricle",
         "id": "draw_cricle",
         "taxonomyOperations": ["Drawing"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] },
-          { "TypesTaxonomy": ["Color"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] },
+          { "TypesTaxonomy": ["Color"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
-        "implementation": { "code": "  \\( +clone -fill none -stroke $Color -draw \"arc 540,360 200,200 0,360\" \\) \\" }
+        "implementation": { "code": "convert $Image -fill none -stroke $Color -draw \"arc 540,360 200,200 0,360\" $Image" }
       },
       {
         "label": "draw_cricle_filled",
         "id": "draw_cricle_filled",
         "taxonomyOperations": ["Drawing"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] },
-          { "TypesTaxonomy": ["Color"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] },
+          { "TypesTaxonomy": ["Color"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "IOTaxonomy": ["Variable"] }
+          { "TypesTaxonomy": ["Image"] }
         ],
-        "implementation": { "code": "  \\( +clone -fill $Color -stroke $Color -draw \"arc 540,360 200,200 0,360\" \\) \\" }
+        "implementation": { "code": "convert $Image -fill $Color -stroke $Color -draw \"arc 540,360 200,200 0,360\" $Image" }
       }
     ]
  }

@@ -1,12 +1,8 @@
 
-FontFamily=Helvetica
-Color=Blue
-echo -n "Choose Image:"
-read Image
-echo -n "Enter Text:"
-read Content
-convert $Image \
-  \( +clone -fill $Color -stroke black -font $FontFamily -pointsize 60 -gravity north -annotate 0 "$Content" \) \
-  \( +clone -modulate 100,100,30 \) \
-  \( +clone -bordercolor $Color -border 40x40 \) \
--delete 0--2 output.png
+read -p "Enter Color [default:Cyan]: " Color
+Color=${Color:-Cyan}
+convert $Image -bordercolor $Color -border 40x40 $Image
+convert $Image $Image +append $Image
+read -p "Enter FontFamily name [default:Helvetica]: " FontFamily
+FontFamily=${FontFamily:-Helvetica}
+convert $Image -fill $Color -stroke black -font $FontFamily -pointsize 60 -gravity north -annotate 0 "$Content" $Image

@@ -1,41 +1,6 @@
 {
   "constraints": [
     {
-      "constraintid": "itn_m",
-      "parameters": [
-        ["Start"],
-        ["Init"]
-      ]
-    },
-    {
-      "constraintid": "itn_m",
-      "parameters": [
-        ["Operation"],
-        ["Start"]
-      ]
-    },
-    {
-      "constraintid": "itn_m",
-      "parameters": [
-        ["Final"],
-        ["Operation"]
-      ]
-    },
-    {
-      "constraintid": "depend_m",
-      "parameters": [
-        ["Final"],
-        ["Operation"]
-      ]
-    },
-    {
-      "constraintid": "depend_m",
-      "parameters": [
-        ["Operation"],
-        ["Start"]
-      ]
-    },
-    {
       "constraintid": "use_m",
       "parameters": [
         ["Labels"]
@@ -45,12 +10,6 @@
       "constraintid": "use_m",
       "parameters": [
         ["Borders"]
-      ]
-    },
-    {
-      "constraintid": "use_m",
-      "parameters": [
-        ["Hue"]
       ]
     }
   ]

@@ -187,14 +187,6 @@
     
 
 
-    <!-- http://www.co-ode.org/ontologies/ont.owl#IOTaxonomy -->
-
-    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#IOTaxonomy">
-        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#DataTaxonomy"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.co-ode.org/ontologies/ont.owl#Image -->
 
     <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Image">
@@ -215,14 +207,6 @@
 
     <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Init">
         <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Procedure"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.co-ode.org/ontologies/ont.owl#Input -->
-
-    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Input">
-        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IOTaxonomy"/>
     </owl:Class>
     
 
@@ -303,14 +287,6 @@
 
     <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Operation">
         <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Procedure"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.co-ode.org/ontologies/ont.owl#Output -->
-
-    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Output">
-        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IOTaxonomy"/>
     </owl:Class>
     
 
@@ -429,14 +405,6 @@
 
     <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#TypesTaxonomy">
         <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#DataTaxonomy"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.co-ode.org/ontologies/ont.owl#Variable -->
-
-    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Variable">
-        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IOTaxonomy"/>
     </owl:Class>
 </rdf:RDF>
 
