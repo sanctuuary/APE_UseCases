@@ -3,12 +3,6 @@
     {
       "constraintid": "use_m",
       "parameters": [
-        ["Labels"]
-      ]
-    },
-    {
-      "constraintid": "use_m",
-      "parameters": [
         ["Borders"]
       ]
     }
