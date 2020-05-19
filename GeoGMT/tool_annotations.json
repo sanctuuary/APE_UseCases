@@ -19,7 +19,7 @@
           "TypesTaxonomy": ["XYZ_table_file"]
         }],
         "implementation": {
-          "code": "read -p \"Enter path to the XYZ table file: \" $XYZ_table_file"
+          "code": "echo \"Enter path to the XYZ table file:\"\n read $@output[0]"
         }
       },
       {
@@ -30,18 +30,7 @@
           "TypesTaxonomy": ["PostScript"]
         }],
         "implementation": {
-          "code": "PostScript=$'WorkflowImpl.ps' (newline) gmt pscoast -R2.81/50.52/7.84/53.75r -JM6i -P -W0p,white -K > $PostScript"
-        }
-      },
-      {
-        "label": "add_XYZ_table",
-        "id": "add_XYZ_table",
-        "taxonomyOperations": ["add_XYZ_table"],
-        "outputs": [{
-          "TypesTaxonomy": ["XYZ_table_file"]
-        }],
-        "implementation": {
-          
+          "code": "@output[0]='result.ps'\ngmt pscoast -R2.81/50.52/7.84/53.75r -JM6i -P -W0p,white -K > $@output[0]"
         }
       },
       {
@@ -268,7 +257,7 @@
           "TypesTaxonomy": ["PostScript"]
         }],
         "implementation": {
-          "code": "gmt psxy -R -J -O -K -Sc0.05 -Gred -Wthinnest $XYZ_table_file >> $PostScript"
+          "code": "gmt psxy -R -J -O -Sc0.05 -Gred -Wthinnest $@input[0] >> $@input[1]\n@output[0]=$@input[1]"
         }
       },
       {
@@ -287,7 +276,7 @@
           "TypesTaxonomy": ["PostScript"]
         }],
         "implementation": {
-          "code": "gmt psxy -R -J -O -K -Gblack -Wthinnest $XYZ_table_file >> $PostScript"
+          "code": "gmt psxy -R -J -O -V -Wthinnest $@input[0] >> $@input[1]\n@output[0]=$@input[1]"
         }
       },
       {
@@ -339,7 +328,7 @@
           "TypesTaxonomy": ["PostScript"]
         }],
         "implementation": {
-          "code": "gmt pscoast -R -J -N1p/thinner -Df -O -K >> $PostScript"
+          "code": "gmt pscoast -R -J -N1p/thinner -Df -O -K >> $@input[0]\n@output[0]=$@input[0]"
         }
       },
       {
@@ -353,7 +342,7 @@
           "TypesTaxonomy": ["PostScript"]
         }],
         "implementation": {
-          "code": "gmt psbasemap -R -J -N1p/thinner -Df -O -K >> $PostScript"
+          "code": "gmt psbasemap -R -J -N1p/thinner -Df -O -K >> $@input[0]\n@output[0]=$@input[0]" 
         }
       },
       {
@@ -451,7 +440,7 @@
           "TypesTaxonomy": ["PostScript"]
         }],
         "implementation": {
-          "code": "gmt pscoast -R -J -Gdarkseagreen2 -Df -K -O -P >> $PostScript"
+          "code": "gmt pscoast -R -J -Gdarkseagreen2 -N1p/thinner -Df -K -O -P >> $@input[0]\n@output[0]=$@input[0]"
         }
       },
       {
@@ -465,7 +454,7 @@
           "TypesTaxonomy": ["PostScript"]
         }],
         "implementation": {
-          "code": "gmt pscoast -R -J -Scornflowerblue -Df -K -P -O >> $PostScript"
+          "code": "gmt pscoast -R -J -Scornflowerblue -Df -K -P -O >> $@input[0]\n@output[0]=$@input[0]"
         }
       },
       {
@@ -479,7 +468,7 @@
           "TypesTaxonomy": ["PostScript"]
         }],
         "implementation": {
-          
+          "code": "gmt pscoast -R -J -Icornflowerblue -Df -K -P -O >> $@input[0]\n@output[0]=$@input[0]"
         }
       },
       {
@@ -493,7 +482,7 @@
           "TypesTaxonomy": ["PostScript"]
         }],
         "implementation": {
-          "code": "gmt pscoast -R -J -N1p/thinner -Df -K -O >> $PostScript"
+          "code": "gmt pscoast -R -J -N1p/thinner -Df -K -O >> $@input[0]\n@output[0]=$@input[0]"
         }
       },
       {

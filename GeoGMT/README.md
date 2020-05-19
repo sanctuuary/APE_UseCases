@@ -1,6 +1,6 @@
 
 
-# A Geovisualization Case Study using GMT [E0]
+# A Geovisualization Case Study using [GMT](https://www.generic-mapping-tools.org/ "GMT")
 
 This is a project used to demonstrate the sysnthesis functionality provided by APE (the Automated Pipeline Explorer). 
 
@@ -9,7 +9,7 @@ The use case aims to demonstrate the usefulness of the synthesis approach for so
 - **E1** use case extends the initial workflow sinthesys step with additional constraints enforcing better map annotations.
 
 ## Installation
-In order to run the synthesis APE-&lt;version>.jar needs to be available: https://github.com/sanctuuary/APE. Furthermore, in order to be able to execute the generated workflows on the machine, GMT (http://gmt.soest.hawaii.edu/projects/gmt/wiki/Installing) set of tools and the Ghostscript command line tool (https://www.ghostscript.com/doc/current/Install.htm) need to be installed.
+In order to run the synthesis APE-&lt;version>.jar needs to be available: https://github.com/sanctuuary/APE. Furthermore, in order to be able to execute the generated workflows on the machine, GMT (https://www.generic-mapping-tools.org/download/) set of tools and the Ghostscript command line tool (https://www.ghostscript.com/doc/current/Install.htm) need to be installed.
 
 ## Run
 

@@ -1,0 +1,36 @@
+{
+  "outputs": [
+    {
+      "format_1915": "http://edamontology.org/format_1915",
+      "data_0006": "ht tp://edamontology.org/data_1506"
+    }
+  ],
+  "solution_graphs_folder": "./results/Figures",
+  "debug_mode": "true",
+  "solution_max_length": "20",
+  "dataSubTaxonomyRoot": [
+    "data_0006 ",
+    "format_1915"
+  ],
+  "solution_min_length": "4",
+  "inputs": [
+    {
+      "format_1915": "http://edam ontology.org/format_3712",
+      "data_0006": "http://edamontology.org/data_0943"
+    }
+  ],
+  "use _all_generated_data": "one",
+  "dataTaxonomyRoot": "",
+  "shared_memory": "true",
+  "ontolog yPrexifIRI": "http://edamontology.org/",
+  "tool_annotations_path": "./apeInputs/tool Annotations.json",
+  "use_workflow_input": "all",
+  "max_solutions": "20",
+  "toolsTaxonomy Root": "operation_0004",
+  "solutions_path": "./results/sat_solutions.txt",
+  "execution _scripts_folder": "./results/",
+  "number_of_generated_graphs": "20",
+  "constraints_pat h": "./apeInputs/constraints.json",
+  "number_of_execution_scripts": "0",
+  "ontology_pa th": "./apeInputs/ontology.owl"
+}
