@@ -5,72 +5,96 @@
         "id": "generate_canvas",
         "taxonomyOperations": ["Generate"],
         "outputs": [
-          { "TypesTaxonomy": ["Image"] }
+          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
         ],
-        "implementation": { "code": "read -p \"Enter canvas size [default:500x500]: \" size\nImage=\"-size \"${size:-500x500}\" canvas:none\"" }
+        "implementation": { "code": "@output[0]='@output[0].png'\nread -p \"Enter canvas size [default:500x500]: \" sizeOf_@output[0]\nconvert -size ${sizeOf_@output[0]:-500x500} xc:transparent $@output[0]\n" }
       },
       {
         "label": "generate_font",
         "id": "generate_font",
         "taxonomyOperations": ["Generate"],
         "outputs": [
-          { "TypesTaxonomy": ["FontFamily"] }
+          { "TypesTaxonomy": ["FontFamily"], "FormatsTaxonomy": ["String"] }
         ],
-        "implementation": { "code": "read -p \"Enter FontFamily name [default:Helvetica]: \" FontFamily\nFontFamily=${FontFamily:-Helvetica}" }
+        "implementation": { "code": "read -p \"Enter FontFamily name [default:Helvetica]: \" @output[0]\n@output[0]=${@output[0]:-Helvetica}\n" }
       },
       {
         "label": "generate_color",
         "id": "generate_color",
         "taxonomyOperations": ["Generate"],
         "outputs": [
-          { "TypesTaxonomy": ["Color"] }
+          { "TypesTaxonomy": ["Color"], "FormatsTaxonomy": ["String"]  }
         ],
-        "implementation": { "code": "read -p \"Enter Color [default:Cyan]: \" Color\nColor=${Color:-Cyan}" }
+        "implementation": { "code": "read -p \"Enter Color [default:Cyan]: \" @output[0]\n@output[0]=${@output[0]:-Cyan}\n" }
       },
       {
         "label": "generate_content",
         "id": "generate_content",
         "taxonomyOperations": ["Generate"],
         "outputs": [
-          { "TypesTaxonomy": ["Content"] }
+          { "TypesTaxonomy": ["Content"], "FormatsTaxonomy": ["String"]  }
         ],
-        "implementation": { "code": "read -p \"Enter some text [default:Lorem Ipsum]: \" Content\nContent=${Content:-\"Lorem Ipsum\"}" }
+        "implementation": { "code": "read -p \"Enter some text [default:Lorem Ipsum]: \" @output[0]\n@output[0]=${@output[0]:-\"Lorem Ipsum\"}\n" }
+      },
+      {
+        "label": "compress",
+        "id": "compress",
+        "taxonomyOperations": ["Conversion"],
+        "inputs": [
+          { "TypesTaxonomy": ["Image"] }
+        ],
+        "outputs": [
+          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["JPG"] }
+        ],
+        "implementation": { "code": "@output[0]='@output[0].jpg'\nconvert $@input[0] $@output[0]\n" }
+      },
+      {
+        "label": "to_bitmap",
+        "id": "to_bitmap",
+        "taxonomyOperations": ["Conversion"],
+        "inputs": [
+          { "TypesTaxonomy": ["Image"] }
+        ],
+        "outputs": [
+          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["BMP"] }
+        ],
+        "implementation": { "code": "@output[0]='@output[0].bmp'\nconvert $@input[0] $@output[0]\n" }
       },
       {
         "label": "auto_level",
         "id": "auto_level",
-        "taxonomyOperations": ["Coloring", "Auto"],
+        "taxonomyOperations": ["Levels", "Auto"],
         "inputs": [
           { "TypesTaxonomy": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"] }
+          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
         ],
-        "implementation": { "code": "convert $Image -auto-level $Image" }
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -auto-level $@output[0]\n" }
       },
       {
         "label": "mild_contrast",
         "id": "mild_contrast",
-        "taxonomyOperations": ["Contrast", "Mild"],
+        "taxonomyOperations": ["Levels", "Mild"],
         "inputs": [
           { "TypesTaxonomy": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"] }
+          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
         ],
-        "implementation": { "code": "convert $Image -level 4x90% $Image" }
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -level 4x90% $@output[0]\n" }
       },
       {
         "label": "intense_contrast",
         "id": "intense_contrast",
-        "taxonomyOperations": ["Contrast", "Intense"],
+        "taxonomyOperations": ["Levels", "Intense"],
         "inputs": [
           { "TypesTaxonomy": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"] }
+          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
         ],
-        "implementation": { "code": "convert $Image -level 7x90% $Image" }
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -level 7x90% $@output[0]\n" }
       },
       {
         "label": "cut",
@@ -81,22 +105,22 @@
           { "TypesTaxonomy": ["Filter"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"] }
+          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
         ],
-        "implementation": { "code": "convert $Image $Filter -compose Multiply -composite $Image" }
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] $@input[1] -compose Multiply -composite $@output[0]\n" }
       },
       {
-        "label": "colorspace",
-        "id": "colorspace",
-        "taxonomyOperations": ["Coloring"],
+        "label": "level_colors",
+        "id": "level_colors",
+        "taxonomyOperations": ["Levels"],
         "inputs": [
           { "TypesTaxonomy": ["Image"] },
-          { "TypesTaxonomy": ["Color"] }
+          { "TypesTaxonomy": ["Color"], "FormatsTaxonomy": ["String"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"] }
+          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
         ],
-        "implementation": { "code": "convert $Image -colorspace $Color $Image" }
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] +level-colors $@input[1], $@output[0]\n" }
       },
       {
         "label": "black_white",
@@ -106,9 +130,9 @@
           { "TypesTaxonomy": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"] }
+          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
         ],
-        "implementation": { "code": "convert $Image -colorspace Gray $Image" }
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -colorspace Gray $@output[0]\n" }
       },
       {
         "label": "negate",
@@ -118,9 +142,9 @@
           { "TypesTaxonomy": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"] }
+          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
         ],
-        "implementation": { "code": "convert $Image -negate $Image" }
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -negate $@output[0]\n" }
       },
       {
         "label": "mild_bright",
@@ -130,9 +154,9 @@
           { "TypesTaxonomy": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"] }
+          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
         ],
-        "implementation": { "code": "convert $Image -modulate 125 $Image" }
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -modulate 125 $@output[0]\n" }
       },
       {
         "label": "intense_bright",
@@ -142,9 +166,9 @@
           { "TypesTaxonomy": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"] }
+          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
         ],
-        "implementation": { "code": "convert $Image -modulate 250 $Image" }
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -modulate 250 $@output[0]\n" }
       },
       {
         "label": "mild_dark",
@@ -154,9 +178,9 @@
           { "TypesTaxonomy": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"] }
+          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
         ],
-        "implementation": { "code": "convert $Image -modulate 80 $Image" }
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -modulate 80 $@output[0]\n" }
       },
       {
         "label": "intense_dark",
@@ -166,21 +190,21 @@
           { "TypesTaxonomy": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"] }
+          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
         ],
-        "implementation": { "code": "convert $Image -modulate 40 $Image" }
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -modulate 40 $@output[0]\n" }
       },
       {
         "label": "hue",
         "id": "hue",
-        "taxonomyOperations": ["Hue"],
+        "taxonomyOperations": ["Modulate"],
         "inputs": [
           { "TypesTaxonomy": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"] }
+          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
         ],
-        "implementation": { "code": "convert $Image -modulate 100,100,30 $Image" }
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -modulate 100,100,30 $@output[0]\n" }
       },
       {
         "label": "mild_saturate",
@@ -190,9 +214,9 @@
           { "TypesTaxonomy": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"] }
+          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
         ],
-        "implementation": { "code": "convert $Image -modulate 100,120 $Image" }
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -modulate 100,120 $@output[0]\n" }
       },
       {
         "label": "intense_saturate",
@@ -202,9 +226,9 @@
           { "TypesTaxonomy": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"] }
+          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
         ],
-        "implementation": { "code": "convert $Image -modulate 100,200 $Image" }
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -modulate 100,200 $@output[0]\n" }
       },
       {
         "label": "mild_blur",
@@ -214,9 +238,9 @@
           { "TypesTaxonomy": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"] }
+          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
         ],
-        "implementation": { "code": "convert $Image -blur 2x1 $Image" }
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -blur 2x1 $@output[0]\n" }
       },
       {
         "label": "intense_blur",
@@ -226,9 +250,9 @@
           { "TypesTaxonomy": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"] }
+          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
         ],
-        "implementation": { "code": "convert $Image -blur 0x3 $Image" }
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -blur 0x6 $@output[0]\n" }
       },
       {
         "label": "mild_sharpen",
@@ -238,9 +262,9 @@
           { "TypesTaxonomy": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"] }
+          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
         ],
-        "implementation": { "code": "convert $Image -sharpen 2x1 $Image" }
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -sharpen 2x1 $@output[0]\n" }
       },
       {
         "label": "intense_sharpen",
@@ -250,61 +274,33 @@
           { "TypesTaxonomy": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"] }
+          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
         ],
-        "implementation": { "code": "convert $Image -sharpen 0x3 $Image" }
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -sharpen 0x3 $@output[0]\n" }
       },
       {
         "label": "rotate_90",
         "id": "rotate_90",
-        "taxonomyOperations": ["Transform"],
+        "taxonomyOperations": ["Distort"],
         "inputs": [
           { "TypesTaxonomy": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"] }
+          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
         ],
-        "implementation": { "code": "convert $Image -rotate 90 $Image" }
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -rotate 90 $@output[0]\n" }
       },
       {
         "label": "half_size",
         "id": "half_size",
-        "taxonomyOperations": ["Sizing"],
+        "taxonomyOperations": ["Geometry"],
         "inputs": [
           { "TypesTaxonomy": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"] }
+          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
         ],
-        "implementation": { "code": "convert $Image -resize 50% $Image" }
-      },
-      {
-        "label": "double_size",
-        "id": "double_size",
-        "taxonomyOperations": ["Sizing"],
-        "inputs": [
-          { "TypesTaxonomy": ["Image"] }
-        ],
-        "outputs": [
-          { "TypesTaxonomy": ["Image"] }
-        ],
-        "implementation": { "code": "convert $Image -resize 200% $Image" }
-      },
-      {
-        "label": "add_large_border",
-        "id": "add_large_border",
-        "taxonomyOperations": ["Borders"],
-        "inputs": [
-          { "TypesTaxonomy": ["Image"] },
-          { "TypesTaxonomy": ["Color"] }
-        ],
-        "outputs": [
-          { "TypesTaxonomy": ["Image"] }
-        ],
-        "implementation": 
-        { 
-          "code": "convert $Image -bordercolor $Color -border 80x80 @output[0]" 
-        }
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -resize 50% $@output[0]\n" }
       },
       {
         "label": "add_small_border",
@@ -312,38 +308,51 @@
         "taxonomyOperations": ["Borders"],
         "inputs": [
           { "TypesTaxonomy": ["Image"] },
-          { "TypesTaxonomy": ["Color"] }
+          { "TypesTaxonomy": ["Color"], "FormatsTaxonomy": ["String"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"] }
+          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
         ],
-        "implementation": { "code": "convert $Image -bordercolor $Color -border 40x40 $Image" }
+        "implementation": { "code": "@output[0]='@output[0].png'\n@input[0]_height=$(($(identify -format '%h' $@input[0])/20))\nconvert $@input[0] -bordercolor $@input[1] -border $@input[0]_height $@output[0]\n" }
+      },
+      {
+        "label": "add_large_border",
+        "id": "add_large_border",
+        "taxonomyOperations": ["Borders"],
+        "inputs": [
+          { "TypesTaxonomy": ["Image"] },
+          { "TypesTaxonomy": ["Color"], "FormatsTaxonomy": ["String"] }
+        ],
+        "outputs": [
+          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
+        ],
+        "implementation": { "code": "@output[0]='@output[0].png'\n@input[0]_height=$(($(identify -format '%h' $@input[0])/10))\nconvert $@input[0] -bordercolor $@input[1] -border $@input[0]_height $@output[0]\n" }
       },
       {
         "label": "append_horizontally",
         "id": "append_horizontally",
-        "taxonomyOperations": ["Merging"],
+        "taxonomyOperations": ["Append"],
         "inputs": [
           { "TypesTaxonomy": ["Image"] },
           { "TypesTaxonomy": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"] }
+          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
         ],
-        "implementation": { "code": "convert $Image $Image +append $Image" }
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] $@input[1] +append $@output[0]\n" }
       },
       {
         "label": "append_vertically",
         "id": "append_vertically",
-        "taxonomyOperations": ["Merging"],
+        "taxonomyOperations": ["Append"],
         "inputs": [
           { "TypesTaxonomy": ["Image"] },
           { "TypesTaxonomy": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"] }
+          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
         ],
-        "implementation": { "code": "convert $Image $Image -append $Image" }
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] $@input[1] -append $@output[0]\n" }
       },
       {
         "label": "overlap",
@@ -354,9 +363,9 @@
           { "TypesTaxonomy": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"] }
+          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
         ],
-        "implementation": { "code": "convert $Image -compose plus $Image $Image" }
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -compose plus $@input[1] $@output[0]\n" }
       },
       {
         "label": "alpha_filter",
@@ -366,9 +375,9 @@
           { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Filter"] }
+          { "TypesTaxonomy": ["Filter"], "FormatsTaxonomy": ["PNG"]  }
         ],
-        "implementation": { "code": "convert $Image -alpha extract $Image" }
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -alpha extract $@output[0]\n" }
       },
       {
         "label": "color_filter",
@@ -376,27 +385,12 @@
         "taxonomyOperations": ["FilterCreation"],
         "inputs": [
           { "TypesTaxonomy": ["Image"] },
-          { "TypesTaxonomy": ["Color"] }
+          { "TypesTaxonomy": ["Color"], "FormatsTaxonomy": ["String"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Filter"] }
+          { "TypesTaxonomy": ["Filter"], "FormatsTaxonomy": ["PNG"]  }
         ],
-        "implementation": { "code": "convert $Image -fuzz 44% -fill white +opaque $Color -fill black +opaque white $Image" }
-      },
-      {
-        "label": "add_caption",
-        "id": "add_caption",
-        "taxonomyOperations": ["Labels"],
-        "inputs": [
-          { "TypesTaxonomy": ["Image"] },
-          { "TypesTaxonomy": ["FontFamily"] },
-          { "TypesTaxonomy": ["Color"] },
-          { "TypesTaxonomy": ["Content"] }
-        ],
-        "outputs": [
-          { "TypesTaxonomy": ["Image"] }
-        ],
-        "implementation": { "code": "convert $Image -fill $Color -stroke black -font $FontFamily -pointsize 30 -gravity south -annotate 0 \"$Content\" $Image" }
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -fuzz 44% -fill white +opaque $@input[1] -fill black +opaque white $@output[0]\n" }
       },
       {
         "label": "add_title",
@@ -404,66 +398,29 @@
         "taxonomyOperations": ["Labels"],
         "inputs": [
           { "TypesTaxonomy": ["Image"] },
-          { "TypesTaxonomy": ["FontFamily"] },
-          { "TypesTaxonomy": ["Color"] },
-          { "TypesTaxonomy": ["Content"] }
+          { "TypesTaxonomy": ["Color"], "FormatsTaxonomy": ["String"] },
+          { "TypesTaxonomy": ["FontFamily"], "FormatsTaxonomy": ["String"] },
+          { "TypesTaxonomy": ["Content"], "FormatsTaxonomy": ["String"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"] }
+          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
         ],
-        "implementation": { "code": "convert $Image -fill $Color -stroke black -font $FontFamily -pointsize 60 -gravity north -annotate 0 \"$Content\" $Image" }
+        "implementation": { "code": "@output[0]='@output[0].png'\n@input[0]_height=$(($(identify -format '%h' $@input[0])/8))\nconvert $@input[0] -fill $@input[1] -stroke black -font $@input[2] -pointsize $@input[0]_height -gravity north -annotate 0 \"$@input[3]\" $@output[0]\n" }
       },
       {
-        "label": "draw_rect",
-        "id": "draw_rect",
-        "taxonomyOperations": ["Drawing"],
+        "label": "add_caption",
+        "id": "add_caption",
+        "taxonomyOperations": ["Labels"],
         "inputs": [
           { "TypesTaxonomy": ["Image"] },
-          { "TypesTaxonomy": ["Color"] }
+          { "TypesTaxonomy": ["Color"], "FormatsTaxonomy": ["String"] },
+          { "TypesTaxonomy": ["FontFamily"], "FormatsTaxonomy": ["String"] },
+          { "TypesTaxonomy": ["Content"], "FormatsTaxonomy": ["String"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"] }
+          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
         ],
-        "implementation": { "code": "convert $Image -fill none -stroke $Color -draw \"rectangle 20,10 80,50\" $Image" }
-      },
-      {
-        "label": "draw_rect_filled",
-        "id": "draw_rect_filled",
-        "taxonomyOperations": ["Drawing"],
-        "inputs": [
-          { "TypesTaxonomy": ["Image"] },
-          { "TypesTaxonomy": ["Color"] }
-        ],
-        "outputs": [
-          { "TypesTaxonomy": ["Image"] }
-        ],
-        "implementation": { "code": "convert $Image -fill $Color -stroke $Color -draw \"rectangle 540,360 200,200\" $Image" }
-      },
-      {
-        "label": "draw_cricle",
-        "id": "draw_cricle",
-        "taxonomyOperations": ["Drawing"],
-        "inputs": [
-          { "TypesTaxonomy": ["Image"] },
-          { "TypesTaxonomy": ["Color"] }
-        ],
-        "outputs": [
-          { "TypesTaxonomy": ["Image"] }
-        ],
-        "implementation": { "code": "convert $Image -fill none -stroke $Color -draw \"arc 540,360 200,200 0,360\" $Image" }
-      },
-      {
-        "label": "draw_cricle_filled",
-        "id": "draw_cricle_filled",
-        "taxonomyOperations": ["Drawing"],
-        "inputs": [
-          { "TypesTaxonomy": ["Image"] },
-          { "TypesTaxonomy": ["Color"] }
-        ],
-        "outputs": [
-          { "TypesTaxonomy": ["Image"] }
-        ],
-        "implementation": { "code": "convert $Image -fill $Color -stroke $Color -draw \"arc 540,360 200,200 0,360\" $Image" }
+        "implementation": { "code": "@output[0]='@output[0].png'\n@input[0]_height=$(($(identify -format '%h' $@input[0])/12))\nconvert $@input[0] -fill $@input[1] -stroke black -font $@input[2] -pointsize $@input[0]_height -gravity south -annotate 0 \"$@input[3]\" $@output[0]\n" }
       }
     ]
  }

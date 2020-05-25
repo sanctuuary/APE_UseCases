@@ -1,0 +1,29 @@
+{
+  "ontology_path": "./ImageMagick/imagemagick_taxonomy.owl",
+  "ontologyPrexifIRI": "http://www.co-ode.org/ontologies/ont.owl#",
+  "toolsTaxonomyRoot": "ToolsTaxonomy",
+  "dataTaxonomyRoot": "DataTaxonomy",
+  "dataSubTaxonomyRoot": [ "TypesTaxonomy", "FormatsTaxonomy"],
+  "tool_annotations_path": "./ImageMagick/tool_annotations.json",
+  "constraints_path": "./ImageMagick/Sample2/constraints.json",
+  "shared_memory": "true",
+  "solutions_path": "./ImageMagick/Sample2/sat_solutions.txt",
+  "solution_min_length": "4",
+  "solution_max_length": "10",
+  "max_solutions": "1",
+  "execution_scripts_folder": "./ImageMagick/Sample2/Implementations/",
+  "number_of_execution_scripts": "1",
+  "solution_graphs_folder": "./ImageMagick/Sample2/Workflows/",
+  "number_of_generated_graphs": "1",
+  "inputs": [
+    { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["JPG"] },
+    { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["JPG"] },
+    { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["JPG"] }
+  ],
+  "outputs": [
+    { "TypesTaxonomy": ["Image"] }
+  ],
+  "debug_mode": "true",
+  "use_workflow_input": "all",
+  "use_all_generated_data": "one"
+}
