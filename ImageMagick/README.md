@@ -1,17 +1,40 @@
-# ImageMagick: Tutorial
+# Automated Pipeline Explorer Tutorial
 
 This is a project used to demonstrate the sysnthesis functionality provided by APE (the Automated Pipeline Explorer) in an easy and understandable way.
 
 The use case aims to demonstrate the usefulness of the synthesis approach for solving a workflow discovery problem with ImageMagick, an open-source software suite for displaying, creating, converting and modifying images.
 
 ## Installation
-In order to run the synthesis APE-&lt;version>.jar needs to be available: https://github.com/sanctuuary/APE. Furthermore, in order to be able to execute the generated workflows on the machine, the tools have to be annotated accordingly, and the cooresponding software should be available.
+In order to run the synthesis, APE-&lt;version>.jar needs to be available: https://github.com/sanctuuary/APE. Furthermore, in order to be able to execute the generated workflows on the machine, the tools have to be annotated accordingly, and the corresponding software should be available.
 
-## Run
-In order to execute the synthesis it would be sufficient to provide the APE-&lt;version>.jar in the main .APE_UseCases directory and run the following command:
+### Download
+This this stand-alone library includes all dependencies.
+- [APE-1.0.0.jar](https://github.com/sanctuuary/APE_UseCases/raw/imagemagick/APE-1.0.0.jar) (25-05-2020)
 
+### Build from source
+[Maven 3.x.x+](https://maven.apache.org/download.cgi) and [Java 8](https://www.oracle.com/java/technologies/javase-jdk8-downloads.html) are required to build the project from source code.
+Clone or download the project from https://github.com/sanctuuary/APE and run the following command from the project root:
 ```shell
- java -jar APE-<version>.jar ImageMagick/Example1/config.json
+> mvn package
+```
+This will build two JAR's to the ```target``` folder:
+- ```APE-<version>.jar```
+- ```APE-<version>-jar-with-dependencies.jar``` (this stand-alone library includes all dependencies)
+
+### Maven
+To include APE in a Maven project, add the following dependency to the POM file:
+```xml
+<dependency>
+   <groupId>nl.uu.cs</groupId>
+   <artifactId>ape</artifactId>
+   <version>1.0.0</version>
+</dependency>
+```
+
+## Run from CLI
+In order to execute the synthesis it would be sufficient to provide the APE-&lt;version>.jar in the main .APE_UseCases directory and run the following command:
+```shell
+> java -jar APE-<version>.jar configuration.json
 ```
 
 ## Taxonomy
