@@ -14,11 +14,8 @@ In order to execute the synthesis it would be sufficient to provide the APE-&lt;
  java -jar APE-<version>.jar ImageMagick/Example1/config.json
 ```
 
-## Tools Taxonomy
-...
-
-## Data Taxonomy
-...
+## Taxonomy
+![](images/ImageMagick_Taxonomy.png)
 
 ## Tool Annotations
 ...
