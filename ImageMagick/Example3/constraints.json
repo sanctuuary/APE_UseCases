@@ -1,0 +1,23 @@
+{
+  "constraints": [
+    {
+      "constraintid": "use_t",
+      "parameters": [
+        ["Filter"]
+      ]
+    },
+    {
+      "constraintid": "nuse_m",
+      "parameters": [
+        ["Borders"]
+      ]
+    },
+    {
+      "constraintid": "next_m",
+      "parameters": [
+        ["cut"],
+        ["overlap"]
+      ]
+    }
+  ]
+}

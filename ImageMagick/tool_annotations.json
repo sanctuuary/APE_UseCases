@@ -107,7 +107,7 @@
         "outputs": [
           { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
         ],
-        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] $@input[1] -compose Multiply -composite $@output[0]\n" }
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] $@input[1] -compose multiply -composite -transparent black $@output[0]\n" }
       },
       {
         "label": "level_colors",
@@ -365,7 +365,7 @@
         "outputs": [
           { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
         ],
-        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -compose plus $@input[1] $@output[0]\n" }
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[1] $@input[0] -background none -layers flatten $@output[0]\n" }
       },
       {
         "label": "alpha_filter",
@@ -390,7 +390,7 @@
         "outputs": [
           { "TypesTaxonomy": ["Filter"], "FormatsTaxonomy": ["PNG"]  }
         ],
-        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -fuzz 44% -fill white +opaque $@input[1] -fill black +opaque white $@output[0]\n" }
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -fuzz 35% -fill black +opaque $@input[1] +fuzz -fill white +opaque black $@output[0]\n" }
       },
       {
         "label": "add_title",
