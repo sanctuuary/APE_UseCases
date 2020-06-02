@@ -48,7 +48,7 @@ After generating multiple workflows we notice that our provided `Colors` are all
 ```
 
 ## Generated Workflow
-![](Workflows/SolutionNo_1_length_4.png)
+<img src="Workflows/SolutionNo_1_length_4.png" width="400"/>
 
 ## Generated script
 ```bash
@@ -86,16 +86,16 @@ echo "1. output is: $node579871414"
 ```
 
 #### INPUT (input.jpg):
-![](Implementations/input.jpg)
+<img src="Implementations/input.jpg" width="200"/>
 
 #### `color_filter` (node19521642.png)
-![](Implementations/node19521642.png)
+<img src="Implementations/node19521642.png" width="200"/>
 
 #### `level_colors` (node579869492.png)
-![](Implementations/node579869492.png)
+<img src="Implementations/node579869492.png" width="200"/>
 
 #### `cut` (node579870453.png)
-![](Implementations/node579870453.png)
+<img src="Implementations/node579870453.png" width="200"/>
 
 #### `overlap` (node579871414.png):
-![](Implementations/node579871414.png)
+<img src="Implementations/node579871414.png" width="200"/>
