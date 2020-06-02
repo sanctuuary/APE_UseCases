@@ -76,7 +76,7 @@ Examples of configurations can be found in Example 1 and 2.
 |`number_of_generated_graphs` |number of workflow figures that will be generated                                                                      |0      |
 |`inputs[]`               |each input represent a single instance that will be an input to the program                                            |       |
 |`inputs[]/{}`             |each of the inputs can be described using the terms from data taxonomy, the tags used (in our example "TypesTaxonomy" reflects the corresponding taxonomy sub root|       |
-|outputs[]`              |each output represent a single instance that will be an output of the program                                          |       |
+|`outputs[]`              |each output represent a single instance that will be an output of the program                                          |       |
 |`outputs[]/{}`            |each of the inputs can be described using the terms from data taxonomy, the tags used (in our example "TypesTaxonomy" reflects the corresponding taxonomy sub root|       |
 |`shared_memory`           |true in a case of shared, memory structure, false if the message passing structure should be used                      |TRUE   |
 |`debug_mode`              |true for debug command line output                                                                                     |FALSE  |
