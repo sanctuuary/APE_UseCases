@@ -88,13 +88,13 @@ echo "1. output is: $node579871414"
 #### INPUT (input.jpg):
 ![](Implementations/input.jpg)
 
-### `color_filer` (node19521642.png)
+#### `color_filter` (node19521642.png)
 ![](Implementations/node19521642.png)
 
-### `level_colors` (node579869492.png)
+#### `level_colors` (node579869492.png)
 ![](Implementations/node579869492.png)
 
-### `cut` (node579870453.png)
+#### `cut` (node579870453.png)
 ![](Implementations/node579870453.png)
 
 #### `overlap` (node579871414.png):
