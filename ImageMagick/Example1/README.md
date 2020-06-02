@@ -35,7 +35,7 @@ At lease one implemented tool of the abstract class `Borders` must be used in th
 ```
 
 ## Generated Workflow
-![](Workflows/SolutionNo_0_length_4.png)
+<img src="Workflows/SolutionNo_0_length_4.png" width="500">
 
 ## Generated script
 ```bash
@@ -80,10 +80,10 @@ Enter FontFamily name [default:Helvetica]:
 ```
 
 #### INPUT (input.png):
-![](Implementations/input.png)
+<img src="Implementations/input.png" width="200">
 
 #### `add_title` (node579870453.png)
-![](Implementations/node579870453.png)
+<img src="Implementations/node579870453.png" width="200">
 
 #### `add_large_border` OUTPUT (node579871414.png):
-![](Implementations/node579871414.png)
+<img src="Implementations/node579871414.png" width="200">
