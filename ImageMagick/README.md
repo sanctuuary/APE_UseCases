@@ -9,8 +9,7 @@ For more info on installation see [APE](https://github.com/sanctuuary/APE).
 ## Domain Ontology
 Domain ontology consists of taxonomic classificationsof the data types and operations in the application domain, and provides a con-trolled  vocabulary  that  allows  for  different  abstraction  levels  of  its  elements. APE loads the [domain ontology](imagemagick_taxonomy.owl) from a file in Web Ontology Language (OWL) format. Note that the the annotated tools are included in the image below (see Tool Annotations below) as blue leafs, although they are not part in the OWL file.
 
-![](Images/ImageMagick_Taxonomy.png)
-
+![](images/ImageMagick_Taxonomy.png)
 
 ## Tool Annotation
 Tool annotation is a collection of tools that have been semantically annotated, according to their inputs and outputs, based on the terms from the ontology. Here is an example for the annotated tool `compress`, which takes as input an Image (TypesTaxonomy) of any format (FormatsTaxonomy) and outputs an Image in the JPG format.
@@ -37,7 +36,7 @@ Tool annotation is a collection of tools that have been semantically annotated, 
 The the example above, the tool annotation references the abstract class `Conversion` from our domain ontology by specifying the `taxonomyOperations` tag.
 A reference to a class (or a set of classes) in the domain ontology must be in array format. This array represents a conjunction of classes from the ontology. For example, given the ontology below. Specifying `["A", "B"]` as input for your tool makes sure only inputs of type `D` and `F` are allowed.
 
-![](Images/TypesTaxonomy.png)
+![](images/TypesTaxonomy.png)
 
 ### Tool Implementation
 The code specified in the tool annotation could be used to constuct a script that executes the workflow.
