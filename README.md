@@ -53,35 +53,35 @@ Examples of configurations can be found in Example 1 and 2.
 
 |Tag                     |Description                                                                                                            |
 |------------------------|-----------------------------------------------------------------------------------------------------------------------|
-|ontology_path           |path to the taxonomy file  (provided demo example taxonomy.owl)                                                        |
-|ontologyPrexifIRI       |absolute IRI to identify thhe elements in the taxonomy file                                                            |
-|toolsTaxonomyRoot       |name of the root tool class                                                                                            |
-|dataTaxonomyRoot        |name of the root data taxonomy class                                                                                   |
-|dataSubTaxonomyRoot[]   |list of sub roots within the data taxonomy, each sub root represents data dimension (e.g. data format, data type, etc.)|
-|tool_annotations_path   |path to the JSON file that contains basic tool annotation (provided demo example tool_annotations.json)                |
-|solutions_path          |path to the file where the workflow solutions will be written                                                          |
-|execution_scripts_folder|folder where the executable scripts will be generated                                                                  |
-|solution_graphs_folder  |folder where the graphical representation of the workflows will be generated                                           |
+|`ontology_path`           |path to the taxonomy file  (provided demo example taxonomy.owl)                                                        |
+|`ontologyPrexifIRI`       |absolute IRI to identify thhe elements in the taxonomy file                                                            |
+|`toolsTaxonomyRoot`       |name of the root tool class                                                                                            |
+|`dataTaxonomyRoot`        |name of the root data taxonomy class                                                                                   |
+|`dataSubTaxonomyRoot[]`   |list of sub roots within the data taxonomy, each sub root represents data dimension (e.g. data format, data type, etc.)|
+|`tool_annotations_path`   |path to the JSON file that contains basic tool annotation (provided demo example tool_annotations.json)                |
+|`solutions_path`          |path to the file where the workflow solutions will be written                                                          |
+|`execution_scripts_folder`|folder where the executable scripts will be generated                                                                  |
+|`solution_graphs_folder`  |folder where the graphical representation of the workflows will be generated                                           |
 
 
 ### Run configuration
 
 |Tag                     |Description                                                                                                            |Default|
 |------------------------|-----------------------------------------------------------------------------------------------------------------------|-------|
-|constraints_path        |path to the JSON file containing constraints representing workflow specification (optional)                            |       |
-|solution_min_length     |minimum length from which solutions should be searched                                                                 |       |
-|solution_max_length     |maximum length to which solutions should be searched, put 0 in case of no limit                                        |       |
-|max_solutions           |max number of solutions that would be returned                                                                         |       |
-|number_of_execution_scripts|number of executable scripts that will be generated                                                                    |0      |
-|number_of_generated_graphs|number of workflow figures that will be generated                                                                      |0      |
-|inputs []               |each input represent a single instance that will be an input to the program                                            |       |
-|inputs[]/{}             |each of the inputs can be described using the terms from data taxonomy, the tags used (in our example "TypesTaxonomy" reflects the corresponding taxonomy sub root|       |
-|outputs	[]              |each output represent a single instance that will be an output of the program                                          |       |
-|outputs[]/{}            |each of the inputs can be described using the terms from data taxonomy, the tags used (in our example "TypesTaxonomy" reflects the corresponding taxonomy sub root|       |
-|shared_memory           |true in a case of shared, memory structure, false if the message passing structure should be used                      |TRUE   |
-|debug_mode              |true for debug command line output                                                                                     |FALSE  |
-|use_workflow_input      |ALL' if all the workflow inputs have to be used, 'ONE' if one of the workflow inputs should be used or 'NONE' if none of the workflow inputs has to be used (default value is ALL)|ALL    |
-|use_all_generated_data  |ALL' if all the generated data has to be used, 'ONE' if one of the data instances that are generated as output, per tool, has to be used or 'NONE' if none of the data instances is obligatory to use|ONE    |
+|`constraints_path`        |path to the JSON file containing constraints representing workflow specification (optional)                            |       |
+|`solution_min_length`     |minimum length from which solutions should be searched                                                                 |       |
+|`solution_max_length`     |maximum length to which solutions should be searched, put 0 in case of no limit                                        |       |
+|`max_solutions`           |max number of solutions that would be returned                                                                         |       |
+|`number_of_execution_scripts` |number of executable scripts that will be generated                                                                    |0      |
+|`number_of_generated_graphs` |number of workflow figures that will be generated                                                                      |0      |
+|`inputs[]`               |each input represent a single instance that will be an input to the program                                            |       |
+|`inputs[]/{}`             |each of the inputs can be described using the terms from data taxonomy, the tags used (in our example "TypesTaxonomy" reflects the corresponding taxonomy sub root|       |
+|outputs[]`              |each output represent a single instance that will be an output of the program                                          |       |
+|`outputs[]/{}`            |each of the inputs can be described using the terms from data taxonomy, the tags used (in our example "TypesTaxonomy" reflects the corresponding taxonomy sub root|       |
+|`shared_memory`           |true in a case of shared, memory structure, false if the message passing structure should be used                      |TRUE   |
+|`debug_mode`              |true for debug command line output                                                                                     |FALSE  |
+|`use_workflow_input`      |ALL' if all the workflow inputs have to be used, 'ONE' if one of the workflow inputs should be used or 'NONE' if none of the workflow inputs has to be used (default value is ALL)|ALL    |
+|`use_all_generated_data`  |ALL' if all the generated data has to be used, 'ONE' if one of the data instances that are generated as output, per tool, has to be used or 'NONE' if none of the data instances is obligatory to use|ONE    |
 
 
 
