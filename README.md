@@ -31,51 +31,57 @@ The library support API usage as well, and the corresponding documentation is pr
 
 Each of the uses cases represent a different scenario 
 
-- /**SimpleDemo** - a basic demonstration case of generating maps using automaticaly synthesised scripts
-- /**GeoGMT** - case of solving a problem of map creation presented it [[Kasalica and Lamprecht, 2020]][kasalicalamprecht2019]
-  - /**E0** - focuses on the initial workflow sinthesys step, labeled as **E0** in the paper.
-  - /**E1** - focuses on synthesis of an extended workflow (w.r.t. *E0*), labeled as **E1** in the paper (Extension 1: Annotations).
-- /**MassSpectometry** - case of automated workflow composition in bioinformatics. more specifically mass spectrometry-based proteomics  [[Palmblad et al., 2019]][lamprecht2019]. 
-  - /**No1** - use case describes the 1st Use Case described in the paper, labeled as **No. 1**.
+- [/**ImageMagick**](/ImageMagick) - a basic demonstration case of editing and constructing images using automaticaly synthesised scripts
+  - [/**Example1**](/ImageMagick/Example1) - generate a postcard from an image
+  - [/**Example2**](/ImageMagick/Example2) - change one color in the image to another color
+- [/**SimpleDemo**](/SimpleDemo) - a basic demonstration case of generating maps using automaticaly synthesised scripts
+- [/**GeoGMT**](/GeoGMT) - case of solving a problem of map creation presented it [[Kasalica and Lamprecht, 2020]][kasalicalamprecht2019]
+  - [/**E0**](/GeoGMT/E0) - focuses on the initial workflow sinthesys step, labeled as **E0** in the paper.
+  - [/**E1**](/GeoGMT/E1) - focuses on synthesis of an extended workflow (w.r.t. *E0*), labeled as **E1** in the paper (Extension 1: Annotations).
+- [/**MassSpectometry**](/MassSpectometry) - case of automated workflow composition in bioinformatics. more specifically mass spectrometry-based proteomics  [[Palmblad et al., 2019]][lamprecht2019]. 
+  - [/**No1**](/MassSpectometry/No1) - use case describes the 1st Use Case described in the paper, labeled as **No. 1**.
 ------------
-
 
 
 ## Configuration file
 
-ape.config is the main configuration file for the library and it consists of the following elements:
+APE requires an configuration file to set up the framework. This includes the domain ontology and tool annotations. After the framework is initialized, you can run APE by providing a run configuration.
+These configurations are in JSON format and could be joined together to serve as a setup- as well as a run configuration, because APE will only read the required fields.
+Examples of configurations can be found in Example 1 and 2.
 
-	ontology_path 			- 	path to the taxonomy file  (provided demo example taxonomy.owl)
-	toolsTaxonomyRoot		-	name of the root tool class
-	dataTaxonomyRoot		-	name of the root data taxonomy class
-	dataSubTaxonomyRoot[]		-	list of sub-roots within the data taxonomy, each sub-root represents data dimension (e.g. 							data format, data type, etc.)
-	tool_annotations_path		-	path to the JSON file that contains basic tool annotation (provided demo example
-						tool_annotations.json)
-	constraints_path	  -	path to the JSON file containing constraints representing workflow specification 
-						(optional)
-	shared_memory			-	true in a case of shared-memory structure, false if the message passing structure should 
- 						be used
-	solutions_path			-	path to the file where the workflow solutions will be written
-	solution_min_length		-	minimum length from which solutions should be searched
-	solution_max_length		-	maximum length to which solutions should be searched, put 0 in case of no limit
-	max_solutions			-	max number of solutions that would be returned
-	execution_scripts_folder	-	folder where the executable scripts will be generated
-	number_of_execution_scripts	-	number of executable scripts that will be generated
-	solution_graphs_folder		-	folder where the graphical representation of the workflows will be generated
-	number_of_generated_graphs	-	number of workflow figures that will be generated
-	inputs []			-	each input represent a single instance that will be an input to the program
-	inputs[]/{}			-	each of the inputs can be described using the terms from data taxonomy, the tags used (in 							our example "TypesTaxonomy" reflects the corresponding taxonomy sub-root
-	outputs	[]			-	each output represent a single instance that will be an output of the program
-	outputs[]/{}			-	each of the inputs can be described using the terms from data taxonomy, the tags used (in 							our example "TypesTaxonomy" reflects the corresponding taxonomy sub-root
-	debug_mode  [optional]		-	true for debug command line output (default value is false)
-	use_workflow_input  [optional]	- 	'ALL' if all the workflow inputs have to be used, 'ONE' if one of the workflow inputs
-						should be used or 'NONE' if none of the workflow inputs has to be used 
-						(default value is ALL)
-	use_all_generated_data  [optional]	- 'ALL' if all the generated data has to be used, 'ONE' if one of the data instances 
-						that are generated as output, per tool, has to be used or 'NONE' if none of the data
-						instances is obligatory to use (default value is ONE)
+### Core configuration
 
-------------
+|Tag                     |Description                                                                                                            |
+|------------------------|-----------------------------------------------------------------------------------------------------------------------|
+|ontology_path           |path to the taxonomy file  (provided demo example taxonomy.owl)                                                        |
+|ontologyPrexifIRI       |absolute IRI to identify thhe elements in the taxonomy file                                                            |
+|toolsTaxonomyRoot       |name of the root tool class                                                                                            |
+|dataTaxonomyRoot        |name of the root data taxonomy class                                                                                   |
+|dataSubTaxonomyRoot[]   |list of sub roots within the data taxonomy, each sub root represents data dimension (e.g. data format, data type, etc.)|
+|tool_annotations_path   |path to the JSON file that contains basic tool annotation (provided demo example tool_annotations.json)                |
+|solutions_path          |path to the file where the workflow solutions will be written                                                          |
+|execution_scripts_folder|folder where the executable scripts will be generated                                                                  |
+|solution_graphs_folder  |folder where the graphical representation of the workflows will be generated                                           |
+
+
+### Run configuration
+
+|Tag                     |Description                                                                                                            |Default|
+|------------------------|-----------------------------------------------------------------------------------------------------------------------|-------|
+|constraints_path        |path to the JSON file containing constraints representing workflow specification (optional)                            |       |
+|solution_min_length     |minimum length from which solutions should be searched                                                                 |       |
+|solution_max_length     |maximum length to which solutions should be searched, put 0 in case of no limit                                        |       |
+|max_solutions           |max number of solutions that would be returned                                                                         |       |
+|number_of_execution_scripts|number of executable scripts that will be generated                                                                    |0      |
+|number_of_generated_graphs|number of workflow figures that will be generated                                                                      |0      |
+|inputs []               |each input represent a single instance that will be an input to the program                                            |       |
+|inputs[]/{}             |each of the inputs can be described using the terms from data taxonomy, the tags used (in our example "TypesTaxonomy" reflects the corresponding taxonomy sub root|       |
+|outputs	[]              |each output represent a single instance that will be an output of the program                                          |       |
+|outputs[]/{}            |each of the inputs can be described using the terms from data taxonomy, the tags used (in our example "TypesTaxonomy" reflects the corresponding taxonomy sub root|       |
+|shared_memory           |true in a case of shared, memory structure, false if the message passing structure should be used                      |TRUE   |
+|debug_mode              |true for debug command line output                                                                                     |FALSE  |
+|use_workflow_input      |ALL' if all the workflow inputs have to be used, 'ONE' if one of the workflow inputs should be used or 'NONE' if none of the workflow inputs has to be used (default value is ALL)|ALL    |
+|use_all_generated_data  |ALL' if all the generated data has to be used, 'ONE' if one of the data instances that are generated as output, per tool, has to be used or 'NONE' if none of the data instances is obligatory to use|ONE    |
 
 
 

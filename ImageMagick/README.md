@@ -4,65 +4,56 @@ This is a project used to demonstrate the sysnthesis functionality provided by A
 
 The use case aims to demonstrate the usefulness of the synthesis approach for solving a workflow discovery problem with ImageMagick, an open-source software suite for displaying, creating, converting and modifying images.
 
-## Installation
-In order to run the synthesis, APE-&lt;version>.jar needs to be available: https://github.com/sanctuuary/APE. Furthermore, in order to be able to execute the generated workflows on the machine, the tools have to be annotated accordingly, and the corresponding software should be available.
+For more info on installation see [APE](https://github.com/sanctuuary/APE).
 
-### Download
-This this stand-alone library includes all dependencies.
-- [APE-1.0.0.jar](https://github.com/sanctuuary/APE_UseCases/raw/imagemagick/APE-1.0.0.jar) (25-05-2020)
+## Domain Ontology
+Domain ontology consists of taxonomic classificationsof the data types and operations in the application domain, and provides a con-trolled  vocabulary  that  allows  for  different  abstraction  levels  of  its  elements. APE loads the [domain ontology](imagemagick_taxonomy.owl) from a file in Web Ontology Language (OWL) format. Note that the the annotated tools are included in the image below (see Tool Annotations below) as blue leafs, although they are not part in the OWL file.
 
-### Build from source
-[Maven 3.x.x+](https://maven.apache.org/download.cgi) and [Java 8](https://www.oracle.com/java/technologies/javase-jdk8-downloads.html) are required to build the project from source code.
-Clone or download the project from https://github.com/sanctuuary/APE and run the following command from the project root:
-```shell
-> mvn package
-```
-This will build two JAR's to the ```target``` folder:
-- ```APE-<version>.jar```
-- ```APE-<version>-jar-with-dependencies.jar``` (this stand-alone library includes all dependencies)
+![](Images/ImageMagick_Taxonomy.png)
 
-### Maven
-To include APE in a Maven project, add the following dependency to the POM file:
-```xml
-<dependency>
-   <groupId>nl.uu.cs</groupId>
-   <artifactId>ape</artifactId>
-   <version>1.0.0</version>
-</dependency>
-```
 
-## Run from CLI
-In order to execute the synthesis it would be sufficient to provide the APE-&lt;version>.jar in the main .APE_UseCases directory and run the following command:
-```shell
-> java -jar APE-<version>.jar configuration.json
+## Tool Annotation
+Tool annotation is a collection of tools that have been semantically annotated, according to their inputs and outputs, based on the terms from the ontology. Here is an example for the annotated tool `compress`, which takes as input an Image (TypesTaxonomy) of any format (FormatsTaxonomy) and outputs an Image in the JPG format.
+
+```json
+{
+        "label": "compress",
+        "id": "compress",
+        "taxonomyOperations": ["Conversion"],
+        "inputs": [
+          { "TypesTaxonomy": ["Image"] }
+        ],
+        "outputs": [
+          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["JPG"] }
+        ],
+        "implementation": { 
+           "code": "@output[0]='@output[0].jpg'\n
+                    convert $@input[0] $@output[0]\n" 
+           }
+}
 ```
 
-## Taxonomy
-![](images/ImageMagick_Taxonomy.png)
+### Referencing the Domain Ontology
+The the example above, the tool annotation references the abstract class `Conversion` from our domain ontology by specifying the `taxonomyOperations` tag.
+A reference to a class (or a set of classes) in the domain ontology must be in array format. This array represents a conjunction of classes from the ontology. For example, given the ontology below. Specifying `["A", "B"]` as input for your tool makes sure only inputs of type `D` and `F` are allowed.
 
-## Configuration
-|Tag                        |Description                                                                                                                                                                                          |Default|
-|---------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------|
-|ontology_path              |path to the taxonomy file  (provided demo example taxonomy.owl)                                                                                                                                      |       |
-|toolsTaxonomyRoot          |name of the root tool class                                                                                                                                                                          |       |
-|dataTaxonomyRoot           |name of the root data taxonomy class                                                                                                                                                                 |       |
-|dataSubTaxonomyRoot[]      |list of sub roots within the data taxonomy, each sub root represents data dimension (e.g. data format, data type, etc.)                                                                              |       |
-|tool_annotations_path      |path to the JSON file that contains basic tool annotation (provided demo example tool_annotations.json)                                                                                              |       |
-|constraints_path           |path to the JSON file containing constraints representing workflow specification (optional)                                                                                                          |       |
-|shared_memory              |true in a case of shared, memory structure, false if the message passing structure should be used                                                                                                    |       |
-|solutions_path             |path to the file where the workflow solutions will be written                                                                                                                                        |       |
-|solution_min_length        |minimum length from which solutions should be searched                                                                                                                                               |1      |
-|solution_max_length        |maximum length to which solutions should be searched, put 0 in case of no limit                                                                                                                      |       |
-|max_solutions              |max number of solutions that would be returned                                                                                                                                                       |       |
-|execution_scripts_folder   |folder where the executable scripts will be generated                                                                                                                                                |       |
-|number_of_execution_scripts|number of executable scripts that will be generated                                                                                                                                                  |       |
-|solution_graphs_folder     |folder where the graphical representation of the workflows will be generated                                                                                                                         |       |
-|number_of_generated_graphs |number of workflow figures that will be generated                                                                                                                                                    |       |
-|inputs []                  |each input represent a single instance that will be an input to the program                                                                                                                          |       |
-|inputs[]/{}                |each of the inputs can be described using the terms from data taxonomy, the tags used (in our example "TypesTaxonomy" reflects the corresponding taxonomy sub root                                   |       |
-|outputs	[]                 |each output represent a single instance that will be an output of the program                                                                                                                        |       |
-|outputs[]/{}               |each of the inputs can be described using the terms from data taxonomy, the tags used (in our example "TypesTaxonomy" reflects the corresponding taxonomy sub root                                   |       |
-|debug_mode                 |true for debug command line output                                                                                                                                                                   |FALSE  |
-|use_workflow_input         |ALL' if all the workflow inputs have to be used, 'ONE' if one of the workflow inputs should be used or 'NONE' if none of the workflow inputs has to be used (default value is ALL)                   |ALL    |
-|use_all_generated_data     |ALL' if all the generated data has to be used, 'ONE' if one of the data instances that are generated as output, per tool, has to be used or 'NONE' if none of the data instances is obligatory to use|ONE    |
+![](Images/TypesTaxonomy.png)
 
+### Tool Implementation
+The code specified in the tool annotation could be used to constuct a script that executes the workflow.
+APE keeps track of the naming of the in- and output variables from tools. `@output[0]` references to the variable name of the first input type specified in the `"inputs"` tag.
+
+For example, implementing this piece of code for a tool called `add`:
+```json
+"implementation": {
+   "code": "@output[0] = $@input[0] + $@input[1]"
+   }
+```
+could result in the script:
+```text
+node003 = $node001 + $node002
+```
+
+### Examples
+- Postcard ([Example 1](/Example1))
+- Repacing a color ([Example 2](/Example2))

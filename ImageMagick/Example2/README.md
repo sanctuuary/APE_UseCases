@@ -1,21 +1,57 @@
-# ImageMagick: More constraints [Example 2]
+# ImageMagick: Replacing a color [Example 2]
 
-This is a project used to demonstrate the sysnthesis functionality provided by APE (the Automated Pipeline Explorer) in an easy and understandable way.
+In this example we will try to replace the `Color` red by the `Color` blue. Using our foreknowledge about images we assume there must be some kind of filtering involved, so we add the constraint to use a type `Filter` in the workflow solution.
 
-The use case aims to demonstrate the usefulness of the synthesis approach for solving a workflow discovery problem with ImageMagick, an open-source software suite for displaying, creating, converting and modifying images.
+After generating multiple workflows we notice that our provided `Colors` are all being used to add borders to our image, so we add a constraint to make sure that `Border` tools are not allowed in the workflow solution.
 
-## Installation
-In order to run the synthesis APE-&lt;version>.jar needs to be available: https://github.com/sanctuuary/APE. Furthermore, in order to be able to execute the generated workflows on the machine, the tools have to be annotated accordingly, and the cooresponding software should be available.
-## Run
+## Input / output
 
-In order to execute the synthesis it would be sufficient to provide the APE-&lt;version>.jar in the main .APE_UseCases directory and run the following command:
-
-```shell
- java -jar APE-<version>.jar ImageMagick/Sample2/config.json
+```json
+{
+	"inputs": [
+		{ "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["JPG"] },
+		{ "TypesTaxonomy": ["Color"], "FormatsTaxonomy": ["String"] },
+		{ "TypesTaxonomy": ["Color"], "FormatsTaxonomy": ["String"] }
+	],
+	"outputs": [
+		{ "TypesTaxonomy": ["Image"] }
+	]
+}
 ```
-The results of the synthesis would be an executable script:
 
-```text
+## Constraints
+
+```json
+{
+	"constraints": [
+	   {
+			"constraintid": "use_t",
+			"parameters": [
+				["Filter"]
+			]
+		},
+		{
+			"constraintid": "nuse_m",
+			"parameters": [
+				["Borders"]
+			]
+		},
+		{
+			"constraintid": "next_m",
+			"parameters": [
+				["cut"],
+				["overlap"]
+			]
+		}
+	]
+}
+```
+
+## Generated Workflow
+![](Workflows/SolutionNo_1_length_4.png)
+
+## Generated script
+```bash
 #!/bin/bash
 if [ $# -ne 3 ]
 	then
@@ -23,26 +59,43 @@ if [ $# -ne 3 ]
 		exit
 fi
 node539597562=$1
-node539597563=$2
-node539597564=$3
+node173381567=$2
+node173381566=$3
 
-node579868531='node579868531.png'
-convert $node539597564 -modulate 100,100,30 $node579868531
+node19521642='node19521642.png'
+convert $node539597562 -fuzz 35% -fill black +opaque $node173381566 +fuzz -fill white +opaque black $node19521642
 
 node579869492='node579869492.png'
-convert $node539597563 $node579868531 +append $node579869492
+convert $node539597562 +level-colors $node173381567, $node579869492
 
-read -p "Enter Color [default:Cyan]: " node173378685
-node173378685=${node173378685:-Cyan}
+node579870453='node579870453.png'
+convert $node579869492 $node19521642 -compose multiply -composite -transparent black $node579870453
 
-node19524525='node19524525.png'
-convert $node539597562 -fuzz 44% -fill white +opaque $node173378685 -fill black +opaque white $node19524525
+node579871414='node579871414.png'
+convert $node539597562 $node579870453 -background none -layers flatten $node579871414
 
-node579872375='node579872375.png'
-convert $node579869492 $node19524525 -compose Multiply -composite $node579872375
-
-echo "1. output is: $node579872375"
+echo "1. output is: $node579871414"
 ```
-A visualization of the workflow can be found in the corresponding folder:
 
-[IMAGE]
+## Executing the script
+
+```bash
+> bash workflowSolution_1.sh input.jpg "Blue" "Red"
+
+1. output is: node579871414.png
+```
+
+#### INPUT (input.jpg):
+![](Implementations/input.jpg)
+
+### `color_filer` (node19521642.png)
+![](Implementations/node19521642.png)
+
+### `level_colors` (node579869492.png)
+![](Implementations/node579869492.png)
+
+### `cut` (node579870453.png)
+![](Implementations/node579870453.png)
+
+#### `overlap` (node579871414.png):
+![](Implementations/node579871414.png)

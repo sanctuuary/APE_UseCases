@@ -3,33 +3,20 @@
     {
       "constraintid": "use_t",
       "parameters": [
-        ["Color"]
-      ]
-    },
-    {
-      "constraintid": "use_m",
-      "parameters": [
-        ["hue"]
-      ]
-    },
-    {
-      "constraintid": "itn_m",
-      "parameters": [
-        ["Merging"],
-        ["Levels"]
-      ]
-    },
-    {
-      "constraintid": "prev_m",
-      "parameters": [
-        ["Merging"],
-        ["Coloring"]
+        ["Filter"]
       ]
     },
     {
       "constraintid": "nuse_m",
       "parameters": [
-        ["append_vertically"]
+        ["Borders"]
+      ]
+    },
+    {
+      "constraintid": "next_m",
+      "parameters": [
+        ["cut"],
+        ["overlap"]
       ]
     }
   ]

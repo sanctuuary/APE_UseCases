@@ -16,7 +16,7 @@
   "solution_graphs_folder": "./ImageMagick/Example1/Workflows/",
   "number_of_generated_graphs": "1",
   "inputs": [
-    { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["JPG"] },
+    { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] },
     { "TypesTaxonomy": ["Content"] }
   ],
   "outputs": [
