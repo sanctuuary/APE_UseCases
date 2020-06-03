@@ -5,7 +5,7 @@
         "id": "generate_canvas",
         "taxonomyOperations": ["Generate"],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
+          { "Type": ["Image"], "Format": ["PNG"] }
         ],
         "implementation": { "code": "@output[0]='@output[0].png'\nread -p \"Enter canvas size [default:500x500]: \" sizeOf_@output[0]\nconvert -size ${sizeOf_@output[0]:-500x500} xc:transparent $@output[0]\n" }
       },
@@ -14,7 +14,7 @@
         "id": "generate_font",
         "taxonomyOperations": ["Generate"],
         "outputs": [
-          { "TypesTaxonomy": ["FontFamily"], "FormatsTaxonomy": ["String"] }
+          { "Type": ["FontFamily"], "Format": ["String"] }
         ],
         "implementation": { "code": "read -p \"Enter FontFamily name [default:Helvetica]: \" @output[0]\n@output[0]=${@output[0]:-Helvetica}\n" }
       },
@@ -23,7 +23,7 @@
         "id": "generate_color",
         "taxonomyOperations": ["Generate"],
         "outputs": [
-          { "TypesTaxonomy": ["Color"], "FormatsTaxonomy": ["String"]  }
+          { "Type": ["Color"], "Format": ["String"]  }
         ],
         "implementation": { "code": "read -p \"Enter Color [default:Cyan]: \" @output[0]\n@output[0]=${@output[0]:-Cyan}\n" }
       },
@@ -32,7 +32,7 @@
         "id": "generate_content",
         "taxonomyOperations": ["Generate"],
         "outputs": [
-          { "TypesTaxonomy": ["Content"], "FormatsTaxonomy": ["String"]  }
+          { "Type": ["Content"], "Format": ["String"]  }
         ],
         "implementation": { "code": "read -p \"Enter some text [default:Lorem Ipsum]: \" @output[0]\n@output[0]=${@output[0]:-\"Lorem Ipsum\"}\n" }
       },
@@ -41,10 +41,10 @@
         "id": "compress",
         "taxonomyOperations": ["Conversion"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"] }
+          { "Type": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["JPG"] }
+          { "Type": ["Image"], "Format": ["JPG"] }
         ],
         "implementation": { "code": "@output[0]='@output[0].jpg'\nconvert $@input[0] $@output[0]\n" }
       },
@@ -53,10 +53,10 @@
         "id": "to_bitmap",
         "taxonomyOperations": ["Conversion"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"] }
+          { "Type": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["BMP"] }
+          { "Type": ["Image"], "Format": ["BMP"] }
         ],
         "implementation": { "code": "@output[0]='@output[0].bmp'\nconvert $@input[0] $@output[0]\n" }
       },
@@ -65,10 +65,10 @@
         "id": "auto_level",
         "taxonomyOperations": ["Levels", "Auto"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"] }
+          { "Type": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
+          { "Type": ["Image"], "Format": ["PNG"] }
         ],
         "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -auto-level $@output[0]\n" }
       },
@@ -77,10 +77,10 @@
         "id": "mild_contrast",
         "taxonomyOperations": ["Levels", "Mild"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"] }
+          { "Type": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
+          { "Type": ["Image"], "Format": ["PNG"] }
         ],
         "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -level 4x90% $@output[0]\n" }
       },
@@ -89,10 +89,10 @@
         "id": "intense_contrast",
         "taxonomyOperations": ["Levels", "Intense"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"] }
+          { "Type": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
+          { "Type": ["Image"], "Format": ["PNG"] }
         ],
         "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -level 7x90% $@output[0]\n" }
       },
@@ -101,11 +101,11 @@
         "id": "cut",
         "taxonomyOperations": ["Layers"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"] },
-          { "TypesTaxonomy": ["Filter"] }
+          { "Type": ["Image"] },
+          { "Type": ["Filter"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
+          { "Type": ["Image"], "Format": ["PNG"] }
         ],
         "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] $@input[1] -compose multiply -composite -transparent black $@output[0]\n" }
       },
@@ -114,11 +114,11 @@
         "id": "level_colors",
         "taxonomyOperations": ["Levels"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"] },
-          { "TypesTaxonomy": ["Color"], "FormatsTaxonomy": ["String"] }
+          { "Type": ["Image"] },
+          { "Type": ["Color"], "Format": ["String"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
+          { "Type": ["Image"], "Format": ["PNG"] }
         ],
         "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] +level-colors $@input[1], $@output[0]\n" }
       },
@@ -127,10 +127,10 @@
         "id": "black_white",
         "taxonomyOperations": ["Coloring"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"] }
+          { "Type": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
+          { "Type": ["Image"], "Format": ["PNG"] }
         ],
         "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -colorspace Gray $@output[0]\n" }
       },
@@ -139,10 +139,10 @@
         "id": "negate",
         "taxonomyOperations": ["Coloring"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"] }
+          { "Type": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
+          { "Type": ["Image"], "Format": ["PNG"] }
         ],
         "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -negate $@output[0]\n" }
       },
@@ -151,10 +151,10 @@
         "id": "mild_bright",
         "taxonomyOperations": ["Brightness", "Mild"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"] }
+          { "Type": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
+          { "Type": ["Image"], "Format": ["PNG"] }
         ],
         "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -modulate 125 $@output[0]\n" }
       },
@@ -163,10 +163,10 @@
         "id": "intense_bright",
         "taxonomyOperations": ["Brightness", "Intense"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"] }
+          { "Type": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
+          { "Type": ["Image"], "Format": ["PNG"] }
         ],
         "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -modulate 250 $@output[0]\n" }
       },
@@ -175,10 +175,10 @@
         "id": "mild_dark",
         "taxonomyOperations": ["Brightness", "Mild"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"] }
+          { "Type": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
+          { "Type": ["Image"], "Format": ["PNG"] }
         ],
         "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -modulate 80 $@output[0]\n" }
       },
@@ -187,10 +187,10 @@
         "id": "intense_dark",
         "taxonomyOperations": ["Brightness", "Intense"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"] }
+          { "Type": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
+          { "Type": ["Image"], "Format": ["PNG"] }
         ],
         "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -modulate 40 $@output[0]\n" }
       },
@@ -199,10 +199,10 @@
         "id": "hue",
         "taxonomyOperations": ["Modulate"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"] }
+          { "Type": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
+          { "Type": ["Image"], "Format": ["PNG"] }
         ],
         "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -modulate 100,100,30 $@output[0]\n" }
       },
@@ -211,10 +211,10 @@
         "id": "mild_saturate",
         "taxonomyOperations": ["Saturate", "Mild"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"] }
+          { "Type": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
+          { "Type": ["Image"], "Format": ["PNG"] }
         ],
         "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -modulate 100,120 $@output[0]\n" }
       },
@@ -223,10 +223,10 @@
         "id": "intense_saturate",
         "taxonomyOperations": ["Saturate", "Intense"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"] }
+          { "Type": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
+          { "Type": ["Image"], "Format": ["PNG"] }
         ],
         "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -modulate 100,200 $@output[0]\n" }
       },
@@ -235,10 +235,10 @@
         "id": "mild_blur",
         "taxonomyOperations": ["Blur", "Mild"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"] }
+          { "Type": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
+          { "Type": ["Image"], "Format": ["PNG"] }
         ],
         "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -blur 2x1 $@output[0]\n" }
       },
@@ -247,10 +247,10 @@
         "id": "intense_blur",
         "taxonomyOperations": ["Blur", "Intense"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"] }
+          { "Type": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
+          { "Type": ["Image"], "Format": ["PNG"] }
         ],
         "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -blur 0x6 $@output[0]\n" }
       },
@@ -259,10 +259,10 @@
         "id": "mild_sharpen",
         "taxonomyOperations": ["Sharpen", "Mild"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"] }
+          { "Type": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
+          { "Type": ["Image"], "Format": ["PNG"] }
         ],
         "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -sharpen 2x1 $@output[0]\n" }
       },
@@ -271,10 +271,10 @@
         "id": "intense_sharpen",
         "taxonomyOperations": ["Sharpen", "Intense"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"] }
+          { "Type": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
+          { "Type": ["Image"], "Format": ["PNG"] }
         ],
         "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -sharpen 0x3 $@output[0]\n" }
       },
@@ -283,10 +283,10 @@
         "id": "rotate_90",
         "taxonomyOperations": ["Distort"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"] }
+          { "Type": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
+          { "Type": ["Image"], "Format": ["PNG"] }
         ],
         "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -rotate 90 $@output[0]\n" }
       },
@@ -295,10 +295,10 @@
         "id": "half_size",
         "taxonomyOperations": ["Geometry"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"] }
+          { "Type": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
+          { "Type": ["Image"], "Format": ["PNG"] }
         ],
         "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -resize 50% $@output[0]\n" }
       },
@@ -307,11 +307,11 @@
         "id": "add_small_border",
         "taxonomyOperations": ["Borders"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"] },
-          { "TypesTaxonomy": ["Color"], "FormatsTaxonomy": ["String"] }
+          { "Type": ["Image"] },
+          { "Type": ["Color"], "Format": ["String"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
+          { "Type": ["Image"], "Format": ["PNG"] }
         ],
         "implementation": { "code": "@output[0]='@output[0].png'\n@input[0]_height=$(($(identify -format '%h' $@input[0])/20))\nconvert $@input[0] -bordercolor $@input[1] -border $@input[0]_height $@output[0]\n" }
       },
@@ -320,11 +320,11 @@
         "id": "add_large_border",
         "taxonomyOperations": ["Borders"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"] },
-          { "TypesTaxonomy": ["Color"], "FormatsTaxonomy": ["String"] }
+          { "Type": ["Image"] },
+          { "Type": ["Color"], "Format": ["String"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
+          { "Type": ["Image"], "Format": ["PNG"] }
         ],
         "implementation": { "code": "@output[0]='@output[0].png'\n@input[0]_height=$(($(identify -format '%h' $@input[0])/10))\nconvert $@input[0] -bordercolor $@input[1] -border $@input[0]_height $@output[0]\n" }
       },
@@ -333,11 +333,11 @@
         "id": "append_horizontally",
         "taxonomyOperations": ["Append"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"] },
-          { "TypesTaxonomy": ["Image"] }
+          { "Type": ["Image"] },
+          { "Type": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
+          { "Type": ["Image"], "Format": ["PNG"] }
         ],
         "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] $@input[1] +append $@output[0]\n" }
       },
@@ -346,11 +346,11 @@
         "id": "append_vertically",
         "taxonomyOperations": ["Append"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"] },
-          { "TypesTaxonomy": ["Image"] }
+          { "Type": ["Image"] },
+          { "Type": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
+          { "Type": ["Image"], "Format": ["PNG"] }
         ],
         "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] $@input[1] -append $@output[0]\n" }
       },
@@ -359,11 +359,11 @@
         "id": "overlap",
         "taxonomyOperations": ["Merging"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"] },
-          { "TypesTaxonomy": ["Image"] }
+          { "Type": ["Image"] },
+          { "Type": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
+          { "Type": ["Image"], "Format": ["PNG"] }
         ],
         "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[1] $@input[0] -background none -layers flatten $@output[0]\n" }
       },
@@ -372,10 +372,10 @@
         "id": "alpha_filter",
         "taxonomyOperations": ["FilterCreation"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
+          { "Type": ["Image"], "Format": ["PNG"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Filter"], "FormatsTaxonomy": ["PNG"]  }
+          { "Type": ["Filter"], "Format": ["PNG"]  }
         ],
         "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -alpha extract $@output[0]\n" }
       },
@@ -384,11 +384,11 @@
         "id": "color_filter",
         "taxonomyOperations": ["FilterCreation"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"] },
-          { "TypesTaxonomy": ["Color"], "FormatsTaxonomy": ["String"] }
+          { "Type": ["Image"] },
+          { "Type": ["Color"], "Format": ["String"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Filter"], "FormatsTaxonomy": ["PNG"]  }
+          { "Type": ["Filter"], "Format": ["PNG"]  }
         ],
         "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -fuzz 35% -fill black +opaque $@input[1] +fuzz -fill white +opaque black $@output[0]\n" }
       },
@@ -397,13 +397,13 @@
         "id": "add_title",
         "taxonomyOperations": ["Labels"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"] },
-          { "TypesTaxonomy": ["Color"], "FormatsTaxonomy": ["String"] },
-          { "TypesTaxonomy": ["FontFamily"], "FormatsTaxonomy": ["String"] },
-          { "TypesTaxonomy": ["Content"], "FormatsTaxonomy": ["String"] }
+          { "Type": ["Image"] },
+          { "Type": ["Color"], "Format": ["String"] },
+          { "Type": ["FontFamily"], "Format": ["String"] },
+          { "Type": ["Content"], "Format": ["String"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
+          { "Type": ["Image"], "Format": ["PNG"] }
         ],
         "implementation": { "code": "@output[0]='@output[0].png'\n@input[0]_height=$(($(identify -format '%h' $@input[0])/8))\nconvert $@input[0] -fill $@input[1] -stroke black -font $@input[2] -pointsize $@input[0]_height -gravity north -annotate 0 \"$@input[3]\" $@output[0]\n" }
       },
@@ -412,13 +412,13 @@
         "id": "add_caption",
         "taxonomyOperations": ["Labels"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"] },
-          { "TypesTaxonomy": ["Color"], "FormatsTaxonomy": ["String"] },
-          { "TypesTaxonomy": ["FontFamily"], "FormatsTaxonomy": ["String"] },
-          { "TypesTaxonomy": ["Content"], "FormatsTaxonomy": ["String"] }
+          { "Type": ["Image"] },
+          { "Type": ["Color"], "Format": ["String"] },
+          { "Type": ["FontFamily"], "Format": ["String"] },
+          { "Type": ["Content"], "Format": ["String"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["PNG"] }
+          { "Type": ["Image"], "Format": ["PNG"] }
         ],
         "implementation": { "code": "@output[0]='@output[0].png'\n@input[0]_height=$(($(identify -format '%h' $@input[0])/12))\nconvert $@input[0] -fill $@input[1] -stroke black -font $@input[2] -pointsize $@input[0]_height -gravity south -annotate 0 \"$@input[3]\" $@output[0]\n" }
       }
