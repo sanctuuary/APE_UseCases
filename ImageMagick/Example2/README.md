@@ -9,12 +9,12 @@ After generating multiple workflows we notice that our provided `Colors` are all
 ```json
 {
 	"inputs": [
-		{ "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["JPG"] },
-		{ "TypesTaxonomy": ["Color"], "FormatsTaxonomy": ["String"] },
-		{ "TypesTaxonomy": ["Color"], "FormatsTaxonomy": ["String"] }
+		{ "Type": ["Image"], "Format": ["JPG"] },
+		{ "Type": ["Color"], "Format": ["String"] },
+		{ "Type": ["Color"], "Format": ["String"] }
 	],
 	"outputs": [
-		{ "TypesTaxonomy": ["Image"] }
+		{ "Type": ["Image"] }
 	]
 }
 ```

@@ -20,10 +20,10 @@ Tool annotation is a collection of tools that have been semantically annotated, 
         "id": "compress",
         "taxonomyOperations": ["Conversion"],
         "inputs": [
-          { "TypesTaxonomy": ["Image"] }
+          { "Type": ["Image"] }
         ],
         "outputs": [
-          { "TypesTaxonomy": ["Image"], "FormatsTaxonomy": ["JPG"] }
+          { "Type": ["Image"], "Format": ["JPG"] }
         ],
         "implementation": { 
            "code": "@output[0]='@output[0].jpg'\n
