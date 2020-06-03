@@ -12,7 +12,7 @@ Domain ontology consists of taxonomic classificationsof the data types and opera
 ![](images/ImageMagick_Taxonomy.png)
 
 ## Tool Annotation
-Tool annotation is a collection of tools that have been semantically annotated, according to their inputs and outputs, based on the terms from the ontology. Here is an example for the annotated tool `compress`, which takes as input an Image (TypesTaxonomy) of any format (FormatsTaxonomy) and outputs an Image in the JPG format.
+Tool annotation is a collection of tools that have been semantically annotated, according to their inputs and outputs, based on the terms from the ontology. Here is an example for the annotated tool `compress`, which takes as input an `Image` (Type) of any `Format` and outputs an Image in the JPG format.
 
 ```json
 {
@@ -54,5 +54,5 @@ node003 = $node001 + $node002
 ```
 
 ### Examples
-- Postcard ([Example 1](/Example1))
-- Repacing a color ([Example 2](/Example2))
+- [Example 1: Creating a postcard](/Example1)
+- [Example 2: Repacing a color](/Example2)
