@@ -1,0 +1,426 @@
+{
+    "functions": [
+      {
+        "label": "generate_canvas",
+        "id": "generate_canvas",
+        "taxonomyOperations": ["Generate"],
+        "outputs": [
+          { "Type": ["Image"], "Format": ["PNG"] }
+        ],
+        "implementation": { "code": "@output[0]='@output[0].png'\nread -p \"Enter canvas size [default:500x500]: \" sizeOf_@output[0]\nconvert -size ${sizeOf_@output[0]:-500x500} xc:transparent $@output[0]\n" }
+      },
+      {
+        "label": "generate_font",
+        "id": "generate_font",
+        "taxonomyOperations": ["Generate"],
+        "outputs": [
+          { "Type": ["FontFamily"], "Format": ["String"] }
+        ],
+        "implementation": { "code": "read -p \"Enter FontFamily name [default:Helvetica]: \" @output[0]\n@output[0]=${@output[0]:-Helvetica}\n" }
+      },
+      {
+        "label": "generate_color",
+        "id": "generate_color",
+        "taxonomyOperations": ["Generate"],
+        "outputs": [
+          { "Type": ["Color"], "Format": ["String"]  }
+        ],
+        "implementation": { "code": "read -p \"Enter Color [default:Cyan]: \" @output[0]\n@output[0]=${@output[0]:-Cyan}\n" }
+      },
+      {
+        "label": "generate_content",
+        "id": "generate_content",
+        "taxonomyOperations": ["Generate"],
+        "outputs": [
+          { "Type": ["Content"], "Format": ["String"]  }
+        ],
+        "implementation": { "code": "read -p \"Enter some text [default:Lorem Ipsum]: \" @output[0]\n@output[0]=${@output[0]:-\"Lorem Ipsum\"}\n" }
+      },
+      {
+        "label": "compress",
+        "id": "compress",
+        "taxonomyOperations": ["Conversion"],
+        "inputs": [
+          { "Type": ["Image"] }
+        ],
+        "outputs": [
+          { "Type": ["Image"], "Format": ["JPG"] }
+        ],
+        "implementation": { "code": "@output[0]='@output[0].jpg'\nconvert $@input[0] $@output[0]\n" }
+      },
+      {
+        "label": "to_bitmap",
+        "id": "to_bitmap",
+        "taxonomyOperations": ["Conversion"],
+        "inputs": [
+          { "Type": ["Image"] }
+        ],
+        "outputs": [
+          { "Type": ["Image"], "Format": ["BMP"] }
+        ],
+        "implementation": { "code": "@output[0]='@output[0].bmp'\nconvert $@input[0] $@output[0]\n" }
+      },
+      {
+        "label": "auto_level",
+        "id": "auto_level",
+        "taxonomyOperations": ["Levels", "Auto"],
+        "inputs": [
+          { "Type": ["Image"] }
+        ],
+        "outputs": [
+          { "Type": ["Image"], "Format": ["PNG"] }
+        ],
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -auto-level $@output[0]\n" }
+      },
+      {
+        "label": "mild_contrast",
+        "id": "mild_contrast",
+        "taxonomyOperations": ["Levels", "Mild"],
+        "inputs": [
+          { "Type": ["Image"] }
+        ],
+        "outputs": [
+          { "Type": ["Image"], "Format": ["PNG"] }
+        ],
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -level 4x90% $@output[0]\n" }
+      },
+      {
+        "label": "intense_contrast",
+        "id": "intense_contrast",
+        "taxonomyOperations": ["Levels", "Intense"],
+        "inputs": [
+          { "Type": ["Image"] }
+        ],
+        "outputs": [
+          { "Type": ["Image"], "Format": ["PNG"] }
+        ],
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -level 7x90% $@output[0]\n" }
+      },
+      {
+        "label": "cut",
+        "id": "cut",
+        "taxonomyOperations": ["Layers"],
+        "inputs": [
+          { "Type": ["Image"] },
+          { "Type": ["Filter"] }
+        ],
+        "outputs": [
+          { "Type": ["Image"], "Format": ["PNG"] }
+        ],
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] $@input[1] -compose multiply -composite -transparent black $@output[0]\n" }
+      },
+      {
+        "label": "level_colors",
+        "id": "level_colors",
+        "taxonomyOperations": ["Levels"],
+        "inputs": [
+          { "Type": ["Image"] },
+          { "Type": ["Color"], "Format": ["String"] }
+        ],
+        "outputs": [
+          { "Type": ["Image"], "Format": ["PNG"] }
+        ],
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] +level-colors $@input[1], $@output[0]\n" }
+      },
+      {
+        "label": "black_white",
+        "id": "black_white",
+        "taxonomyOperations": ["Coloring"],
+        "inputs": [
+          { "Type": ["Image"] }
+        ],
+        "outputs": [
+          { "Type": ["Image"], "Format": ["PNG"] }
+        ],
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -colorspace Gray $@output[0]\n" }
+      },
+      {
+        "label": "negate",
+        "id": "negate",
+        "taxonomyOperations": ["Coloring"],
+        "inputs": [
+          { "Type": ["Image"] }
+        ],
+        "outputs": [
+          { "Type": ["Image"], "Format": ["PNG"] }
+        ],
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -negate $@output[0]\n" }
+      },
+      {
+        "label": "mild_bright",
+        "id": "mild_bright",
+        "taxonomyOperations": ["Brightness", "Mild"],
+        "inputs": [
+          { "Type": ["Image"] }
+        ],
+        "outputs": [
+          { "Type": ["Image"], "Format": ["PNG"] }
+        ],
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -modulate 125 $@output[0]\n" }
+      },
+      {
+        "label": "intense_bright",
+        "id": "intense_bright",
+        "taxonomyOperations": ["Brightness", "Intense"],
+        "inputs": [
+          { "Type": ["Image"] }
+        ],
+        "outputs": [
+          { "Type": ["Image"], "Format": ["PNG"] }
+        ],
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -modulate 250 $@output[0]\n" }
+      },
+      {
+        "label": "mild_dark",
+        "id": "mild_dark",
+        "taxonomyOperations": ["Brightness", "Mild"],
+        "inputs": [
+          { "Type": ["Image"] }
+        ],
+        "outputs": [
+          { "Type": ["Image"], "Format": ["PNG"] }
+        ],
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -modulate 80 $@output[0]\n" }
+      },
+      {
+        "label": "intense_dark",
+        "id": "intense_dark",
+        "taxonomyOperations": ["Brightness", "Intense"],
+        "inputs": [
+          { "Type": ["Image"] }
+        ],
+        "outputs": [
+          { "Type": ["Image"], "Format": ["PNG"] }
+        ],
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -modulate 40 $@output[0]\n" }
+      },
+      {
+        "label": "hue",
+        "id": "hue",
+        "taxonomyOperations": ["Modulate"],
+        "inputs": [
+          { "Type": ["Image"] }
+        ],
+        "outputs": [
+          { "Type": ["Image"], "Format": ["PNG"] }
+        ],
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -modulate 100,100,30 $@output[0]\n" }
+      },
+      {
+        "label": "mild_saturate",
+        "id": "mild_saturate",
+        "taxonomyOperations": ["Saturate", "Mild"],
+        "inputs": [
+          { "Type": ["Image"] }
+        ],
+        "outputs": [
+          { "Type": ["Image"], "Format": ["PNG"] }
+        ],
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -modulate 100,120 $@output[0]\n" }
+      },
+      {
+        "label": "intense_saturate",
+        "id": "intense_saturate",
+        "taxonomyOperations": ["Saturate", "Intense"],
+        "inputs": [
+          { "Type": ["Image"] }
+        ],
+        "outputs": [
+          { "Type": ["Image"], "Format": ["PNG"] }
+        ],
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -modulate 100,200 $@output[0]\n" }
+      },
+      {
+        "label": "mild_blur",
+        "id": "mild_blur",
+        "taxonomyOperations": ["Blur", "Mild"],
+        "inputs": [
+          { "Type": ["Image"] }
+        ],
+        "outputs": [
+          { "Type": ["Image"], "Format": ["PNG"] }
+        ],
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -blur 2x1 $@output[0]\n" }
+      },
+      {
+        "label": "intense_blur",
+        "id": "intense_blur",
+        "taxonomyOperations": ["Blur", "Intense"],
+        "inputs": [
+          { "Type": ["Image"] }
+        ],
+        "outputs": [
+          { "Type": ["Image"], "Format": ["PNG"] }
+        ],
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -blur 0x6 $@output[0]\n" }
+      },
+      {
+        "label": "mild_sharpen",
+        "id": "mild_sharpen",
+        "taxonomyOperations": ["Sharpen", "Mild"],
+        "inputs": [
+          { "Type": ["Image"] }
+        ],
+        "outputs": [
+          { "Type": ["Image"], "Format": ["PNG"] }
+        ],
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -sharpen 2x1 $@output[0]\n" }
+      },
+      {
+        "label": "intense_sharpen",
+        "id": "intense_sharpen",
+        "taxonomyOperations": ["Sharpen", "Intense"],
+        "inputs": [
+          { "Type": ["Image"] }
+        ],
+        "outputs": [
+          { "Type": ["Image"], "Format": ["PNG"] }
+        ],
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -sharpen 0x3 $@output[0]\n" }
+      },
+      {
+        "label": "rotate_90",
+        "id": "rotate_90",
+        "taxonomyOperations": ["Distort"],
+        "inputs": [
+          { "Type": ["Image"] }
+        ],
+        "outputs": [
+          { "Type": ["Image"], "Format": ["PNG"] }
+        ],
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -rotate 90 $@output[0]\n" }
+      },
+      {
+        "label": "half_size",
+        "id": "half_size",
+        "taxonomyOperations": ["Geometry"],
+        "inputs": [
+          { "Type": ["Image"] }
+        ],
+        "outputs": [
+          { "Type": ["Image"], "Format": ["PNG"] }
+        ],
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -resize 50% $@output[0]\n" }
+      },
+      {
+        "label": "add_small_border",
+        "id": "add_small_border",
+        "taxonomyOperations": ["Borders"],
+        "inputs": [
+          { "Type": ["Image"] },
+          { "Type": ["Color"], "Format": ["String"] }
+        ],
+        "outputs": [
+          { "Type": ["Image"], "Format": ["PNG"] }
+        ],
+        "implementation": { "code": "@output[0]='@output[0].png'\n@input[0]_height=$(($(identify -format '%h' $@input[0])/20))\nconvert $@input[0] -bordercolor $@input[1] -border $@input[0]_height $@output[0]\n" }
+      },
+      {
+        "label": "add_large_border",
+        "id": "add_large_border",
+        "taxonomyOperations": ["Borders"],
+        "inputs": [
+          { "Type": ["Image"] },
+          { "Type": ["Color"], "Format": ["String"] }
+        ],
+        "outputs": [
+          { "Type": ["Image"], "Format": ["PNG"] }
+        ],
+        "implementation": { "code": "@output[0]='@output[0].png'\n@input[0]_height=$(($(identify -format '%h' $@input[0])/10))\nconvert $@input[0] -bordercolor $@input[1] -border $@input[0]_height $@output[0]\n" }
+      },
+      {
+        "label": "append_horizontally",
+        "id": "append_horizontally",
+        "taxonomyOperations": ["Append"],
+        "inputs": [
+          { "Type": ["Image"] },
+          { "Type": ["Image"] }
+        ],
+        "outputs": [
+          { "Type": ["Image"], "Format": ["PNG"] }
+        ],
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] $@input[1] +append $@output[0]\n" }
+      },
+      {
+        "label": "append_vertically",
+        "id": "append_vertically",
+        "taxonomyOperations": ["Append"],
+        "inputs": [
+          { "Type": ["Image"] },
+          { "Type": ["Image"] }
+        ],
+        "outputs": [
+          { "Type": ["Image"], "Format": ["PNG"] }
+        ],
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] $@input[1] -append $@output[0]\n" }
+      },
+      {
+        "label": "overlap",
+        "id": "overlap",
+        "taxonomyOperations": ["Merging"],
+        "inputs": [
+          { "Type": ["Image"] },
+          { "Type": ["Image"] }
+        ],
+        "outputs": [
+          { "Type": ["Image"], "Format": ["PNG"] }
+        ],
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[1] $@input[0] -background none -layers flatten $@output[0]\n" }
+      },
+      {
+        "label": "alpha_filter",
+        "id": "alpha_filter",
+        "taxonomyOperations": ["FilterCreation"],
+        "inputs": [
+          { "Type": ["Image"], "Format": ["PNG"] }
+        ],
+        "outputs": [
+          { "Type": ["Filter"], "Format": ["PNG"]  }
+        ],
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -alpha extract $@output[0]\n" }
+      },
+      {
+        "label": "color_filter",
+        "id": "color_filter",
+        "taxonomyOperations": ["FilterCreation"],
+        "inputs": [
+          { "Type": ["Image"] },
+          { "Type": ["Color"], "Format": ["String"] }
+        ],
+        "outputs": [
+          { "Type": ["Filter"], "Format": ["PNG"]  }
+        ],
+        "implementation": { "code": "@output[0]='@output[0].png'\nconvert $@input[0] -fuzz 35% -fill black +opaque $@input[1] +fuzz -fill white +opaque black $@output[0]\n" }
+      },
+      {
+        "label": "add_title",
+        "id": "add_title",
+        "taxonomyOperations": ["Labels"],
+        "inputs": [
+          { "Type": ["Image"] },
+          { "Type": ["Color"], "Format": ["String"] },
+          { "Type": ["FontFamily"], "Format": ["String"] },
+          { "Type": ["Content"], "Format": ["String"] }
+        ],
+        "outputs": [
+          { "Type": ["Image"], "Format": ["PNG"] }
+        ],
+        "implementation": { "code": "@output[0]='@output[0].png'\n@input[0]_height=$(($(identify -format '%h' $@input[0])/8))\nconvert $@input[0] -fill $@input[1] -stroke black -font $@input[2] -pointsize $@input[0]_height -gravity north -annotate 0 \"$@input[3]\" $@output[0]\n" }
+      },
+      {
+        "label": "add_caption",
+        "id": "add_caption",
+        "taxonomyOperations": ["Labels"],
+        "inputs": [
+          { "Type": ["Image"] },
+          { "Type": ["Color"], "Format": ["String"] },
+          { "Type": ["FontFamily"], "Format": ["String"] },
+          { "Type": ["Content"], "Format": ["String"] }
+        ],
+        "outputs": [
+          { "Type": ["Image"], "Format": ["PNG"] }
+        ],
+        "implementation": { "code": "@output[0]='@output[0].png'\n@input[0]_height=$(($(identify -format '%h' $@input[0])/12))\nconvert $@input[0] -fill $@input[1] -stroke black -font $@input[2] -pointsize $@input[0]_height -gravity south -annotate 0 \"$@input[3]\" $@output[0]\n" }
+      }
+    ]
+ }

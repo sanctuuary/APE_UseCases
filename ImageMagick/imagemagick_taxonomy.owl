@@ -1,0 +1,342 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/mauri/ontologies/2020/3/untitled-ontology-4#"
+     xml:base="http://www.semanticweb.org/mauri/ontologies/2020/3/untitled-ontology-4"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/maurin/ontologies/2020/imagemagick"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Append -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Append">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Merging"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Auto -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Auto">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Descriptive"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#BMP -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#BMP">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Lossless"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Blur -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Blur">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Distort"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Borders -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Borders">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Layers"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Brightness -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Brightness">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Modulate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Canvas -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Canvas">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Color -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Color">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Coloring -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Coloring">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Compressed -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Compressed">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#ImageFormat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Content -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Content">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Conversion -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Conversion">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Data -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Data"/>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Descriptive -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Descriptive">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Distort -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Distort">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Filter -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Filter">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Canvas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#FilterCreation -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#FilterCreation">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#FontFamily -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#FontFamily">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Format -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Format">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Data"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Generate -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Generate">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Geometry -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Geometry">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Image -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Image">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Canvas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#ImageFormat -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#ImageFormat">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Format"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Intense -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Intense">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Descriptive"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#JPG -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#JPG">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Compressed"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Labels -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Labels">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#TextToImage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Layers -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Layers">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Levels -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Levels">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Coloring"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Lossless -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Lossless">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#ImageFormat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Merging -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Merging">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Layers"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Mild -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Mild">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Descriptive"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Modulate -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Modulate">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Coloring"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#PNG -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#PNG">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Lossless"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Saturate -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Saturate">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Modulate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Sharpen -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Sharpen">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Distort"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#String -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#String">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#TextFormat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#TextFormat -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#TextFormat">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Format"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#TextToImage -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#TextToImage">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Tool -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Tool"/>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Type -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Type">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Data"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
