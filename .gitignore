@@ -25,7 +25,7 @@ GeoGMT/E1/Implementations/workflowSolution*
 !GeoGMT/E1/Implementations/move.txt
 !GeoGMT/E1/Implementations/run.sh
 
-
+GeoGMT/UnitTest/*
 
 ### Linux ###
 *~
