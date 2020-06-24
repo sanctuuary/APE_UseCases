@@ -13,13 +13,13 @@ MassSpectometry/No1/Implementations/workflowSolution*
 
 ### GeoGMT ###
 
-GeoGMT/E0/sat_solutions.tx
+GeoGMT/E0/sat_solutions.txt
 GeoGMT/E0/Figures/*
 GeoGMT/E0/Implementations/*
 !GeoGMT/E0/Implementations/move.txt
 !GeoGMT/E0/Implementations/run.sh
 
-GeoGMT/E1/sat_solutions.tx
+GeoGMT/E1/sat_solutions.txt
 GeoGMT/E1/Figures/*
 GeoGMT/E1/Implementations/workflowSolution*
 !GeoGMT/E1/Implementations/move.txt
