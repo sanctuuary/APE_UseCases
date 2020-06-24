@@ -148,10 +148,6 @@
       },
       {
         "constraintid": "use_m",
-        "parameters": [ ["Display_PostScript_files"]]
-      },
-      {
-        "constraintid": "use_m",
         "parameters": [ ["Points_and_lines"]]
       }
     ]
