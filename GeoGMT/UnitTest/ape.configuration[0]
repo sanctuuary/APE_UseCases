@@ -2,8 +2,7 @@
   "ontology_path": "./GeoGMT/GMT_UseCase_taxonomy.owl",
   "ontologyPrexifIRI": "http://www.co-ode.org/ontologies/ont.owl#",
   "toolsTaxonomyRoot": "ToolsTaxonomy",
-  "dataTaxonomyRoot": "DataTaxonomy",
-  "dataSubTaxonomyRoot": "TypesTaxonomy",
+  "dataDimensionsTaxonomyRoots": ["TypesTaxonomy"],
   "tool_annotations_path": "./GeoGMT/tool_annotations.json",
   "constraints_path": "./GeoGMT/E0/constraints_e0.json",
   "shared_memory": "true",
@@ -14,7 +13,7 @@
   "execution_scripts_folder": "./GeoGMT/E0/Implementations/",
   "number_of_execution_scripts": "0",
   "solution_graphs_folder": "./GeoGMT/E0/Figures",
-  "number_of_generated_graphs": "0",
+  "number_of_generated_graphs": "5",
   "tool_seq_repeat": "true",
   "inputs": [
     {

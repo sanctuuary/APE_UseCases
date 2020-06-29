@@ -2,8 +2,7 @@
   "ontology_path": "./MassSpectometry/edam.owl",
   "ontologyPrexifIRI": "http://edamontology.org/",
   "toolsTaxonomyRoot": "operation_0004",
-  "dataTaxonomyRoot": "",
-  "dataSubTaxonomyRoot": ["data_0006", "format_1915" ],
+  "dataDimensionsTaxonomyRoots": ["data_0006", "format_1915" ],
   "tool_annotations_path": "./MassSpectometry/bio.tools_fragment.json",
   "constraints_path": "./MassSpectometry/No1/constraints_no1.json",
   "shared_memory": "true",
@@ -18,7 +17,7 @@
   "debug_mode": "false",
   "use_workflow_input": "all",
   "use_all_generated_data": "all",
-  "tool_seq_repeat": "false",
+  "tool_seq_repeat": "true",
   "inputs": [
         {
           "data_0006": [
