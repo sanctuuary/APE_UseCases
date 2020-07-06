@@ -9,7 +9,7 @@
   "solutions_path": "./MassSpectometry/No1/sat_solutions.txt",
   "solution_min_length": "1",
   "solution_max_length": "10",
-  "max_solutions": "100",
+  "max_solutions": "1000",
   "execution_scripts_folder": "./MassSpectometry/No1/Implementations/",
   "number_of_execution_scripts": "0",
   "solution_graphs_folder": "./MassSpectometry/No1/Figures",

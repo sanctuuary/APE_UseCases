@@ -9,7 +9,7 @@
   "solutions_path": "./SimpleDemo/sat_solutions.txt",
   "solution_min_length": "1",
   "solution_max_length": "8",
-  "max_solutions": "100",
+  "max_solutions": "1000",
   "execution_scripts_folder": "./SimpleDemo/Implementations/",
   "number_of_execution_scripts": "3",
   "solution_graphs_folder": "./SimpleDemo/Figures",
