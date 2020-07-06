@@ -20,7 +20,7 @@
     { "Type": ["Content"] }
   ],
   "outputs": [
-    { "Type": ["Image"], "Format": ["LosslessImageFormat"]  }
+    { "Type": ["Image"], "Format": ["Lossless"]  }
   ],
   "debug_mode": "true",
   "use_workflow_input": "all",
