@@ -1,4 +1,4 @@
-# Automated Pipeline Explorer Tutorial
+# Automated Pipeline Explorer Tutorial (using [ImageMagic](https://imagemagick.org/index.php) tools)
 
 This is a project used to demonstrate the sysnthesis functionality provided by APE (the Automated Pipeline Explorer) in an easy and understandable way.
 
