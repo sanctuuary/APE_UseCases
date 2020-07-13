@@ -3,7 +3,11 @@
 This is a basic project used to demonstrate the sysnthesis functionality provided by APE (the Automated Pipeline Explorer). 
 
 ## Installation
-In order to run the synthesis APE-&lt;version>.jar needs to be available: https://github.com/sanctuuary/APE. Furthermore, in order to be able to execute the generated workflows on the machine, GMT set of tools needs to be installed: http://gmt.soest.hawaii.edu/projects/gmt/wiki/Installing
+In order to run the synthesis APE-&lt;version>.jar needs to be available: https://github.com/sanctuuary/APE. 
+
+#### Optional
+In order to be able to execute the generated workflows on the machine, GMT set of tools needs to be installed: http://gmt.soest.hawaii.edu/projects/gmt/wiki/Installing
+This step is not required for the workflow synthesis, considering that the synthesis of conadidate workflows and their execution are 2 separate steps.
 
 ## Run
 
