@@ -11,18 +11,16 @@ while ape.config file needs to be provided in the same folder or
 
     java -jar APE-<version>.jar [path_to_ape.config_file]
 
+#### Note: 
 If you want to be able to run the executable shell scipts of the demo examples, GMT set of tools needs to be installed .
 http://gmt.soest.hawaii.edu/projects/gmt/wiki/Installing
-
-#### Note: 
-Errors regarding SLF4J will not affect the synthesis execution and can be ignored. The same goes for possible warnings.
 
 ------------
 
 
 ### APE API
 
-The library support API usage as well, and the corresponding documentation is provided in "APE-<version>-sources.jar".
+The library support API usage as well, and the corresponding documentation is provided in "APE-\<version>-sources.jar" and in [javadoc repository](https://javadoc.io/doc/io.github.sanctuuary/APE/latest/nl/uu/cs/ape/sat/APE.html).
 
 
 ------------
@@ -34,7 +32,6 @@ Each of the uses cases represent a different scenario
 - [/**ImageMagick**](/ImageMagick) - a basic demonstration case of editing and constructing images using automaticaly synthesised scripts
   - [/**Example1**](/ImageMagick/Example1) - generate a postcard from an image
   - [/**Example2**](/ImageMagick/Example2) - change one color in the image to another color
-- [/**SimpleDemo**](/SimpleDemo) - a basic demonstration case of generating maps using automaticaly synthesised scripts
 - [/**GeoGMT**](/GeoGMT) - case of solving a problem of map creation presented it [[Kasalica and Lamprecht, 2020]][kasalicalamprecht2019]
   - [/**E0**](/GeoGMT/E0) - focuses on the initial workflow sinthesys step, labeled as **E0** in the paper.
   - [/**E1**](/GeoGMT/E1) - focuses on synthesis of an extended workflow (w.r.t. *E0*), labeled as **E1** in the paper (Extension 1: Annotations).
@@ -47,7 +44,7 @@ Each of the uses cases represent a different scenario
 
 APE requires an configuration file to set up the framework. This includes the domain ontology and tool annotations. After the framework is initialized, you can run APE by providing a run configuration.
 These configurations are in JSON format and could be joined together to serve as a setup- as well as a run configuration, because APE will only read the required fields.
-Examples of configurations can be found in Example 1 and 2.
+Examples of configurations can be found in Example [1](/ImageMagick/Example1) and [2](/ImageMagick/Example2).
 
 ### Core configuration
 
@@ -56,8 +53,7 @@ Examples of configurations can be found in Example 1 and 2.
 |`ontology_path`           |path to the taxonomy file  (provided demo example taxonomy.owl)                                                        |
 |`ontologyPrexifIRI`       |absolute IRI to identify thhe elements in the taxonomy file                                                            |
 |`toolsTaxonomyRoot`       |name of the root tool class                                                                                            |
-|`dataTaxonomyRoot`        |name of the root data taxonomy class                                                                                   |
-|`dataSubTaxonomyRoot[]`   |list of sub roots within the data taxonomy, each sub root represents data dimension (e.g. data format, data type, etc.)|
+|`dataDimensionsTaxonomyRoots[]`   |list of roots within the data taxonomy, each sub root represents data dimension (e.g. data format, data type, etc.)|
 |`tool_annotations_path`   |path to the JSON file that contains basic tool annotation (provided demo example tool_annotations.json)                |
 |`solutions_path`          |path to the file where the workflow solutions will be written                                                          |
 |`execution_scripts_folder`|folder where the executable scripts will be generated                                                                  |
@@ -87,12 +83,12 @@ Examples of configurations can be found in Example 1 and 2.
 
 ##  Taxonomy file
 
-##### Demo file: 'SimpleDemo/GMT_Demo_UseCase.owl'
+##### Demo file: 'ImageMagic/imagemagick_taxonomy.owl'
 
 Used to classify tools and data types into 2 different categories. General structure is that the main class "thing" has 2 subclasses, **Tools** and **Data** taxonomies. Furthermore, Data taxonomy consists of multiple subtaxpnpmies, where each represents a **dimension** of data, in the following example we discuss 2 different dimensions of data, namely, data *type* and data *format*.
 - **thing** (root class in the OWL file)
   - **Tools Taxonomy** (name provided as modulesTaxonomyRoot in config file)
-  - **Data Taxonomy** (name provided as dataTaxonomyRoot in config file)
+  - **Data Taxonomy** (usage of this class is optional)
      -  **Type Taxonomy** (name provided under dataSubTaxonomyRoot in config file)
      - **Format Taxonomy** (name provided under dataSubTaxonomyRoot in config file) [optional]
 
@@ -113,7 +109,7 @@ Encoding supports explicit subclass relations in RDF format. The rest of the OWL
 
 ## Tool Annotations file
 
-##### Demo file: 'SimpleDemo/tool_annotations.json'
+##### Demo file: 'ImageMagic/tool_annotations.json'
 The file has the following structure:
 
     functions
