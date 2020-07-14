@@ -55,24 +55,24 @@ Examples of configurations can be found in Example [1](/ImageMagick/Example1) an
 |`toolsTaxonomyRoot`       |name of the root tool class                                                                                            |
 |`dataDimensionsTaxonomyRoots[]`   |list of roots within the data taxonomy, each sub root represents data dimension (e.g. data format, data type, etc.)|
 |`tool_annotations_path`   |path to the JSON file that contains basic tool annotation (provided demo example tool_annotations.json)                |
-|`solutions_path`          |path to the file where the workflow solutions will be written                                                          |
-|`execution_scripts_folder`|folder where the executable scripts will be generated                                                                  |
-|`solution_graphs_folder`  |folder where the graphical representation of the workflows will be generated                                           |
 
 
 ### Run configuration
 
 |Tag                     |Description                                                                                                            |Default|
 |------------------------|-----------------------------------------------------------------------------------------------------------------------|-------|
-|`constraints_path`        |path to the JSON file containing constraints representing workflow specification (optional)                            |       |
+|`constraints_path`        |path to the JSON file containing constraints representing workflow specification		                          | No constraints |
 |`solution_min_length`     |minimum length from which solutions should be searched                                                                 |       |
 |`solution_max_length`     |maximum length to which solutions should be searched, put 0 in case of no limit                                        |       |
 |`max_solutions`           |max number of solutions that would be returned                                                                         |       |
+|`solutions_path`          |path to the file where the workflow solutions will be written  (in textual format)                                     |No textual output	|
+|`execution_scripts_folder`|folder where the executable scripts will be generated                                                                  |No shell scripts |
+|`solution_graphs_folder`  |folder where the graphical representation of the workflows will be generated                                           |No graphics |
 |`number_of_execution_scripts` |number of executable scripts that will be generated                                                                    |0      |
 |`number_of_generated_graphs` |number of workflow figures that will be generated                                                                      |0      |
-|`inputs[]`               |each input represent a single instance that will be an input to the program                                            |       |
+|`inputs[]`               |each input represent a single instance that will be an input to the program                                            | No inputs |
 |`inputs[]/{}`             |each of the inputs can be described using the terms from data taxonomy, the tags used (in our example "TypesTaxonomy" reflects the corresponding taxonomy sub root|       |
-|`outputs[]`              |each output represent a single instance that will be an output of the program                                          |       |
+|`outputs[]`              |each output represent a single instance that will be an output of the program                                          |No outputs |
 |`outputs[]/{}`            |each of the inputs can be described using the terms from data taxonomy, the tags used (in our example "TypesTaxonomy" reflects the corresponding taxonomy sub root|       |
 |`shared_memory`           |true in a case of shared, memory structure, false if the message passing structure should be used                      |TRUE   |
 |`debug_mode`              |true for debug command line output                                                                                     |FALSE  |
