@@ -63,5 +63,5 @@ node003 = $node001 + $node002
 
 ### Examples
 The run of the synthesis is explained on the following two examples:
-- [Example 1: Creating a postcard](/Example1)
-- [Example 2: Repacing a color](/Example2)
+- [Example 1: Creating a postcard](Example1)
+- [Example 2: Repacing a color](Example2)
