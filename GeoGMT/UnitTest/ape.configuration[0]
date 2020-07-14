@@ -13,18 +13,15 @@
   "execution_scripts_folder": "./GeoGMT/E0/Implementations/",
   "number_of_execution_scripts": "0",
   "solution_graphs_folder": "./GeoGMT/E0/Figures",
-  "number_of_generated_graphs": "0",
+  "number_of_generated_graphs": "5",
   "tool_seq_repeat": "true",
   "inputs": [
     {
       "TypesTaxonomy": ["XYZ_table_file"]
-    },
-{
-      "TypesTaxonomy": ["XYZ_table_file"]
     }
   ],
   "outputs": [
- {
+    {
       "TypesTaxonomy": ["PostScript"]
     }
   ],

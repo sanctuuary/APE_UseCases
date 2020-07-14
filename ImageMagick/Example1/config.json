@@ -2,25 +2,25 @@
   "ontology_path": "./ImageMagick/imagemagick_taxonomy.owl",
   "ontologyPrexifIRI": "http://www.co-ode.org/ontologies/ont.owl#",
   "toolsTaxonomyRoot": "Tool",
-  "dataTaxonomyRoot": "Data",
-  "dataSubTaxonomyRoot": [ "Type", "Format"],
+  "dataDimensionsTaxonomyRoots": [ "Type", "Format"],
   "tool_annotations_path": "./ImageMagick/tool_annotations.json",
   "constraints_path": "./ImageMagick/Example1/constraints.json",
   "shared_memory": "true",
   "solutions_path": "./ImageMagick/Example1/sat_solutions.txt",
   "solution_min_length": "1",
-  "solution_max_length": "6",
-  "max_solutions": "1",
+  "solution_max_length": "8",
+  "max_solutions": "1000",
   "execution_scripts_folder": "./ImageMagick/Example1/Implementations/",
   "number_of_execution_scripts": "1",
   "solution_graphs_folder": "./ImageMagick/Example1/Workflows/",
   "number_of_generated_graphs": "1",
+  "tool_seq_repeat": "true",
   "inputs": [
     { "Type": ["Image"], "Format": ["PNG"] },
     { "Type": ["Content"] }
   ],
   "outputs": [
-    { "Type": ["Image"], "Format": ["LosslessImageFormat"]  }
+    { "Type": ["Image"], "Format": ["Lossless"]  }
   ],
   "debug_mode": "true",
   "use_workflow_input": "all",

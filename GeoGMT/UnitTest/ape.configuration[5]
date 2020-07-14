@@ -1,0 +1,18 @@
+{
+  "inputs": [
+    {
+      "TypesTaxonomy": ["XYZ_table_file"]
+    },
+    {
+      "TypesTaxonomy": ["XYZ_table_file"]
+    }
+  ],
+  "outputs": [
+    {
+      "TypesTaxonomy": ["PostScript"]
+    },
+    {
+      "TypesTaxonomy": ["PostScript"]
+    }
+  ]
+}
