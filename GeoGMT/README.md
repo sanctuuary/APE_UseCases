@@ -9,7 +9,11 @@ The use case aims to demonstrate the usefulness of the synthesis approach for so
 - [**E1**](E1) use case extends the initial workflow sinthesys step with additional constraints enforcing better map annotations.
 
 ## Installation
-In order to run the synthesis APE-&lt;version>.jar needs to be available: https://github.com/sanctuuary/APE. Furthermore, in order to be able to execute the generated workflows on the machine, GMT (https://www.generic-mapping-tools.org/download/) set of tools and the Ghostscript command line tool (https://www.ghostscript.com/doc/current/Install.htm) need to be installed.
+In order to run the synthesis APE-&lt;version>.jar needs to be available: https://github.com/sanctuuary/APE. 
+
+#### Optional
+In order to be able to execute the generated workflows on the machine, GMT set of tools needs to be installed: http://gmt.soest.hawaii.edu/projects/gmt/wiki/Installing
+This step is not required for the workflow synthesis, considering that the synthesis of conadidate workflows and their execution are 2 separate steps.
 
 ## Run
 
@@ -23,6 +27,9 @@ The results of the synthesis would be:
 	GeoGMT/E[number]/sat_solutions.txt	-	First 100 candidate solutions in textual format
 	GeoGMT/E[number]/Figures/		-	Data-flow figures corresponding to the first 10 solutions
 	GeoGMT/E[number]/Implementations/	-	Executable shell scripts corresponding to the first 6 solutions
+
+
+## References
 
 <a id="1">[1]</a> 
 Kasalica, V., & Lamprecht, A.-L. (2019). 
