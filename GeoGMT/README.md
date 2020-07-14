@@ -1,6 +1,6 @@
 
 
-# A Geovisualization Case Study using [GMT](https://www.generic-mapping-tools.org/ "GMT")
+# A Geovisualization Case Study (using [GMT](https://www.generic-mapping-tools.org/ "GMT") tools)
 
 This is a project used to demonstrate the sysnthesis functionality provided by APE (the Automated Pipeline Explorer). 
 
