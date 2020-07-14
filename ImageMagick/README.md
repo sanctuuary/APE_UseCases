@@ -1,13 +1,21 @@
-# Automated Pipeline Explorer Tutorial (using [ImageMagic](https://imagemagick.org/index.php) tools)
+# APE Tutorial (using [ImageMagic](https://imagemagick.org/index.php) tools)
 
-This is a project used to demonstrate the sysnthesis functionality provided by APE (the Automated Pipeline Explorer) in an easy and understandable way.
+This is a project used to demonstrate the sysnthesis functionality provided by APE (the Automated Pipeline Explorer).
 
-The use case aims to demonstrate the usefulness of the synthesis approach for solving a workflow discovery problem with ImageMagick, an open-source software suite for displaying, creating, converting and modifying images.
+The use case aims to describe the domain knowledge that has to be provided, comprising [Domain ontology](#domain-ontology) and [Tool annotations](#tool-annotation). In addition it will demonstrate the usefulness of the synthesis approach for solving a workflow discovery problem with [ImageMagic](https://imagemagick.org/index.php), an open-source software suite for displaying, creating, converting and modifying images.
 
-For more info on installation see [APE](https://github.com/sanctuuary/APE).
+For more info on installation see [APE](https://github.com/sanctuuary/APE).dana
 
 ## Domain Ontology
-Domain ontology consists of taxonomic classificationsof the data types and operations in the application domain, and provides a con-trolled  vocabulary  that  allows  for  different  abstraction  levels  of  its  elements. APE loads the [domain ontology](imagemagick_taxonomy.owl) from a file in Web Ontology Language (OWL) format. Note that the the annotated tools are included in the image below (see Tool Annotations below) as blue leafs, although they are not part in the OWL file.
+Domain ontology consists of taxonomic classifications of the data and operations in the application domain, and provides a controlled  vocabulary  that  allows  for  different  abstraction  levels  of  its  elements. The current use case [ontology](imagemagick_taxonomy.owl) contains the following structure:
+- **thing** (root class in the OWL file)
+  - **Tool** (name provided as modulesTaxonomyRoot in config file)
+  - **Data** (usage of this class is optional)
+     -  **Type** (name provided under **dataDimensionsTaxonomyRoots** in config file)
+     - **Format** (name provided under **dataDimensionsTaxonomyRoots** in config file)
+where the **Tool** represents the root of the operations taxonomy, and the **Type** and **Format**, represent roots of taxonomies that classify types and formats of data, respectively. The class **Data** can be ommited, considering that it is ignored by APE library, however it was part of the doman classification and we decided to keep it. 
+
+APE loads the [domain ontology](imagemagick_taxonomy.owl) from a file in Web Ontology Language (OWL) format. Note that the the annotated tools (provided in the [tool annotations](#tool-annotation)) are included in the image below as blue leafs, although they are not part in the OWL file.
 
 ![](images/ImageMagick_Taxonomy.png)
 
@@ -54,5 +62,6 @@ node003 = $node001 + $node002
 ```
 
 ### Examples
+The run of the synthesis is explained on the following two examples:
 - [Example 1: Creating a postcard](/Example1)
 - [Example 2: Repacing a color](/Example2)
