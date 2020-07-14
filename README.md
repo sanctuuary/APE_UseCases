@@ -5,15 +5,18 @@ The project cointains different scenarios where APE (the Automated Pipeline Expl
 
 In order to use the APE library from the command line, simple run the APE-<version>.jar file using command:
 
-    java -jar APE-<version>.jar
-
-while ape.config file needs to be provided in the same folder or 
 
     java -jar APE-<version>.jar [path_to_ape.config_file]
+    
 
-#### Note: 
-If you want to be able to run the executable shell scipts of the demo examples, GMT set of tools needs to be installed .
-http://gmt.soest.hawaii.edu/projects/gmt/wiki/Installing
+for example, if you would clone this repository on your local machine, you could run a [demo use case](ImageMagic) by executing the following command:
+
+
+
+    cd ~/git/APE_UseCases
+    
+    java -jar APE-1.0.1-executable.jar ImageMagic/Example1/config.json
+
 
 ------------
 
