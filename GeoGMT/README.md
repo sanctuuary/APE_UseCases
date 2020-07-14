@@ -16,7 +16,7 @@ In order to run the synthesis APE-&lt;version>.jar needs to be available: https:
 In order to execute the synthesis it would be sufficient to provide the APE-&lt;version>.jar in the main .APE_UseCases directory and run the following command:
 
 ```shell
- java -jar APE-<version>.jar GeoGMT/E[number]/ape.configuration
+ java -jar APE-<version>.jar GeoGMT/E[0|1]/ape.configuration
 ```
 The results of the synthesis would be:
 
