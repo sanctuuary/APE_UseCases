@@ -83,23 +83,22 @@ Examples of configurations can be found in Example [1](/ImageMagick/Example1) an
 
 ##  Taxonomy file
 
-##### Demo file: 'ImageMagic/imagemagick_taxonomy.owl'
+##### Demo file: [ImageMagic/imagemagick_taxonomy.owl](https://github.com/sanctuuary/APE_UseCases/blob/master/ImageMagick/imagemagick_taxonomy.owl)
 
 Used to classify tools and data types into 2 different categories. General structure is that the main class "thing" has 2 subclasses, **Tools** and **Data** taxonomies. Furthermore, Data taxonomy consists of multiple subtaxpnpmies, where each represents a **dimension** of data, in the following example we discuss 2 different dimensions of data, namely, data *type* and data *format*.
 - **thing** (root class in the OWL file)
-  - **Tools Taxonomy** (name provided as modulesTaxonomyRoot in config file)
-  - **Data Taxonomy** (usage of this class is optional)
-     -  **Type Taxonomy** (name provided under dataSubTaxonomyRoot in config file)
-     - **Format Taxonomy** (name provided under dataSubTaxonomyRoot in config file) [optional]
+  - **Tools Taxonomy** (URI provided as modulesTaxonomyRoot in config file)
+  - **Type Taxonomy** (URI provided under **dataDimensionsTaxonomyRoots** in config file)
+  - **Format Taxonomy** (URI provided under **dataDimensionsTaxonomyRoots** in config file)
+**Tools Taxonomy** consists of terms that describes operations from the domain, these are called abstraction operations and they usually gropu concrete operations.
+**Type Taxonomy** consists of actual data types from the domain, as well as the abstraction classes that subsume them.
+**Format Taxonomy** consists of actual data Format from the domain, as well as the abstraction classes that subsume them.
 
-Tools Taxonomy consists of actual tools from the domain, as well as their abstraction classes.
-Type Taxonomy consists of actual data types from the domain, as well as their abstraction classes.
-Format Taxonomy consists of actual data Format from the domain, as well as their abstraction classes.
+Idea behind using a Format Taxonomy, is that a certain data instance require both, *data type* and *data format* to be identified. Thus, these are called dimensions of data. Having more than one data dimension is optional. Some use cases only one data dimension (see [GeoGMT](GeoGMT)), while some can have more than two.
 
-Idea behind using a Format Taxonomy, is that a certain data instance can be defined using a pair, Data Type and Data Format. Thus, Format Taxonomy is optional. The usage can be generalised and the structure allows arbitrary number of such data dimensions to be described.
+A concrete example of a domain taxonomy can be find [here](https://github.com/sanctuuary/APE_UseCases/tree/master/ImageMagick#domain-ontology).
 
-
-Note:
+#### Note: 
 Encoding supports explicit subclass relations in RDF format. The rest of the OWL file annotations will be omitted.
 
 
@@ -109,7 +108,7 @@ Encoding supports explicit subclass relations in RDF format. The rest of the OWL
 
 ## Tool Annotations file
 
-##### Demo file: 'ImageMagic/tool_annotations.json'
+##### Demo file: [ImageMagic/tool_annotations.json](https://github.com/sanctuuary/APE_UseCases/blob/master/ImageMagick/tool_annotations.json)
 The file has the following structure:
 
     functions
@@ -133,13 +132,13 @@ Regarding the semantics:
     function		-	an implementation/instance of a tool
     ID			-	unique identifier of the tool
     label			-	display label of the tool implementation
-    taxonomyOperations - operations from the tool taxonomy that the current function implements
+    taxonomyOperations 	- 	operations from the tool taxonomy (#taxonomy-file) that the current function implements
     input			-	a single input of the workflow
     output			-	a single output of the workflow
-    dataSubTaxonomyRoot	-	data type that describes the input/output (each taxonomyTerm from the [taxonomyTerm] list has to belong to the corresponding 	subTaxonomy)
+    dataSubTaxonomyRoot	-	data type that describes the input/output (each taxonomyTerm from the [taxonomyTerm] list has to belong to the corresponding subTaxonomy)
     code		-	code that will be used to implement the workflow as a script
 
-Simplified table representation of our tool annotations is provided in 'res/tool_annotations.png'
+A concrete example of tool annotations can be find [here](https://github.com/sanctuuary/APE_UseCases/tree/master/ImageMagick#tool-annotation).
 
 ------------
 
@@ -147,7 +146,7 @@ Simplified table representation of our tool annotations is provided in 'res/tool
 
 ## Constraints File
 
-##### Demo file: 'SimpleDemo/constraints.json'
+##### Demo file: [ImageMagic/Example1/constraints.json](https://github.com/sanctuuary/APE_UseCases/blob/master/ImageMagick/Example1/constraints.json)
 
 The list of all the natural language templates is provided in 'SimpleDemo/constraints templates.json'. As an example we will present one of the constraint templates, namely "if then generate type" is represented as follows:
 
