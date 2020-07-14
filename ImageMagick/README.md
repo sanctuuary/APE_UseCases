@@ -7,7 +7,7 @@ The use case aims to describe the domain knowledge that has to be provided, comp
 For more info on installation see [APE](https://github.com/sanctuuary/APE).dana
 
 ## Domain Ontology
-Domain ontology consists of taxonomic classifications of the data and operations in the application domain, and provides a controlled  vocabulary  that  allows  for  different  abstraction  levels  of  its  elements. The current use case [ontology](imagemagick_taxonomy.owl) contains the following structure:
+Domain ontology consists of taxonomic classifications of the data and operations in the application domain, and provides a controlled  vocabulary  that  allows  for  different  abstraction  levels  of  its  elements. The current use case ontology (see [ontology file](imagemagick_taxonomy.owl)) contains the following structure:
 - **thing** (root class in the OWL file)
   - **Tool** (name provided as modulesTaxonomyRoot in config file)
   - **Data** (usage of this class is optional)
@@ -20,7 +20,7 @@ APE loads the [domain ontology](imagemagick_taxonomy.owl) from a file in Web Ont
 ![](images/ImageMagick_Taxonomy.png)
 
 ## Tool Annotation
-Tool annotation is a collection of tools that have been semantically annotated, according to their inputs and outputs, based on the terms from the ontology. Here is an example for the annotated tool `compress`, which takes as input an `Image` (Type) of any `Format` and outputs an Image in the JPG format.
+Tool annotation is a collection of tools that have been semantically annotated (see [tool annotation file](tool_annotations.json)), according to their inputs and outputs, based on the terms from the ontology. The following example annotated the tool `compress`, which takes as input an `Image` (Type) of any `Format` and outputs an Image in the JPG format.
 
 ```json
 {
