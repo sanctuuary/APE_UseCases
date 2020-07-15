@@ -1,9 +1,5 @@
-### SimpleDemo ###
-SimpleDemo/sat_solutions.txt
-SimpleDemo/Figures/*
-SimpleDemo/Implementations/*
-!SimpleDemo/Implementations/move.txt
-!SimpleDemo/Implementations/run.sh
+### ImageMagic ###
+
 
 ### MassSpectometry ###
 
@@ -24,6 +20,9 @@ GeoGMT/E1/Figures/*
 GeoGMT/E1/Implementations/workflowSolution*
 !GeoGMT/E1/Implementations/move.txt
 !GeoGMT/E1/Implementations/run.sh
+
+###Local files###
+clean_figures.sh
 
 ### Linux ###
 *~
