@@ -1,5 +1,13 @@
 ### ImageMagic ###
+ImageMagick/Example1/sat_solutions.txt
+ImageMagick/Example1/Workflows/*
+ImageMagick/Example1/Implementations/*
+!ImageMagick/Example1/Implementations/input.jpg
 
+ImageMagick/Example2/sat_solutions.txt
+ImageMagick/Example2/Workflows/*
+ImageMagick/Example2/Implementations/*
+!ImageMagick/Example2/Implementations/input.jpg
 
 ### MassSpectometry ###
 
