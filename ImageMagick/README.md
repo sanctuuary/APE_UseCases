@@ -4,7 +4,11 @@ This is a project used to demonstrate the sysnthesis functionality provided by A
 
 The use case aims to describe the domain knowledge that has to be provided, comprising [Domain ontology](#domain-ontology) and [Tool annotations](#tool-annotation). In addition it will demonstrate the usefulness of the synthesis approach for solving a workflow discovery problem with [ImageMagic](https://imagemagick.org/index.php), an open-source software suite for displaying, creating, converting and modifying images.
 
-For more info on installation see [APE](https://github.com/sanctuuary/APE).dana
+For more info on installation see [APE](https://github.com/sanctuuary/APE).
+
+#### Note: 
+If you want to be able to run the executable shell scipts of the demo examples, [ImageMagic](https://imagemagick.org/index.php) tools needs to be installed .
+
 
 ## Domain Ontology
 Domain ontology consists of taxonomic classifications of the data and operations in the application domain, and provides a controlled  vocabulary  that  allows  for  different  abstraction  levels  of  its  elements. The current use case ontology (see [ontology file](imagemagick_taxonomy.owl)) contains the following structure:
@@ -63,5 +67,5 @@ node003 = $node001 + $node002
 
 ### Examples
 The run of the synthesis is explained on the following two examples:
-- [Example 1: Creating a postcard](/Example1)
-- [Example 2: Repacing a color](/Example2)
+- [Example 1: Creating a postcard](Example1)
+- [Example 2: Repacing a color](Example2)
