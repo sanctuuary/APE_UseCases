@@ -10,7 +10,7 @@ In order to use the APE library from the command line, simply run the `APE-<vers
     java -jar APE-<version>-executable.jar [path_to_ape.config_file]
     
 
-for example, if you would download the [APE-1.0.1-executable.jar](https://repo.maven.apache.org/maven2/io/github/sanctuuary/APE/1.0.1/APE-1.0.1-executable.jar) to the root of this repository on your local machine, you could run a [demo use case](ImageMagic) by executing the following command:
+for example, if you would download the [APE-1.0.1-executable.jar](https://repo.maven.apache.org/maven2/io/github/sanctuuary/APE/1.0.1/APE-1.0.1-executable.jar) to the root of this repository on your local machine, you could run a [demo use case](https://github.com/sanctuuary/APE_UseCases/tree/master/ImageMagick) by executing the following command:
 
 
 
