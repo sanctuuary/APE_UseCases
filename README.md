@@ -3,13 +3,14 @@
 
 The project cointains different scenarios where APE (the Automated Pipeline Explorer) can be used to automate the workflow composition. Most of the UseCases are modeling and trying to solve real-life problems in diferent domains (e.g. bioinformatisc, GIS).
 
-In order to use the APE library from the command line, simple run the APE-<version>.jar file using command:
+### Run APE from the command line
+In order to use the APE library from the command line, simply run the `APE-<version>-executable.jar` file using command:
 
 
-    java -jar APE-<version>.jar [path_to_ape.config_file]
+    java -jar APE-<version>-executable.jar [path_to_ape.config_file]
     
 
-for example, if you would clone this repository on your local machine, you could run a [demo use case](ImageMagic) by executing the following command:
+for example, if you would download the [APE-1.0.1-executable.jar](https://repo.maven.apache.org/maven2/io/github/sanctuuary/APE/1.0.1/APE-1.0.1-executable.jar) to the root of this repository on your local machine, you could run a [demo use case](ImageMagic) by executing the following command:
 
 
 
@@ -21,9 +22,20 @@ for example, if you would clone this repository on your local machine, you could
 ------------
 
 
-### APE API
+### Run APE API
 
-The library support API usage as well, and the corresponding documentation is provided in "APE-\<version>-sources.jar" and in [javadoc repository](https://javadoc.io/doc/io.github.sanctuuary/APE/latest/nl/uu/cs/ape/sat/APE.html).
+The library support API usage as well, and the corresponding documentation is provided in "APE-\<version>-sources.jar" and in [javadoc repository](https://javadoc.io/doc/io.github.sanctuuary/APE/latest/nl/uu/cs/ape/sat/APE.html). A simple example of runing APE from, after [importing it to your project](https://github.com/sanctuuary/APE#how-to-add-ape-to-your-maven-project) is:
+```java
+// set up the framework
+APE ape = new APE("~/git/APE_UseCases/mageMagic/Example1/config.json");
+
+// run the synthesis
+SATsolutionsList solutions = ape.runSynthesis("~/git/APE_UseCases/mageMagic/Example1/config.json");
+// write the solutions for the file system
+APE.writeSolutionToFile(solutions);
+APE.writeDataFlowGraphs(solutions, RankDir.TOP_TO_BOTTOM);
+APE.writeExecutableWorkflows(solutions);
+```
 
 
 ------------
