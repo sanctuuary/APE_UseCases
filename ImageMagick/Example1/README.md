@@ -40,7 +40,7 @@ An example of the generated workflow:
 <img src="Workflows/ExampleWorkflow.png" width="500">
 
 ## Generated script
-An example of the generated shell scripts that corresponds to the workflow:
+An example of the generated shell scripts that corresponds to the workflow (where node[number] are auto generated variables):
 ```bash
 #!/bin/bash
 if [ $# -ne 2 ]
