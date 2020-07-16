@@ -16,7 +16,7 @@ for example, if you would download the [APE-1.0.1-executable.jar](https://repo.m
 
     cd ~/git/APE_UseCases
     
-    java -jar APE-1.0.1-executable.jar ImageMagic/Example1/config.json
+    java -jar APE-1.0.1-executable.jar ImageMagick/Example1/config.json
 
 
 ------------
@@ -98,7 +98,7 @@ Examples of configurations can be found in Example [1](/ImageMagick/Example1) an
 
 ##  Taxonomy file
 
-##### Demo file: [ImageMagic/imagemagick_taxonomy.owl](https://github.com/sanctuuary/APE_UseCases/blob/master/ImageMagick/imagemagick_taxonomy.owl)
+##### Demo file: [ImageMagick/imagemagick_taxonomy.owl](https://github.com/sanctuuary/APE_UseCases/blob/master/ImageMagick/imagemagick_taxonomy.owl)
 
 Used to classify tools and data types into 2 different categories. General structure is that the main class "thing" has 2 subclasses, **Tools** and **Data** taxonomies. Furthermore, Data taxonomy consists of multiple subtaxpnpmies, where each represents a **dimension** of data, in the following example we discuss 2 different dimensions of data, namely, data *type* and data *format*.
 - **thing** (root class in the OWL file)
@@ -123,7 +123,7 @@ Encoding supports explicit subclass relations in RDF format. The rest of the OWL
 
 ## Tool Annotations file
 
-##### Demo file: [ImageMagic/tool_annotations.json](https://github.com/sanctuuary/APE_UseCases/blob/master/ImageMagick/tool_annotations.json)
+##### Demo file: [ImageMagick/tool_annotations.json](https://github.com/sanctuuary/APE_UseCases/blob/master/ImageMagick/tool_annotations.json)
 The file has the following structure:
 
     functions
@@ -161,7 +161,7 @@ A concrete example of tool annotations can be find [here](https://github.com/san
 
 ## Constraints File
 
-##### Demo file: [ImageMagic/Example1/constraints.json](https://github.com/sanctuuary/APE_UseCases/blob/master/ImageMagick/Example1/constraints.json)
+##### Demo file: [ImageMagick/Example1/constraints.json](https://github.com/sanctuuary/APE_UseCases/blob/master/ImageMagick/Example1/constraints.json)
 
 The list of all the natural language templates is provided in 'SimpleDemo/constraints templates.json'. As an example we will present one of the constraint templates, namely "if then generate type" is represented as follows:
 
