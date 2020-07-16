@@ -24,7 +24,7 @@ for example, if you would download the [APE-1.0.1-executable.jar](https://repo.m
 
 ### Run APE API
 
-The library support API usage as well, and the corresponding documentation is provided in "APE-\<version>-sources.jar" and in [javadoc repository](https://javadoc.io/doc/io.github.sanctuuary/APE/latest/nl/uu/cs/ape/sat/APE.html). A simple example of runing APE from, after [importing it to your project](https://github.com/sanctuuary/APE#how-to-add-ape-to-your-maven-project) is:
+The library support API usage as well, and the corresponding documentation is provided by [downloading](https://repo.maven.apache.org/maven2/io/github/sanctuuary/APE/1.0.1/APE-1.0.1-javadoc.jar) `APE-\<version>-sources.jar` or visitin [APE javadoc.io](https://javadoc.io/doc/io.github.sanctuuary/APE/latest/nl/uu/cs/ape/sat/APE.html) page. A simple example of runing APE from, after [importing it to your project](https://github.com/sanctuuary/APE#how-to-add-ape-to-your-maven-project) is:
 ```java
 // set up the framework
 APE ape = new APE("~/git/APE_UseCases/mageMagic/Example1/config.json");
