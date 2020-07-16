@@ -2,12 +2,12 @@
 
 This is a project used to demonstrate the sysnthesis functionality provided by APE (the Automated Pipeline Explorer).
 
-The use case aims to describe the domain knowledge that has to be provided, comprising [Domain ontology](#domain-ontology) and [Tool annotations](#tool-annotation). In addition it will demonstrate the usefulness of the synthesis approach for solving a workflow discovery problem with [ImageMagic](https://imagemagick.org/index.php), an open-source software suite for displaying, creating, converting and modifying images.
+The use case aims to describe the domain knowledge that has to be provided, comprising [Domain ontology](#domain-ontology) and [Tool annotations](#tool-annotation). In addition it will demonstrate the usefulness of the synthesis approach for solving a workflow discovery problem with [ImageMagick](https://imagemagick.org/index.php), an open-source software suite for displaying, creating, converting and modifying images.
 
 For more info on installation see [APE](https://github.com/sanctuuary/APE).
 
 #### Note: 
-If you want to be able to run the executable shell scipts of the demo examples, [ImageMagic](https://imagemagick.org/index.php) tools needs to be installed .
+If you want to be able to run the executable shell scipts of the demo examples, [ImageMagick](https://imagemagick.org/index.php) tools needs to be installed .
 
 ## Run APE from the command line
 In order to use the APE library from the command line, simply run the `APE-<version>-executable.jar` file using command:
@@ -21,13 +21,13 @@ As an example, if you would download the [APE-1.0.1-executable.jar](https://repo
 
     cd ~/git/APE_UseCases
     
-    java -jar APE-1.0.1-executable.jar ImageMagic/Example1/config.json
+    java -jar APE-1.0.1-executable.jar ImageMagick/Example1/config.json
 
 The results of the synthesis would be:
 
-	ImageMagic/Example1/sat_solutions.txt	-	First 100 candidate solutions in textual format
-	ImageMagic/Example1/Workflows/		-	Data-flow figures corresponding to the first solution (config.json specifies that only 1 solution should be found)
-	ImageMagic/Example1/Implementations/	-	Executable shell scripts corresponding to the first solution
+	ImageMagick/Example1/sat_solutions.txt	-	First 100 candidate solutions in textual format
+	ImageMagick/Example1/Workflows/		-	Data-flow figures corresponding to the first solution (config.json specifies that only 1 solution should be found)
+	ImageMagick/Example1/Implementations/	-	Executable shell scripts corresponding to the first solution
 
 
 ## Domain Ontology
