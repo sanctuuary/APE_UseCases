@@ -78,7 +78,7 @@ In order to be able to run the executable shell scipts of the demo examples, [Im
 
 An example of a workflow execution:
 ```bash
-> bash workflowSolution_0.sh input.png "Greetings from the\nNetherlands!"
+> bash workflowSolution_0.sh input.png "Greetings from the\nNetherlands\!"
 
 Enter Color [default:Cyan]: Orange
 Enter FontFamily name [default:Helvetica]:
