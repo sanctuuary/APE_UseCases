@@ -10,7 +10,7 @@ In order to use the APE library from the command line, simply run the `APE-<vers
     java -jar APE-<version>-executable.jar [path_to_ape.config_file]
     
 
-for example, if you would download the [APE-1.0.1-executable.jar](https://repo.maven.apache.org/maven2/io/github/sanctuuary/APE/1.0.1/APE-1.0.1-executable.jar) to the root of this repository on your local machine, you could run a [demo use case](https://github.com/sanctuuary/APE_UseCases/tree/master/ImageMagick) by executing the following command:
+As an example, if you would download the [`APE-1.0.1-executable.jar`](https://repo.maven.apache.org/maven2/io/github/sanctuuary/APE/1.0.1/APE-1.0.1-executable.jar) to the root of this repository on your local machine, you could run a [demo use case](https://github.com/sanctuuary/APE_UseCases/tree/master/ImageMagick) by executing the following command:
 
 
 
@@ -24,7 +24,7 @@ for example, if you would download the [APE-1.0.1-executable.jar](https://repo.m
 
 ### Run APE API
 
-The library support API usage as well, and the corresponding documentation is provided by [downloading](https://repo.maven.apache.org/maven2/io/github/sanctuuary/APE/1.0.1/APE-1.0.1-javadoc.jar) `APE-\<version>-sources.jar` or visitin [APE javadoc.io](https://javadoc.io/doc/io.github.sanctuuary/APE/latest/nl/uu/cs/ape/sat/APE.html) page. A simple example of runing APE from, after [importing it to your project](https://github.com/sanctuuary/APE#how-to-add-ape-to-your-maven-project) is:
+The library support API usage as well, and the corresponding documentation is provided at [APE javadoc.io](https://javadoc.io/doc/io.github.sanctuuary/APE/latest/nl/uu/cs/ape/sat/APE.html) page or by downloading the corresponding [`APE-\<version>-sources.jar`](https://repo.maven.apache.org/maven2/io/github/sanctuuary/APE/1.0.1/APE-1.0.1-javadoc.jar). A simple example of runing APE, after [importing it to your project](https://github.com/sanctuuary/APE#how-to-add-ape-to-your-maven-project) is:
 ```java
 // set up the framework
 APE ape = new APE("~/git/APE_UseCases/mageMagic/Example1/config.json");
