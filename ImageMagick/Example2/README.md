@@ -21,6 +21,9 @@ After generating multiple workflows we notice that our provided `Colors` are all
 
 ## Constraints
 
+1) A filter data type needs to be used
+2) Do not use an operation that draws borders
+3) Cut operation needs to be followed by an operation that does image overlapping
 ```json
 {
 	"constraints": [
@@ -48,9 +51,11 @@ After generating multiple workflows we notice that our provided `Colors` are all
 ```
 
 ## Generated Workflow
+An example of a generated workflow:
 <img src="Workflows/SolutionNo_1_length_4.png" width="400"/>
 
 ## Generated script
+An example of a generated shell scripts that corresponds to the workflow:
 ```bash
 #!/bin/bash
 if [ $# -ne 3 ]
@@ -79,6 +84,9 @@ echo "1. output is: $node579871414"
 
 ## Executing the script
 
+In order to be able to run the executable shell scipts of the demo examples, [ImageMagic](https://imagemagick.org/index.php) tools needs to be installed.
+
+An example of a workflow execution:
 ```bash
 > bash workflowSolution_1.sh input.jpg "Blue" "Red"
 
