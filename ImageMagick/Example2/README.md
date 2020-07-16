@@ -96,8 +96,12 @@ An example of a workflow execution:
 #### INPUT (input.jpg):
 <img src="Implementations/input.jpg" width="200"/>
 
+
+#### INPUT (node579871414.png)
+An image where the Red color was swapped with Blue.
+<!---
 #### `color_filter` (node19521642.png)
-<img src="Implementations/node19521642.png" width="200"/>
+[//]: <><img src="Implementations/node19521642.png" width="200"/>
 
 #### `level_colors` (node579869492.png)
 <img src="Implementations/node579869492.png" width="200"/>
@@ -107,3 +111,4 @@ An example of a workflow execution:
 
 #### `overlap` (node579871414.png):
 <img src="Implementations/node579871414.png" width="200"/>
+--->
