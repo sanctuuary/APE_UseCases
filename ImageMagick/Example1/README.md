@@ -74,7 +74,7 @@ echo "1. output is: $node579871414"
 
 ## Executing the script
 
-In order to be able to run the executable shell scipts of the demo examples, [ImageMagic](https://imagemagick.org/index.php) tools needs to be installed.
+In order to be able to run the executable shell scipts of the demo examples, [ImageMagick](https://imagemagick.org/index.php) tools needs to be installed.
 
 An example of a workflow execution:
 ```bash
