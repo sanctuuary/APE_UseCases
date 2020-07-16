@@ -52,10 +52,10 @@ After generating multiple workflows we notice that our provided `Colors` are all
 
 ## Generated Workflow
 An example of a generated workflow:
-<img src="Workflows/SolutionNo_1_length_4.png" width="400"/>
+<img src="Workflows/ExampleWorkflow.png" width="400"/>
 
 ## Generated script
-An example of a generated shell scripts that corresponds to the workflow:
+An example of a generated shell scripts that corresponds to the workflow (where node[number] are auto generated variables):
 ```bash
 #!/bin/bash
 if [ $# -ne 3 ]
