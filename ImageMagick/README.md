@@ -13,7 +13,7 @@ If you want to be able to run the executable shell scipts of the demo examples, 
 In order to use the APE library from the command line, simply run the `APE-<version>-executable.jar` file using command:
 
 
-    java -jar APE-<version>-executable.jar [path_to_ape.config_file]
+    java -jar APE-<version>-executable.jar [path_to_ape_configuration_file]
     
 
 As an example, if you would download the [APE-1.0.1-executable.jar](https://repo.maven.apache.org/maven2/io/github/sanctuuary/APE/1.0.1/APE-1.0.1-executable.jar) to the root of APE_UseCases repository on your local machine, you could run this demo by executing the following command:
