@@ -9,6 +9,26 @@ For more info on installation see [APE](https://github.com/sanctuuary/APE).
 #### Note: 
 If you want to be able to run the executable shell scipts of the demo examples, [ImageMagic](https://imagemagick.org/index.php) tools needs to be installed .
 
+## Run APE from the command line
+In order to use the APE library from the command line, simply run the `APE-<version>-executable.jar` file using command:
+
+
+    java -jar APE-<version>-executable.jar [path_to_ape.config_file]
+    
+
+As an example, if you would download the [APE-1.0.1-executable.jar](https://repo.maven.apache.org/maven2/io/github/sanctuuary/APE/1.0.1/APE-1.0.1-executable.jar) to the root of APE_UseCases repository on your local machine, you could run this demo by executing the following command:
+
+
+    cd ~/git/APE_UseCases
+    
+    java -jar APE-1.0.1-executable.jar ImageMagic/Example1/config.json
+
+The results of the synthesis would be:
+
+	ImageMagic/Example1/sat_solutions.txt	-	First 100 candidate solutions in textual format
+	ImageMagic/Example1/Workflows/		-	Data-flow figures corresponding to the first solution (config.json specifies that only 1 solution should be found)
+	ImageMagic/Example1/Implementations/	-	Executable shell scripts corresponding to the first solution
+
 
 ## Domain Ontology
 Domain ontology consists of taxonomic classifications of the data and operations in the application domain, and provides a controlled  vocabulary  that  allows  for  different  abstraction  levels  of  its  elements. The current use case ontology (see [ontology file](imagemagick_taxonomy.owl)) contains the following structure:
