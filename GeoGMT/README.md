@@ -17,16 +17,24 @@ This step is not required for the workflow synthesis, considering that the synth
 
 ## Run
 
-In order to execute the synthesis it would be sufficient to provide the APE-&lt;version>.jar in the main .APE_UseCases directory and run the following command:
+## Run APE from the command line
+In order to use the APE library from the command line, simply run the `APE-<version>-executable.jar` file using command:
+
+
+    java -jar APE-<version>-executable.jar [path_to_ape_configuration_file]
+    
+
+As an example, if you would download the [APE-1.0.1-executable.jar](https://repo.maven.apache.org/maven2/io/github/sanctuuary/APE/1.0.1/APE-1.0.1-executable.jar) to the root of APE_UseCases repository on your local machine, you could run this demo by executing the following command:
 
 ```shell
- java -jar APE-<version>.jar GeoGMT/E[0|1]/ape.configuration
+ cd ~/git/APE_UseCases
+ java -jar APE-<version>.jar GeoGMT/E0/ape.configuration
 ```
 The results of the synthesis would be:
 
-	GeoGMT/E[number]/sat_solutions.txt	-	First 100 candidate solutions in textual format
-	GeoGMT/E[number]/Figures/		-	Data-flow figures corresponding to the first 10 solutions
-	GeoGMT/E[number]/Implementations/	-	Executable shell scripts corresponding to the first 6 solutions
+	GeoGMT/E0/sat_solutions.txt	-	First 100 candidate solutions in textual format
+	GeoGMT/E0/Figures/		-	Data-flow figures corresponding to the first 10 solutions
+	GeoGMT/E0/Implementations/	-	Executable shell scripts corresponding to the first 6 solutions
 
 
 ## References
