@@ -51,12 +51,12 @@ After generating multiple workflows we notice that our provided `Colors` are all
 ```
 
 ## Generated Workflow
-An example of a generated workflow:
+An example of the generated workflow:
 
 <img src="Workflows/ExampleWorkflow.png" width="400"/>
 
 ## Generated script
-An example of a generated shell scripts that corresponds to the workflow (where node[number] are auto generated variables):
+An example of the generated shell scripts that corresponds to the workflow (where node[number] are auto generated variables):
 
 ```bash
 #!/bin/bash
@@ -88,7 +88,7 @@ echo "1. output is: $node579871414"
 
 In order to be able to run the executable shell scipts of the demo examples, [ImageMagick](https://imagemagick.org/index.php) tools needs to be installed.
 
-An example of a workflow execution:
+An example of the workflow execution:
 ```bash
 > bash workflowSolution_1.sh input.jpg "Blue" "Red"
 
