@@ -174,7 +174,7 @@ The list of all the natural language templates is provided in 'SimpleDemo/constr
 	   ]
 	}
 
-where both `"${parameter_1}" `and `"${parameter_1}"` represent a sequence of one or more data terms. The following encoding represents a use of such constraint in practice (tag `"description"` is not obligatory):
+where both `"${parameter_1}" `and `"${parameter_2}"` represent a sequence of one or more data terms. The following encoding represents a use of such constraint in practice (tag `"description"` is not obligatory):
 
 ```json
 {
