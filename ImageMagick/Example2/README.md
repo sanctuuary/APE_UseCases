@@ -52,10 +52,10 @@ After generating multiple workflows we notice that our provided `Colors` are all
 
 ## Generated Workflow
 An example of a generated workflow:
-<img src="Workflows/SolutionNo_1_length_4.png" width="400"/>
+<img src="Workflows/ExampleWorkflow.png" width="400"/>
 
 ## Generated script
-An example of a generated shell scripts that corresponds to the workflow:
+An example of a generated shell scripts that corresponds to the workflow (where node[number] are auto generated variables):
 ```bash
 #!/bin/bash
 if [ $# -ne 3 ]
@@ -96,8 +96,12 @@ An example of a workflow execution:
 #### INPUT (input.jpg):
 <img src="Implementations/input.jpg" width="200"/>
 
+
+#### INPUT (node579871414.png)
+An image where the Red color was swapped with Blue.
+<!---
 #### `color_filter` (node19521642.png)
-<img src="Implementations/node19521642.png" width="200"/>
+[//]: <><img src="Implementations/node19521642.png" width="200"/>
 
 #### `level_colors` (node579869492.png)
 <img src="Implementations/node579869492.png" width="200"/>
@@ -107,3 +111,4 @@ An example of a workflow execution:
 
 #### `overlap` (node579871414.png):
 <img src="Implementations/node579871414.png" width="200"/>
+--->
