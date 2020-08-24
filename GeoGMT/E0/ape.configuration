@@ -6,7 +6,7 @@
   "tool_annotations_path": "./GeoGMT/tool_annotations.json",
   "constraints_path": "./GeoGMT/E0/constraints_e0.json",
   "shared_memory": "true",
-  "solutions_dir_path": "./GeoGMT/E0/sol",
+  "solutions_dir_path": "./GeoGMT/E0/",
   "solution_min_length": "1",
   "solution_max_length": "10",
   "max_solutions": "1000",

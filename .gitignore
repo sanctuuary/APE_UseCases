@@ -1,36 +1,36 @@
 ### ImageMagic ###
 ImageMagick/Example1/sat_solutions.txt
 ImageMagick/Example1/Workflows/*
-ImageMagick/Example1/Implementations/*
-!ImageMagick/Example1/Implementations/input.jpg
+ImageMagick/Example1/Executables/*
+!ImageMagick/Example1/Executables/input.jpg
 
 ImageMagick/Example2/sat_solutions.txt
 ImageMagick/Example2/Workflows/*
-ImageMagick/Example2/Implementations/*
-!ImageMagick/Example2/Implementations/input.jpg
+ImageMagick/Example2/Executables/*
+!ImageMagick/Example2/Executables/input.jpg
 
 ### MassSpectometry ###
 
 MassSpectometry/No1/sat_solutions.txt
-MassSpectometry/No1/Figures/*
-MassSpectometry/No1/Implementations/workflowSolution*
+MassSpectometry/No1/Workflows/*
+MassSpectometry/No1/Executables/workflowSolution*
 
 ### GeoGMT ###
 
 GeoGMT/E0/sat_solutions.txt
-GeoGMT/E0/Figures/*
-GeoGMT/E0/Implementations/*
-!GeoGMT/E0/Implementations/move.txt
-!GeoGMT/E0/Implementations/run.sh
+GeoGMT/E0/Workflows/*
+GeoGMT/E0/Executables/*
+!GeoGMT/E0/Executables/move.txt
+!GeoGMT/E0/Executables/run.sh
 
 GeoGMT/E1/sat_solutions.txt
-GeoGMT/E1/Figures/*
-GeoGMT/E1/Implementations/workflowSolution*
-!GeoGMT/E1/Implementations/move.txt
-!GeoGMT/E1/Implementations/run.sh
+GeoGMT/E1/Workflows/*
+GeoGMT/E1/Executables/workflowSolution*
+!GeoGMT/E1/Executables/move.txt
+!GeoGMT/E1/Executables/run.sh
 
 ###Local files###
-clean_figures.sh
+clean_workflows.sh
 APE*
 
 ### Linux ###
