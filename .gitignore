@@ -13,7 +13,7 @@ ImageMagick/Example2/Executables/*
 
 MassSpectometry/No1/solutions.txt
 MassSpectometry/No1/Figures/*
-MassSpectometry/No1/Executables/workflowSolution*
+MassSpectometry/No1/Executables/*
 
 ### GeoGMT ###
 
@@ -25,7 +25,7 @@ GeoGMT/E0/Executables/*
 
 GeoGMT/E1/solutions.txt
 GeoGMT/E1/Figures/*
-GeoGMT/E1/Executables/workflowSolution*
+GeoGMT/E1/Executables/*
 !GeoGMT/E1/Executables/move.txt
 !GeoGMT/E1/Executables/run.sh
 
