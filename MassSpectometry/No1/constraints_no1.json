@@ -2,15 +2,21 @@
     "constraints": [
       {
         "constraintid": "use_m",
-        "parameters": [["operation_3631"]]
+        "parameters": [
+	{ "operation_0004" : ["operation_3631"]}
+	]
       },
 	{
         "constraintid": "use_m",
-        "parameters": [["operation_3649"]]
+        "parameters": [
+	{ "operation_0004" : ["operation_3649"]}
+	]
       },
 	{
         "constraintid": "use_m",
-        "parameters": [["operation_3633"]]
+        "parameters": [
+	{ "operation_0004" : ["operation_3633"]}
+	]
       }
     ]
 

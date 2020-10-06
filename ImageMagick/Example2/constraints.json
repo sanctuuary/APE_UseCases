@@ -3,20 +3,20 @@
     {
       "constraintid": "use_t",
       "parameters": [
-        ["Filter"]
+	 { "Type" : ["Filter"]}
       ]
     },
     {
       "constraintid": "nuse_m",
       "parameters": [
-        ["Borders"]
+	 { "Tool" : ["Borders"]}
       ]
     },
     {
       "constraintid": "next_m",
       "parameters": [
-        ["cut"],
-        ["overlap"]
+	 { "Tool" : ["cut"]},
+	 { "Tool" : ["overlap"]}
       ]
     }
   ]

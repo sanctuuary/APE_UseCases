@@ -6,7 +6,7 @@
           "data_0006": [
             "http://edamontology.org/data_0945"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_3655"
           ]
         }
@@ -16,7 +16,7 @@
           "data_0006": [
             "http://edamontology.org/data_0943"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_3244",
             "http://edamontology.org/format_3654"
           ]
@@ -34,7 +34,7 @@
           "data_0006": [
             "http://edamontology.org/data_0943"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_3752",
             "http://edamontology.org/format_3244",
             "http://edamontology.org/format_3834",
@@ -47,7 +47,7 @@
           "data_0006": [
             "http://edamontology.org/data_0943"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_3245"
           ]
         }
@@ -64,7 +64,7 @@
           "data_0006": [
             "http://edamontology.org/data_2600"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_2331"
           ]
         }
@@ -74,7 +74,7 @@
           "data_0006": [
             "http://edamontology.org/data_1033"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_2330"
           ]
         },
@@ -82,7 +82,7 @@
           "data_0006": [
             "http://edamontology.org/data_3021"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             
           ]
         }
@@ -99,7 +99,7 @@
           "data_0006": [
             "http://edamontology.org/data_2600"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_2331"
           ]
         }
@@ -109,7 +109,7 @@
           "data_0006": [
             "http://edamontology.org/data_3021"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             
           ]
         }
@@ -126,7 +126,7 @@
           "data_0006": [
             "http://edamontology.org/data_2600"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_2331"
           ]
         }
@@ -136,7 +136,7 @@
           "data_0006": [
             "http://edamontology.org/data_0928"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_3475"
           ]
         },
@@ -144,7 +144,7 @@
           "data_0006": [
             "http://edamontology.org/data_3021"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             
           ]
         }
@@ -161,7 +161,7 @@
           "data_0006": [
             "http://edamontology.org/data_3753"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_3603",
             "http://edamontology.org/format_2330",
             "http://edamontology.org/format_3468"
@@ -171,7 +171,7 @@
           "data_0006": [
             "http://edamontology.org/data_2872"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_2330"
           ]
         }
@@ -181,7 +181,7 @@
           "data_0006": [
             "http://edamontology.org/data_2872"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_2330"
           ]
         }
@@ -201,7 +201,7 @@
           "data_0006": [
             "http://edamontology.org/data_0945"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_3655",
             "http://edamontology.org/format_3247"
           ]
@@ -212,7 +212,7 @@
           "data_0006": [
             "http://edamontology.org/data_0945"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_3747",
             "http://edamontology.org/format_3655",
             "http://edamontology.org/format_3247"
@@ -233,7 +233,7 @@
           "data_0006": [
             "http://edamontology.org/data_2603"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_3468",
             "http://edamontology.org/format_3508"
           ]
@@ -244,7 +244,7 @@
           "data_0006": [
             "http://edamontology.org/data_0944"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_3651"
           ]
         },
@@ -252,7 +252,7 @@
           "data_0006": [
             "http://edamontology.org/data_0945"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_3752"
           ]
         }
@@ -275,7 +275,7 @@
           "data_0006": [
             "http://edamontology.org/data_2603"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_3747",
             "http://edamontology.org/format_3655"
           ]
@@ -286,7 +286,7 @@
           "data_0006": [
             "http://edamontology.org/data_0945"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_3655"
           ]
         }
@@ -306,7 +306,7 @@
           "data_0006": [
             "http://edamontology.org/data_2536"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_2330",
             "http://edamontology.org/format_3712",
             "http://edamontology.org/format_3654",
@@ -321,7 +321,7 @@
           "data_0006": [
             "http://edamontology.org/data_2536"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_2330",
             "http://edamontology.org/format_3712",
             "http://edamontology.org/format_3654",
@@ -344,7 +344,7 @@
           "data_0006": [
             "http://edamontology.org/data_1636"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_3603"
           ]
         }
@@ -354,7 +354,7 @@
           "data_0006": [
             "http://edamontology.org/data_0943"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_3654"
           ]
         }
@@ -373,7 +373,7 @@
           "data_0006": [
             "http://edamontology.org/data_2884"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_3603"
           ]
         },
@@ -381,7 +381,7 @@
           "data_0006": [
             "http://edamontology.org/data_0942"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_3603"
           ]
         }
@@ -391,7 +391,7 @@
           "data_0006": [
             "http://edamontology.org/data_0943"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_3654"
           ]
         },
@@ -399,7 +399,7 @@
           "data_0006": [
             "http://edamontology.org/data_0945"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_3655"
           ]
         }
@@ -418,7 +418,7 @@
           "data_0006": [
             "http://edamontology.org/data_0945"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_3655",
             "http://edamontology.org/format_2331"
           ]
@@ -429,7 +429,7 @@
           "data_0006": [
             "http://edamontology.org/data_0945"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_3655",
             "http://edamontology.org/format_2331"
           ]
@@ -450,7 +450,7 @@
           "data_0006": [
             "http://edamontology.org/data_0943"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_3603",
             "http://edamontology.org/format_3651",
             "http://edamontology.org/format_3591",
@@ -464,7 +464,7 @@
           "data_0006": [
             "http://edamontology.org/data_0943"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_3655",
             "http://edamontology.org/format_3475",
             "http://edamontology.org/format_3651",
@@ -483,9 +483,9 @@
       "outputs": [
         {
           "data_0006": [
-            "http://edamontology.org/data_3426"
+            "http://edamontology.org/data_2531"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_3475",
             "http://edamontology.org/format_3247"
           ]
@@ -494,7 +494,7 @@
           "data_0006": [
             "http://edamontology.org/data_2603"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_3475",
             "http://edamontology.org/format_3247"
           ]
@@ -505,7 +505,7 @@
           "data_0006": [
             "http://edamontology.org/data_0943"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_3655",
             "http://edamontology.org/format_3475",
             "http://edamontology.org/format_3651",
@@ -528,7 +528,7 @@
           "data_0006": [
             "http://edamontology.org/data_0945"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_2332",
             "http://edamontology.org/format_3747",
             "http://edamontology.org/format_2331",
@@ -541,7 +541,7 @@
           "data_0006": [
             "http://edamontology.org/data_0945"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_3655",
             "http://edamontology.org/format_2331"
           ]
@@ -563,7 +563,7 @@
           "data_0006": [
             "http://edamontology.org/data_0945"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_3655",
             "http://edamontology.org/format_3247",
             "http://edamontology.org/format_3475"
@@ -573,7 +573,7 @@
           "data_0006": [
             "http://edamontology.org/data_2603"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_3475"
           ]
         }
@@ -583,7 +583,7 @@
           "data_0006": [
             "http://edamontology.org/data_1233"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_1929"
           ]
         },
@@ -591,7 +591,7 @@
           "data_0006": [
             "http://edamontology.org/data_0945"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_3655"
           ]
         }
@@ -610,7 +610,7 @@
           "data_0006": [
             "http://edamontology.org/data_0945"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_3655"
           ]
         }
@@ -620,7 +620,7 @@
           "data_0006": [
             "http://edamontology.org/data_0945"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_3655"
           ]
         }
@@ -637,7 +637,7 @@
           "data_0006": [
             "http://edamontology.org/data_1520"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_2331",
             "http://edamontology.org/format_3468"
           ]
@@ -646,7 +646,7 @@
           "data_0006": [
             "http://edamontology.org/data_2016"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_2331",
             "http://edamontology.org/format_3468"
           ]
@@ -655,9 +655,9 @@
       "inputs": [
         {
           "data_0006": [
-            "http://edamontology.org/data_2974"
+            "http://edamontology.org/data_2976"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_2330"
           ]
         },
@@ -665,7 +665,7 @@
           "data_0006": [
             "http://edamontology.org/data_2976"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_2330"
           ]
         }
@@ -682,7 +682,7 @@
           "data_0006": [
             "http://edamontology.org/data_2016"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_2332",
             "http://edamontology.org/format_3475",
             "http://edamontology.org/format_2330"
@@ -694,7 +694,7 @@
           "data_0006": [
             "http://edamontology.org/data_0945"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_3475",
             "http://edamontology.org/format_3751",
             "http://edamontology.org/format_3655"
@@ -713,7 +713,7 @@
           "data_0006": [
             "http://edamontology.org/data_0945"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_3475"
           ]
         }
@@ -723,7 +723,7 @@
           "data_0006": [
             "http://edamontology.org/data_0945"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_3655",
             "http://edamontology.org/format_3247"
           ]
@@ -741,7 +741,7 @@
           "data_0006": [
             "http://edamontology.org/data_0945"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_3711",
             "http://edamontology.org/format_3247"
           ]
@@ -752,7 +752,7 @@
           "data_0006": [
             "http://edamontology.org/data_0943"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_3652",
             "http://edamontology.org/format_3653",
             "http://edamontology.org/format_3654",
@@ -766,7 +766,7 @@
           "data_0006": [
             "http://edamontology.org/data_0850"
           ],
-          "format_1915$OR$": [
+          "format_1915": [
             "http://edamontology.org/format_1929"
           ]
         }

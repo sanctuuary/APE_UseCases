@@ -3,7 +3,7 @@
     {
       "constraintid": "use_m",
       "parameters": [
-        ["Borders"]
+        { "Tool" : ["Borders"]}
       ]
     }
   ]
