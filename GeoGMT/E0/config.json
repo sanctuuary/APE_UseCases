@@ -4,7 +4,7 @@
   "toolsTaxonomyRoot": "ToolsTaxonomy",
   "dataDimensionsTaxonomyRoots": ["TypesTaxonomy"],
   "tool_annotations_path": "./GeoGMT/tool_annotations.json",
-  "strict_tool_annotations": "false",
+  "strict_tool_annotations": "true",
   "constraints_path": "./GeoGMT/E0/constraints_e0.json",
   "shared_memory": "true",
   "solutions_dir_path": "./GeoGMT/E0/",
@@ -14,6 +14,9 @@
   "number_of_generated_graphs": "5",
   "tool_seq_repeat": "true",
   "inputs": [
+    {
+      "TypesTaxonomy": ["XYZ_table_file"]
+    }
   ],
   "outputs": [
  {
