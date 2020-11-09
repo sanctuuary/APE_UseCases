@@ -2462,7 +2462,6 @@
     </owl:Class>
     
 
-http://edamontology.org/data_2603
 
     <!-- http://edamontology.org/data_0928 -->
 
@@ -32935,7 +32934,7 @@ http://edamontology.org/data_2603
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#formats"/>
         <rdfs:comment>It iis expected to replace the Graphics Interchange Format (GIF).</rdfs:comment>
-        <rdfs:label>png</rdfs:label>
+        <rdfs:label>PNG</rdfs:label>
     </owl:Class>
     
 

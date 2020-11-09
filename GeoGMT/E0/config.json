@@ -4,20 +4,23 @@
   "toolsTaxonomyRoot": "ToolsTaxonomy",
   "dataDimensionsTaxonomyRoots": ["TypesTaxonomy"],
   "tool_annotations_path": "./GeoGMT/tool_annotations.json",
-  "constraints_path": "./GeoGMT/E1/constraints_e1.json",
+  "strict_tool_annotations": "false",
+  "constraints_path": "./GeoGMT/E0/constraints_e0.json",
   "shared_memory": "true",
-  "solutions_dir_path": "./GeoGMT/E1/",
-  "solution_length": { "min": 1, "max": 18 },
-  "max_solutions": "100",
-  "number_of_execution_scripts": "6",
-  "number_of_generated_graphs": "10",
-  "tool_seq_repeat": "false",
+  "solutions_dir_path": "./GeoGMT/E0/",
+  "solution_length": { "min": 1, "max": 10 },
+  "max_solutions": "1000",
+  "number_of_execution_scripts": "1",
+  "number_of_generated_graphs": "5",
+  "tool_seq_repeat": "true",
   "inputs": [
-    {
-      "TypesTaxonomy": ["XYZ_table_file"]
+  ],
+  "outputs": [
+ {
+      "TypesTaxonomy": ["PostScript"]
     }
   ],
-  "debug_mode": "false",
+  "debug_mode": "true",
   "use_workflow_input": "all",
   "use_all_generated_data": "all"
 }

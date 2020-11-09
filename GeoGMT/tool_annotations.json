@@ -16,7 +16,7 @@
         "id": "add_XYZ_table",
         "taxonomyOperations": ["add_XYZ_table"],
         "outputs": [{
-          "TypesTaxonomy": ["XYZ_table_file"]
+          "TypesTaxonomy": ["ASCII"]
         }],
         "implementation": {
           "code": "echo \"Enter path to the XYZ table file:\"\n read $@output[0]"
