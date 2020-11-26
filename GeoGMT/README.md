@@ -11,8 +11,6 @@ The use case aims to demonstrate the usefulness of the synthesis approach for so
 ## Installation
 In order to run the synthesis APE-&lt;version>.jar needs to be available: https://github.com/sanctuuary/APE. 
 
-## Run
-
 ## Run APE from the command line
 In order to use the APE library from the command line, simply run the `APE-<version>-executable.jar` file using command:
 
