@@ -20,7 +20,7 @@ In order to use the APE library from the command line, simply run the `APE-<vers
     java -jar APE-<version>-executable.jar [path_to_ape_configuration_file]
     
     
-For more infomration please visit [ape-framework.readthedocs.io](https://ape-framework.readthedocs.io/en/latest/docs/demo/geo_gmt/geo_gmt.html)
+For more infomration please visit [https://ape-framework.readthedocs.io](https://ape-framework.readthedocs.io/en/latest/docs/demo/geo_gmt/geo_gmt.html)
 
 ## References
 
