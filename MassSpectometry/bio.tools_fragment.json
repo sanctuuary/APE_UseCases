@@ -32,36 +32,6 @@
       "outputs": [
         {
           "format_1915": [
-            "http://edamontology.org/format_3752",
-            "http://edamontology.org/format_3244",
-            "http://edamontology.org/format_3834",
-            "http://edamontology.org/format_3654"
-          ],
-          "data_0006": [
-            "http://edamontology.org/data_0943"
-          ]
-        }
-      ],
-      "inputs": [
-        {
-          "format_1915": [
-            "http://edamontology.org/format_3245"
-          ],
-          "data_0006": [
-            "http://edamontology.org/data_0943"
-          ]
-        }
-      ],
-      "taxonomyOperations": [
-        "http://edamontology.org/operation_0335"
-      ],
-      "label": "CompassXport",
-      "id": "compassxport"
-    },
-    {
-      "outputs": [
-        {
-          "format_1915": [
             "http://edamontology.org/format_3475"
           ],
           "data_0006": [
@@ -213,7 +183,7 @@
             "http://edamontology.org/format_3247"
           ],
           "data_0006": [
-            "http://edamontology.org/data_2536"
+            "http://edamontology.org/data_0943"
           ]
         }
       ],
@@ -228,7 +198,7 @@
             "http://edamontology.org/format_3247"
           ],
           "data_0006": [
-            "http://edamontology.org/data_2536"
+            "http://edamontology.org/data_0943"
           ]
         }
       ],

@@ -1,0 +1,30 @@
+{
+    "constraints": [
+      {
+        "constraintid": "use_m",
+        "parameters": [
+	{ "operation_0004" : ["operation_3631"]}
+	]
+      },
+	{
+        "constraintid": "use_m",
+        "parameters": [
+	{ "operation_0004" : ["operation_3501"]}
+	]
+      },
+	{
+        "constraintid": "prev_m",
+        "parameters": [
+	{ "operation_0004" : ["operation_3501"]},
+	{ "operation_0004" : ["operation_3631"]}
+	]
+      },
+	{
+        "constraintid": "prev_m",
+        "parameters": [
+	{ "operation_0004" : ["proteinprophet"]},
+	{ "operation_0004" : ["peptideprophet"]}
+	]
+      }
+    ]
+}

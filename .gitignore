@@ -30,6 +30,10 @@ GeoGMT/E1/Executables/*
 !GeoGMT/E1/Executables/move.txt
 !GeoGMT/E1/Executables/run.sh
 
+### QuAnGIS ###
+
+QuAnGIS/*
+
 ###Local files###
 clean_workflows.sh
 APE*
