@@ -21,8 +21,7 @@ Each of the uses cases represent a different scenario
   - [/**No4**](/MassSpectometry/No1) - use case describes the 1st Use Case described in the paper, labeled as **No. 4**.
 ------------
 
-For more information visit https://ape-framework.readthedocs.io/en/latest/docs/demo/demo-overview.html
-
+For more infomration please visit [https://ape-framework.readthedocs.io](https://ape-framework.readthedocs.io/en/latest/docs/demo/demo-overview.html)
 ------------
 
 
