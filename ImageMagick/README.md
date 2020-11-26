@@ -2,7 +2,7 @@
 
 This is a project used to demonstrate the sysnthesis functionality provided by APE (the Automated Pipeline Explorer).
 
-The use case aims to describe the domain knowledge that has to be provided, comprising [Domain ontology](#domain-ontology) and [Tool annotations](#tool-annotation). In addition it will demonstrate the usefulness of the synthesis approach for solving a workflow discovery problem with [ImageMagick](https://imagemagick.org/index.php), an open-source software suite for displaying, creating, converting and modifying images.
+The use case aims to describe the domain knowledge that has to be provided, comprising [Domain ontology](https://ape-framework.readthedocs.io/en/latest/docs/specifications/setup.html#id1) and [Tool annotations](https://ape-framework.readthedocs.io/en/latest/docs/specifications/setup.html#tool-annotations). In addition it will demonstrate the usefulness of the synthesis approach for solving a workflow discovery problem with [ImageMagick](https://imagemagick.org/index.php), an open-source software suite for displaying, creating, converting and modifying images.
 
 ## Installation
 In order to run the synthesis APE-&lt;version>.jar needs to be available: https://github.com/sanctuuary/APE. 
