@@ -11,10 +11,6 @@ The use case aims to demonstrate the usefulness of the synthesis approach for so
 ## Installation
 In order to run the synthesis APE-&lt;version>.jar needs to be available: https://github.com/sanctuuary/APE. 
 
-#### Optional
-In order to be able to execute the generated workflows on the machine, GMT set of tools needs to be installed: http://gmt.soest.hawaii.edu/projects/gmt/wiki/Installing
-This step is not required for the workflow synthesis, considering that the synthesis of conadidate workflows and their execution are 2 separate steps.
-
 ## Run
 
 ## Run APE from the command line
@@ -23,19 +19,8 @@ In order to use the APE library from the command line, simply run the `APE-<vers
 
     java -jar APE-<version>-executable.jar [path_to_ape_configuration_file]
     
-
-As an example, if you would download the [APE-1.0.2-executable.jar](https://repo.maven.apache.org/maven2/io/github/sanctuuary/APE/1.0.2/APE-1.0.2U-executable.jar) to the root of APE_UseCases repository on your local machine, you could run this demo by executing the following command:
-
-```shell
- cd ~/git/APE_UseCases
- java -jar APE-<version>.jar GeoGMT/E0/ape.configuration
-```
-The results of the synthesis would be:
-
-	GeoGMT/E0/sat_solutions.txt	-	First 100 candidate solutions in textual format
-	GeoGMT/E0/Figures/		-	Data-flow figures corresponding to the first 10 solutions
-	GeoGMT/E0/Implementations/	-	Executable shell scripts corresponding to the first 6 solutions
-
+    
+For more infomration please visit [ape-framework.readthedocs.io](https://ape-framework.readthedocs.io/en/latest/docs/demo/geo_gmt/geo_gmt.html)
 
 ## References
 
