@@ -4,86 +4,20 @@ This is a project used to demonstrate the sysnthesis functionality provided by A
 
 The use case aims to describe the domain knowledge that has to be provided, comprising [Domain ontology](#domain-ontology) and [Tool annotations](#tool-annotation). In addition it will demonstrate the usefulness of the synthesis approach for solving a workflow discovery problem with [ImageMagick](https://imagemagick.org/index.php), an open-source software suite for displaying, creating, converting and modifying images.
 
-For more info on installation see [APE](https://github.com/sanctuuary/APE).
-
-#### Note: 
-If you want to be able to run the executable shell scipts of the demo examples, [ImageMagick](https://imagemagick.org/index.php) tools needs to be installed .
+## Installation
+In order to run the synthesis APE-&lt;version>.jar needs to be available: https://github.com/sanctuuary/APE. 
 
 ## Run APE from the command line
 In order to use the APE library from the command line, simply run the `APE-<version>-executable.jar` file using command:
 
 
     java -jar APE-<version>-executable.jar [path_to_ape_configuration_file]
-    
 
-As an example, if you would download the [APE-1.0.2-executable.jar](https://repo.maven.apache.org/maven2/io/github/sanctuuary/APE/1.0.2/APE-1.0.2-executable.jar) to the root of APE_UseCases repository on your local machine, you could run this demo by executing the following command:
-
-
-    cd ~/git/APE_UseCases
-    
-    java -jar APE-1.0.2-executable.jar ImageMagick/Example1/config.json
-
-The results of the synthesis would be:
-
-	ImageMagick/Example1/sat_solutions.txt	-	First 100 candidate solutions in textual format
-	ImageMagick/Example1/Workflows/		-	Data-flow figures corresponding to the first solution (config.json specifies that only 1 solution should be found)
-	ImageMagick/Example1/Implementations/	-	Executable shell scripts corresponding to the first solution
+#### Note: 
+If you want to be able to run the executable shell scipts of the demo examples, [ImageMagick](https://imagemagick.org/index.php) tools needs to be installed .
 
 
-## Domain Ontology
-Domain ontology consists of taxonomic classifications of the data and operations in the application domain, and provides a controlled  vocabulary  that  allows  for  different  abstraction  levels  of  its  elements. The current use case ontology (see [ontology file](imagemagick_taxonomy.owl)) contains the following structure:
-- **thing** (root class in the OWL file)
-  - **Tool** (name provided as modulesTaxonomyRoot in config file)
-  - **Data** (usage of this class is optional)
-     -  **Type** (name provided under **dataDimensionsTaxonomyRoots** in config file)
-     - **Format** (name provided under **dataDimensionsTaxonomyRoots** in config file)
-where the **Tool** represents the root of the operations taxonomy, and the **Type** and **Format**, represent roots of taxonomies that classify types and formats of data, respectively. The class **Data** can be ommited, considering that it is ignored by APE library, however it was part of the doman classification and we decided to keep it. 
-
-APE loads the [domain ontology](imagemagick_taxonomy.owl) from a file in Web Ontology Language (OWL) format. Note that the the annotated tools (provided in the [tool annotations](#tool-annotation)) are included in the image below as blue leafs, although they are not part in the OWL file.
-
-![](images/ImageMagick_Taxonomy.png)
-
-## Tool Annotation
-Tool annotation is a collection of tools that have been semantically annotated (see [tool annotation file](tool_annotations.json)), according to their inputs and outputs, based on the terms from the ontology. The following example annotated the tool `compress`, which takes as input an `Image` (Type) of any `Format` and outputs an Image in the JPG format.
-
-```json
-{
-        "label": "compress",
-        "id": "compress",
-        "taxonomyOperations": ["Conversion"],
-        "inputs": [
-          { "Type": ["Image"] }
-        ],
-        "outputs": [
-          { "Type": ["Image"], "Format": ["JPG"] }
-        ],
-        "implementation": { 
-           "code": "@output[0]='@output[0].jpg'\n
-                    convert $@input[0] $@output[0]\n" 
-           }
-}
-```
-
-### Referencing the Domain Ontology
-The the example above, the tool annotation references the abstract class `Conversion` from our domain ontology by specifying the `taxonomyOperations` tag.
-A reference to a class (or a set of classes) in the domain ontology must be in array format. This array represents a conjunction of classes from the ontology. For example, given the ontology below. Specifying `["A", "B"]` as input for your tool makes sure only inputs of type `D` and `F` are allowed.
-
-![](images/TypesTaxonomy.png)
-
-### Tool Implementation
-The code specified in the tool annotation could be used to constuct a script that executes the workflow.
-APE keeps track of the naming of the in- and output variables from tools. `@output[0]` references to the variable name of the first input type specified in the `"inputs"` tag.
-
-For example, implementing this piece of code for a tool called `add`:
-```json
-"implementation": {
-   "code": "@output[0] = $@input[0] + $@input[1]"
-   }
-```
-could result in the script:
-```text
-node003 = $node001 + $node002
-```
+### For more information please visit [our page](https://ape-framework.readthedocs.io/en/latest/docs/demo/imagemagick/imagemagick.html).
 
 ### Examples
 The run of the synthesis is explained on the following two examples:
