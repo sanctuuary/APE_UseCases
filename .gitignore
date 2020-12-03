@@ -31,7 +31,8 @@ GeoGMT/E1/Executables/*
 !GeoGMT/E1/Executables/run.sh
 
 ### QuAnGIS ###
-
+QuAnGIS/No1/solutions.txt
+QuAnGIS/No1/Figures/*
 
 ###Local files###
 clean_workflows.sh
