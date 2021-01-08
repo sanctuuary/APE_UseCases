@@ -6,7 +6,7 @@
   "tool_annotations_path": "./MassSpectometry/bio.tools_proteomics_domain.json",
   "strict_tool_annotations": "true",
   "constraints_path": "./MassSpectometry/No4/constraints_no4.json",
-  "shared_memory": "true",
+  "timeout(sec)": "600",
   "solutions_dir_path": "./MassSpectometry/No4/",
   "solution_length": { "min": 1, "max": 10 },
   "max_solutions": "1000",
