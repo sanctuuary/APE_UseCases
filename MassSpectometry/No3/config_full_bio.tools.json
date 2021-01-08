@@ -6,7 +6,7 @@
   "tool_annotations_path": "./MassSpectometry/full_bio.tools.json",
   "strict_tool_annotations": "true",
   "constraints_path": "./MassSpectometry/No3/constraints_no3.json",
-  "shared_memory": "true",
+  "timeout(sec)": "3600",
   "solutions_dir_path": "./MassSpectometry/No3/",
   "solution_length": { "min": 1, "max": 10 },
   "max_solutions": "1000",
