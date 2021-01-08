@@ -6,7 +6,7 @@
   "tool_annotations_path": "./ImageMagick/tool_annotations.json",
   "strict_tool_annotations": "false",
   "constraints_path": "./ImageMagick/Example2/constraints.json",
-  "shared_memory": "true",
+  "timeout(sec)": "20",
   "solutions_dir_path": "./ImageMagick/Example2/",
   "solution_length": { "min": 1, "max": 10 },
   "max_solutions": "1000",
