@@ -6,7 +6,7 @@
   "tool_annotations_path": "./GeoGMT/tool_annotations.json",
   "strict_tool_annotations": "false",
   "constraints_path": "./GeoGMT/E1/constraints_e1.json",
-  "shared_memory": "true",
+  "timeout(sec)": "20",
   "solutions_dir_path": "./GeoGMT/E1/",
   "solution_length": { "min": 1, "max": 18 },
   "max_solutions": "100",
