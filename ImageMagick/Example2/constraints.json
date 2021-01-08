@@ -3,7 +3,7 @@
     {
       "constraintid": "use_t",
       "parameters": [
-	 { "Type" : ["Filter"]}
+	 { "Type" : ["Filter"], "Format" : ["Format"]}
       ]
     },
     {
