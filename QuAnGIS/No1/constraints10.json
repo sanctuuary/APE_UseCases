@@ -5,8 +5,8 @@
 	  "description": "", 
       "parameters": [
        {
-        "CoreConceptQ": [ "http://geographicknowledge.de/vocab/CoreConceptData.rdf#MatrixQ"],
-	"LayerA":	["http://geographicknowledge.de/vocab/CoreConceptData.rdf#RegionA"],
+        "CoreConceptQ": [ "MatrixQ"],
+	"LayerA":	["RegionA"],
 	"NominalA":	["http://geographicknowledge.de/vocab/ExtensiveMeasures.rdf#ERA"]
 	}		
 	]
