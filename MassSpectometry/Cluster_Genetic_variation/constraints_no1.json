@@ -1,0 +1,16 @@
+{
+    "constraints": [
+      {
+        "constraintid": "use_m",
+        "parameters": [
+	{ "operation_0004" : ["snpeff"]}
+	]
+      },
+	{
+        "constraintid": "use_m",
+        "parameters": [
+	{ "operation_0004" : ["mutect"]}
+	]
+      }
+    ]
+}

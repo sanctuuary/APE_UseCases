@@ -1,0 +1,28 @@
+{
+    "constraints": [
+      {
+        "constraintid": "use_m",
+        "parameters": [
+	{ "operation_0004" : ["rsubread"]}
+	]
+      },
+	{
+        "constraintid": "use_m",
+        "parameters": [
+	{ "operation_0004" : ["clusterprofiler"]}
+	]
+      },
+	{
+        "constraintid": "use_m",
+        "parameters": [
+	{ "operation_0004" : ["limma"]}
+	]
+      },
+	{
+        "constraintid": "nuse_m",
+        "parameters": [
+	{ "operation_0004" : ["edger"]}
+	]
+      }
+    ]
+}

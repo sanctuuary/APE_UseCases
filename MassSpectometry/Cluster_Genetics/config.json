@@ -1,0 +1,48 @@
+{
+  "ontology_path": "./MassSpectometry/edam.owl",
+  "ontologyPrexifIRI": "http://edamontology.org/",
+  "toolsTaxonomyRoot": "operation_0004",
+  "dataDimensionsTaxonomyRoots": ["data_0006", "format_1915" ],
+  "tool_annotations_path": "./MassSpectometry/full_bio.tools.json",
+  "strict_tool_annotations": "false",
+  "constraints_path": "./MassSpectometry/Cluster_Genetics/constraints_no1.json",
+  "shared_memory": "true",
+  "solutions_dir_path": "./MassSpectometry/Cluster_Genetics/",
+  "solution_length": { "min": 4, "max": 10 },
+  "max_solutions": "10",
+  "number_of_execution_scripts": "0",
+  "number_of_generated_graphs": "10",
+  "debug_mode": "true",
+  "use_workflow_input": "none",
+  "use_all_generated_data": "one",
+  "tool_seq_repeat": "false",
+    "timeout_sec": "30000",
+  "inputs": [
+        {
+          "data_0006": [
+            "data_0943"
+          ],
+          "format_1915": [
+            "format_3712"
+          ]
+        },
+        {
+          "data_0006": [
+            "data_0943"
+          ],
+          "format_1915": [
+            "format_3712"
+          ]
+        }
+      ],
+  "outputs": [
+        {
+          "data_0006": [
+            "data_0943"
+          ],
+          "format_1915": [
+            "format_3712"
+          ]
+        }
+      ]
+}

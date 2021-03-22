@@ -1,0 +1,28 @@
+{
+    "constraints": [
+      {
+        "constraintid": "use_m",
+        "parameters": [
+	{ "operation_0004" : ["ipk_blast"]}
+	]
+      },
+	{
+        "constraintid": "use_m",
+        "parameters": [
+	{ "operation_0004" : ["MAFFT"]}
+	]
+      },
+	{
+        "constraintid": "use_m",
+        "parameters": [
+	{ "operation_0004" : ["phyml"]}
+	]
+      },
+	{
+        "constraintid": "nuse_m",
+        "parameters": [
+	{ "operation_0004" : ["hmmer3_op4"]}
+	]
+      }
+    ]
+}
