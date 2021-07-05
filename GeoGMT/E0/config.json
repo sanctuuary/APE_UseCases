@@ -12,6 +12,7 @@
   "max_solutions": "1000",
   "number_of_execution_scripts": "1",
   "number_of_generated_graphs": "5",
+  "number_of_cwl_files": "1",
   "tool_seq_repeat": "true",
   "inputs": [
     {
