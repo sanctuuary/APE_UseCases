@@ -1,6 +1,6 @@
 {
   "ontology_path": "./MassSpectometry/edam.owl",
-  "ontologyPrexifIRI": "http://edamontology.org/",
+  "ontologyPrefixIRI": "http://edamontology.org/",
   "toolsTaxonomyRoot": "operation_0004",
   "dataDimensionsTaxonomyRoots": ["data_0006", "format_1915" ],
   "tool_annotations_path": "./MassSpectometry/bio.tools_proteomics_domain.json",
