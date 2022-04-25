@@ -13,7 +13,7 @@
   ],
   "timeout_sec": "300",
   "solution_length": { "min": 1, "max": 10 },
-  "max_solutions": "5",
+  "solutions": "5",
   "number_of_execution_scripts": "0",
   "number_of_generated_graphs": "5",
   "inputs": [    

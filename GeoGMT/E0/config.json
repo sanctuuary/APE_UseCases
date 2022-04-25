@@ -9,7 +9,7 @@
   "timeout_sec": "20",
   "solutions_dir_path": "./GeoGMT/E0/",
   "solution_length": { "min": 1, "max": 10 },
-  "max_solutions": "1000",
+  "solutions": "1000",
   "number_of_execution_scripts": "1",
   "number_of_generated_graphs": "5",
   "number_of_cwl_files": "1",

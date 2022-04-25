@@ -9,7 +9,7 @@
   "timeout_sec": "3600",
   "solutions_dir_path": "./MassSpectometry/No2/",
   "solution_length": { "min": 1, "max": 10 },
-  "max_solutions": "1000",
+  "solutions": "1000",
   "number_of_execution_scripts": "0",
   "number_of_generated_graphs": "10",
   "debug_mode": "true",
