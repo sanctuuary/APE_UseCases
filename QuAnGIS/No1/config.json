@@ -1,5 +1,5 @@
 {
- "ontologyPrexifIRI": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#",
+ "ontologyPrefixIRI": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#",
   "solutions_dir_path": "./QuAnGIS/No1/", 
   "tool_annotations_path": "./QuAnGIS/FlowmapDescription.json",
   "strict_tool_annotations": "false",

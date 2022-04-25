@@ -1,6 +1,6 @@
 {
   "ontology_path": "./ImageMagick/imagemagick_taxonomy.owl",
-  "ontologyPrexifIRI": "http://www.co-ode.org/ontologies/ont.owl#",
+  "ontologyPrefixIRI": "http://www.co-ode.org/ontologies/ont.owl#",
   "toolsTaxonomyRoot": "Tool",
   "dataDimensionsTaxonomyRoots": [ "Type", "Format"],
   "tool_annotations_path": "./ImageMagick/tool_annotations.json",
