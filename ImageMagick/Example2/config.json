@@ -1,6 +1,6 @@
 {
   "ontology_path": "./ImageMagick/imagemagick_taxonomy.owl",
-  "ontologyPrexifIRI": "http://www.co-ode.org/ontologies/ont.owl#",
+  "ontologyPrefixIRI": "http://www.co-ode.org/ontologies/ont.owl#",
   "toolsTaxonomyRoot": "Tool",
   "dataDimensionsTaxonomyRoots": [ "Type", "Format"],
   "tool_annotations_path": "./ImageMagick/tool_annotations.json",
@@ -9,7 +9,7 @@
   "timeout_sec": "20",
   "solutions_dir_path": "./ImageMagick/Example2/",
   "solution_length": { "min": 1, "max": 10 },
-  "max_solutions": "1000",
+  "solutions": "1000",
   "number_of_execution_scripts": "2",
   "number_of_generated_graphs": "2",
   "tool_seq_repeat": "true",
