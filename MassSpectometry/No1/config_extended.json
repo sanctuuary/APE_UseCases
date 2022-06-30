@@ -8,7 +8,7 @@
   "constraints_path": "./MassSpectometry/No1/constraints_no1.json",
   "timeout_sec": "600",
   "solutions_dir_path": "./MassSpectometry/No1/",
-  "solution_length": { "min": 4 , "max": 10 },
+  "solution_length": { "min": 1 , "max": 10 },
   "solutions": "10",
   "number_of_execution_scripts": "0",
   "number_of_generated_graphs": "10",
