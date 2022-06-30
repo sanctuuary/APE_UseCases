@@ -1,0 +1,2042 @@
+{
+  "functions": [
+    {
+      "id": "http://www.co-ode.org/ontologies/ont.owl#Intersect_RR_P_Ord",
+      "label": "Intersect_region_region_point_ordinal",
+      "taxonomyOperations": [
+        "http://www.co-ode.org/ontologies/ont.owl#Intersect"
+      ],
+      "inputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#OrdinalA"
+          ]
+        },
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#OrdinalA"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#OrdinalA"
+          ]
+        }
+      ],
+      "implementation": {
+          "code": "import arcpy;arcpy.env.workspace = '/home/mohammad/Desktop/Data/'; arcpy.Intersect_analysis('[@input[0],@input[1]]','@output[0].shp','','','point')"}
+    },
+    {
+      "id": "http://www.co-ode.org/ontologies/ont.owl#Intersect_RR_R_Nom",
+      "label": "Intersect_region_region_region_nominal",
+      "taxonomyOperations": [
+        "http://www.co-ode.org/ontologies/ont.owl#Intersect"
+      ],
+      "inputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+        },
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+        }
+      ],
+      "implementation": {
+        "code": "import arcpy;arcpy.env.workspace = '/home/mohammad/Desktop/Data/'; 	arcpy.Intersect_analysis('[@input[0],@input[1]]','@output[0].shp','','','INPUT')"}
+    },
+    {
+      "id": "http://www.co-ode.org/ontologies/ont.owl#Intersect_RR_P_Nom",
+      "label": "Intersect_region_region_point_nominal",
+      "taxonomyOperations": [
+        "http://www.co-ode.org/ontologies/ont.owl#Intersect"
+      ],
+      "inputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+        },
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+        }
+      ],
+      "implementation": {
+          "code": "import arcpy;arcpy.env.workspace = '/home/mohammad/Desktop/Data/';             arcpy.Intersect_analysis('[@input[0],@input[1]]','@output[0].shp','','','point')"}
+    },
+    
+    {
+      "id": "http://www.co-ode.org/ontologies/ont.owl#Intersect_LL_L_Nom",
+      "label": "Intersect_line_line_line_nominal",
+      "taxonomyOperations": [
+        "http://www.co-ode.org/ontologies/ont.owl#Intersect"
+      ],
+      "inputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#LineA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+        },
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#LineA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+          
+        }
+      ],
+      "outputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#LineA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+        }
+      ],
+      "implementation": {
+          "code": "import arcpy;arcpy.env.workspace = '/home/mohammad/Desktop/Data/';             arcpy.Intersect_analysis('[@input[0],@input[1]]','@output[0].shp','','','line')"}
+    },
+    
+    {
+      "id": "http://www.co-ode.org/ontologies/ont.owl#Intersect_LL_P_Nom",
+      "label": "Intersect_line_line_point_nominal",
+      "taxonomyOperations": [
+        "http://www.co-ode.org/ontologies/ont.owl#Intersect"
+      ],
+      "inputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#LineA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+        },
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#LineA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+          
+        }
+      ],
+      "outputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+        }
+      ],
+      "implementation": {
+          "code": "import arcpy;arcpy.env.workspace = '/home/mohammad/Desktop/Data/';             arcpy.Intersect_analysis('[@input[0],@input[1]]','@output[0].shp','','','point')"}
+    
+    },
+    
+    {
+      "id": "http://www.co-ode.org/ontologies/ont.owl#Intersect_LL_P_Ord",
+      "label": "Intersect_line_line_point_ordinal",
+      "taxonomyOperations": [
+        "http://www.co-ode.org/ontologies/ont.owl#Intersect"
+      ],
+      "inputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#LineA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#OrdinalA"
+          ]
+        },
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#LineA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#OrdinalA"
+          ]
+          
+        }
+      ],
+      "outputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#OrdinalA"
+          ]
+        }
+      ],
+      "implementation": {
+          "code": "import arcpy;arcpy.env.workspace = '/home/mohammad/Desktop/Data/';             arcpy.Intersect_analysis('[@input[0],@input[1]]','@output[0].shp','','','point')"}
+    },
+    
+    {
+      "id": "http://www.co-ode.org/ontologies/ont.owl#Intersect_LL_P_Cou",
+      "label": "Intersect_line_line_point_count",
+      "taxonomyOperations": [
+        "http://www.co-ode.org/ontologies/ont.owl#Intersect"
+      ],
+      "inputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#LineA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#CountA"
+          ]
+        },
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#LineA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#CountA"
+          ]
+          
+        }
+      ],
+      "outputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#CountA"
+          ]
+        }
+      ],
+      "implementation": {
+          "code": "import arcpy;arcpy.env.workspace = '/home/mohammad/Desktop/Data/';             arcpy.Intersect_analysis('[@input[0],@input[1]]','@output[0].shp','','','point')"}
+    },
+    
+    {
+      "id": "http://www.co-ode.org/ontologies/ont.owl#Intersect_LL_P_Bool",
+      "label": "Intersect_line_line_point_boolean",
+      "taxonomyOperations": [
+        "http://www.co-ode.org/ontologies/ont.owl#Intersect"
+      ],
+      "inputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#LineA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#BooleanA"
+          ]
+        },
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#LineA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#BooleanA"
+          ]
+          
+        }
+      ],
+      "outputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#BooleanA"
+          ]
+        }
+      ],
+      "implementation": {
+          "code": "import arcpy;arcpy.env.workspace = '/home/mohammad/Desktop/Data/';             arcpy.Intersect_analysis('[@input[0],@input[1]]','@output[0].shp','','','point')"}
+    },
+    
+    {
+      "id": "http://www.co-ode.org/ontologies/ont.owl#Intersect_LL_P_Rat",
+      "label": "Intersect_line_line_point_ratio",
+      "taxonomyOperations": [
+        "http://www.co-ode.org/ontologies/ont.owl#Intersect"
+      ],
+      "inputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#LineA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RatioA"
+          ]
+        },
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#LineA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RatioA"
+          ]
+          
+        }
+      ],
+      "outputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RatioA"
+          ]
+        }
+      ],
+      "implementation": {
+          "code": "import arcpy;arcpy.env.workspace = '/home/mohammad/Desktop/Data/';             arcpy.Intersect_analysis('[@input[0],@input[1]]','@output[0].shp','','','point')"}
+    },
+    
+    {
+      "id": "http://www.co-ode.org/ontologies/ont.owl#Intersect_PP_P_Cou",
+      "label": "Intersect_point_point_point_count",
+      "taxonomyOperations": [
+        "http://www.co-ode.org/ontologies/ont.owl#Intersect"
+      ],
+      "inputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#CountA"
+          ]
+        },
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#CountA"
+          ]
+          
+        }
+      ],
+      "outputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#CountA"
+          ]
+        }
+      ],
+      "implementation": {
+          "code": "import arcpy;arcpy.env.workspace = '/home/mohammad/Desktop/Data/';             arcpy.Intersect_analysis('[@input[0],@input[1]]','@output[0].shp','','','point')"}
+    },
+    
+    {
+      "id": "http://www.co-ode.org/ontologies/ont.owl#Intersect_RL_L_Nom",
+      "label": "Intersect_region_line_line_nominal",
+      "taxonomyOperations": [
+        "http://www.co-ode.org/ontologies/ont.owl#Intersect"
+      ],
+      "inputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+        },
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#LineA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+          
+        }
+      ],
+      "outputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#LineA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+        }
+      ],
+      "implementation": {
+          "code": "import arcpy;arcpy.env.workspace = '/home/mohammad/Desktop/Data/';             arcpy.Intersect_analysis('[@input[0],@input[1]]','@output[0].shp','','','line')"}
+    
+    },
+    
+    
+  
+    {
+      "id": "http://www.co-ode.org/ontologies/ont.owl#Buffer_P_R_Nom",
+      "label": "Buffer_point_region_nominal",
+      "taxonomyOperations": [
+        "http://www.co-ode.org/ontologies/ont.owl#Buffer"
+      ],
+      "inputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+        }
+    
+      ],
+      "outputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+        }
+      ],
+      "implementation": {
+          "code": "import arcpy;arcpy.env.workspace = '/home/mohammad/Desktop/Data/';             arcpy.Buffer_analysis('@input[0]','@output[0].shp','5000 meter')"}
+    },
+    
+    {
+      "id": "http://www.co-ode.org/ontologies/ont.owl#Buffer_P_R_Ord",
+      "label": "Buffer_point_region_ordinal",
+      "taxonomyOperations": [
+        "http://www.co-ode.org/ontologies/ont.owl#Buffer"
+      ],
+      "inputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#OrdinalA"
+          ]
+        }
+    
+      ],
+      "outputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#OrdinalA"
+          ]
+        }
+      ],
+      "implementation": {
+          "code": "import arcpy;arcpy.env.workspace = '/home/mohammad/Desktop/Data/';             arcpy.Buffer_analysis('@input[0]','@output[0].shp','5000 meter')"}
+    },
+    
+    {
+      "id": "http://www.co-ode.org/ontologies/ont.owl#Buffer_P_R_Cou",
+      "label": "Buffer_point_region_count",
+      "taxonomyOperations": [
+        "http://www.co-ode.org/ontologies/ont.owl#Buffer"
+      ],
+      "inputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#CountA"
+          ]
+        }
+    
+      ],
+      "outputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#CountA"
+          ]
+        }
+      ],
+      "implementation": {
+          "code": "import arcpy;arcpy.env.workspace = '/home/mohammad/Desktop/Data/';             arcpy.Buffer_analysis('@input[0]','@output[0].shp','5000 meter')"}
+    },
+    
+    {
+      "id": "http://www.co-ode.org/ontologies/ont.owl#Buffer_P_R_Rat",
+      "label": "Buffer_point_region_ratio",
+      "taxonomyOperations": [
+        "http://www.co-ode.org/ontologies/ont.owl#Buffer"
+      ],
+      "inputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RatioA"
+          ]
+        }
+    
+      ],
+      "outputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RatioA"
+          ]
+        }
+      ],
+      "implementation": {
+          "code": "import arcpy;arcpy.env.workspace = '/home/mohammad/Desktop/Data/';             arcpy.Buffer_analysis('@input[0]','@output[0].shp','5000 meter')"}
+    },
+    
+    {
+      "id": "http://www.co-ode.org/ontologies/ont.owl#Buffer_P_R_Bool",
+      "label": "Buffer_point_region_boolean",
+      "taxonomyOperations": [
+        "http://www.co-ode.org/ontologies/ont.owl#Buffer"
+      ],
+      "inputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#BooleanA"
+          ]
+        }
+    
+      ],
+      "outputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#BooleanA"
+          ]
+        }
+      ],
+      "implementation": {
+          "code": "import arcpy;arcpy.env.workspace = '/home/mohammad/Desktop/Data/';             arcpy.Buffer_analysis('@input[0]','@output[0].shp','5000 meter')"}
+    },
+    
+    {
+      "id": "http://www.co-ode.org/ontologies/ont.owl#Buffer_L_R_Nom",
+      "label": "Buffer_line_region_nominal",
+      "taxonomyOperations": [
+        "http://www.co-ode.org/ontologies/ont.owl#Buffer"
+      ],
+      "inputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#LineA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+        }
+    
+      ],
+      "outputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+        }
+      ],
+      "implementation": {
+          "code": "import arcpy;arcpy.env.workspace = '/home/mohammad/Desktop/Data/';             arcpy.Buffer_analysis('@input[0]','@output[0].shp','5000 meter')"}
+    },
+    
+    {
+      "id": "http://www.co-ode.org/ontologies/ont.owl#Buffer_R_R_Nom",
+      "label": "Buffer_region_region_nominal",
+      "taxonomyOperations": [
+        "http://www.co-ode.org/ontologies/ont.owl#Buffer"
+      ],
+      "inputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+        }
+    
+      ],
+      "outputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+        }
+      ],
+      "implementation": {
+          "code": "import arcpy;arcpy.env.workspace = '/home/mohammad/Desktop/Data/';             arcpy.Buffer_analysis('@input[0]','@output[0].shp','5000 meter')"}
+    },
+    
+    {
+      "id": "http://www.co-ode.org/ontologies/ont.owl#MultiRingBuffer_P_R_Nom",
+      "label": "MultiRingBuffer_point_region_nominal",
+      "taxonomyOperations": [
+        "http://www.co-ode.org/ontologies/ont.owl#MultipleRingBuffer"
+      ],
+      "inputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+        }
+    
+      ],
+      "outputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+        }
+      ],
+      "implementation": {
+          "code": "import arcpy;arcpy.env.workspace = '/home/mohammad/Desktop/Data/';             arcpy.MultipleRingBuffer_analysis('@input[0]','@output[0].shp',[5000],'meters')"}
+    },
+    
+    {
+      "id": "http://www.co-ode.org/ontologies/ont.owl#MultiRingBuffer_P_R_Ord",
+      "label": "MultiRingBuffer_point_region_ordinal",
+      "taxonomyOperations": [
+        "http://www.co-ode.org/ontologies/ont.owl#MultipleRingBuffer"
+      ],
+      "inputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#OrdinalA"
+          ]
+        }
+    
+      ],
+      "outputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#OrdinalA"
+          ]
+        }
+      ],
+      "implementation": {
+          "code": "import arcpy;arcpy.env.workspace = '/home/mohammad/Desktop/Data/';             arcpy.MultipleRingBuffer_analysis('@input[0]','@output[0].shp',[5000],'meters')"}
+    },
+    
+    {
+      "id": "http://www.co-ode.org/ontologies/ont.owl#MultiRingBuffer_P_R_Cou",
+      "label": "MultiRingBuffer_point_region_count",
+      "taxonomyOperations": [
+        "http://www.co-ode.org/ontologies/ont.owl#MultipleRingBuffer"
+      ],
+      "inputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#CountA"
+          ]
+        }
+    
+      ],
+      "outputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#CountA"
+          ]
+        }
+      ],
+      "implementation": {
+          "code": "import arcpy;arcpy.env.workspace = '/home/mohammad/Desktop/Data/';             arcpy.MultipleRingBuffer_analysis('@input[0]','@output[0].shp',[5000],'meters')"}
+    },
+    
+    {
+      "id": "http://www.co-ode.org/ontologies/ont.owl#MultiRingBuffer_P_R_Rat",
+      "label": "MultiRingBuffer_point_region_ratio",
+      "taxonomyOperations": [
+        "http://www.co-ode.org/ontologies/ont.owl#MultipleRingBuffer"
+      ],
+      "inputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RatioA"
+          ]
+        }
+    
+      ],
+      "outputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RatioA"
+          ]
+        }
+      ],
+      "implementation": {
+          "code": "import arcpy;arcpy.env.workspace = '/home/mohammad/Desktop/Data/';             arcpy.MultipleRingBuffer_analysis('@input[0]','@output[0].shp',[5000],'meters')"}
+    },
+    
+    {
+      "id": "http://www.co-ode.org/ontologies/ont.owl#MultiRingBuffer_P_R_Bool",
+      "label": "MultiRingBuffer_point_region_boolean",
+      "taxonomyOperations": [
+        "http://www.co-ode.org/ontologies/ont.owl#MultipleRingBuffer"
+      ],
+      "inputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#BooleanA"
+          ]
+        }
+    
+      ],
+      "outputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#BooleanA"
+          ]
+        }
+      ],
+      "implementation": {
+          "code": "import arcpy;arcpy.env.workspace = '/home/mohammad/Desktop/Data/';             arcpy.MultipleRingBuffer_analysis('@input[0]','@output[0].shp',[5000],'meters')"}
+    },
+    
+    {
+      "id": "http://www.co-ode.org/ontologies/ont.owl#MultiRingBuffer_L_R_Nom",
+      "label": "MultiRingBuffer_line_region_nominal",
+      "taxonomyOperations": [
+        "http://www.co-ode.org/ontologies/ont.owl#MultipleRingBuffer"
+      ],
+      "inputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#LineA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+        }
+    
+      ],
+      "outputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+        }
+      ],
+      "implementation": {
+          "code": "import arcpy;arcpy.env.workspace = '/home/mohammad/Desktop/Data/';             arcpy.MultipleRingBuffer_analysis('@input[0]','@output[0].shp',[5000],'meters')"}
+    },
+    
+    {
+      "id": "http://www.co-ode.org/ontologies/ont.owl#MultiRingBuffer_R_R_Nom",
+      "label": "MultiRingBuffer_region_region_nominal",
+      "taxonomyOperations": [
+        "http://www.co-ode.org/ontologies/ont.owl#MultipleRingBuffer"
+      ],
+      "inputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+        }
+    
+      ],
+      "outputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+        }
+      ],
+      "implementation": {
+          "code": "import arcpy;arcpy.env.workspace = '/home/mohammad/Desktop/Data/';             arcpy.MultipleRingBuffer_analysis('@input[0]','@output[0].shp',[5000],'meters')"}
+    },
+    
+    {
+      "id": "http://www.co-ode.org/ontologies/ont.owl#v.buffer_P_R_Nom",
+      "label": "v.buffer_point_region_nominal",
+      "taxonomyOperations": [
+        "http://www.co-ode.org/ontologies/ont.owl#v.buffer"
+      ],
+      "inputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+        }
+    
+      ],
+      "outputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+        }
+      ],
+      "implementation": {
+          "code": "qgis_process run grass7:v.buffer --input=@input[0] --output=@output[0].shp --distance=0.045"}
+    },
+    
+    {
+      "id": "http://www.co-ode.org/ontologies/ont.owl#v.buffer_P_R_Ord",
+      "label": "v.buffer_point_region_ordinal",
+      "taxonomyOperations": [
+        "http://www.co-ode.org/ontologies/ont.owl#v.buffer"
+      ],
+      "inputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#OrdinalA"
+          ]
+        }
+    
+      ],
+      "outputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#OrdinalA"
+          ]
+        }
+      ],
+      "implementation": {
+          "code": "qgis_process run grass7:v.buffer --input=@input[0] --output=@output[0].shp --distance=0.045"}
+    },
+    
+    {
+      "id": "http://www.co-ode.org/ontologies/ont.owl#v.buffer_P_R_Cou",
+      "label": "v.buffer_point_region_count",
+      "taxonomyOperations": [
+        "http://www.co-ode.org/ontologies/ont.owl#v.buffer"
+      ],
+      "inputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#CountA"
+          ]
+        }
+    
+      ],
+      "outputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#CountA"
+          ]
+        }
+      ],
+      "implementation": {
+          "code": "qgis_process run grass7:v.buffer --input=@input[0] --output=@output[0].shp --distance=0.045"}
+    },
+    
+    {
+      "id": "http://www.co-ode.org/ontologies/ont.owl#v.buffer_P_R_Rat",
+      "label": "v.buffer_point_region_ratio",
+      "taxonomyOperations": [
+        "http://www.co-ode.org/ontologies/ont.owl#v.buffer"
+      ],
+      "inputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RatioA"
+          ]
+        }
+    
+      ],
+      "outputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RatioA"
+          ]
+        }
+      ],
+      "implementation": {
+          "code": "qgis_process run grass7:v.buffer --input=@input[0] --output=@output[0].shp --distance=0.045"}
+    },
+    
+    {
+      "id": "http://www.co-ode.org/ontologies/ont.owl#v.buffer_P_R_Bool",
+      "label": "v.buffer_point_region_boolean",
+      "taxonomyOperations": [
+        "http://www.co-ode.org/ontologies/ont.owl#v.buffer"
+      ],
+      "inputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#BooleanA"
+          ]
+        }
+    
+      ],
+      "outputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#BooleanA"
+          ]
+        }
+      ],
+      "implementation": {
+          "code": "qgis_process run grass7:v.buffer --input=@input[0] --output=@output[0].shp --distance=0.045"}
+    },
+    
+    {
+      "id": "http://www.co-ode.org/ontologies/ont.owl#v.buffer_L_R_Nom",
+      "label": "v.buffer_line_region_nominal",
+      "taxonomyOperations": [
+        "http://www.co-ode.org/ontologies/ont.owl#v.buffer"
+      ],
+      "inputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#LineA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+        }
+    
+      ],
+      "outputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+        }
+      ],
+      "implementation": {
+          "code": "qgis_process run grass7:v.buffer --input=@input[0] --output=@output[0].shp --distance=0.045"}
+    },
+    
+    {
+      "id": "http://www.co-ode.org/ontologies/ont.owl#v.buffer_R_R_Nom",
+      "label": "v.buffer_region_region_nominal",
+      "taxonomyOperations": [
+        "http://www.co-ode.org/ontologies/ont.owl#v.buffer"
+      ],
+      "inputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+        }
+    
+      ],
+      "outputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+        }
+      ],
+      "implementation": {
+          "code": "qgis_process run grass7:v.buffer --input=@input[0] --output=@output[0].shp --distance=0.045"}
+    },
+    
+    {
+      "id": "http://www.co-ode.org/ontologies/ont.owl#select_P_P_Nom",
+      "label": "select_point_point_nominal",
+      "taxonomyOperations": [
+        "http://www.co-ode.org/ontologies/ont.owl#select"
+      ],
+      "inputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+        }
+    
+      ],
+      "outputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+        }
+      ],
+      "implementation": {
+          "code": "import arcpy;arcpy.env.workspace = '/home/mohammad/Desktop/Data/';             arcpy.Select_analysis('@input[0]','@output[0].shp','')"}
+    },
+    
+    {
+      "id": "http://www.co-ode.org/ontologies/ont.owl#select_P_P_Ord",
+      "label": "select_point_point_ordinal",
+      "taxonomyOperations": [
+        "http://www.co-ode.org/ontologies/ont.owl#select"
+      ],
+      "inputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#OrdinalA"
+          ]
+        }
+    
+      ],
+      "outputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#OrdinalA"
+          ]
+        }
+      ],
+      "implementation": {
+          "code": "import arcpy;arcpy.env.workspace = '/home/mohammad/Desktop/Data/';             arcpy.Select_analysis('@input[0]','@output[0].shp','')"}
+    },
+    
+    {
+      "id": "http://www.co-ode.org/ontologies/ont.owl#select_P_P_Cou",
+      "label": "select_point_point_count",
+      "taxonomyOperations": [
+        "http://www.co-ode.org/ontologies/ont.owl#select"
+      ],
+      "inputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#CountA"
+          ]
+        }
+    
+      ],
+      "outputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#CountA"
+          ]
+        }
+      ],
+      "implementation": {
+          "code": "import arcpy;arcpy.env.workspace = '/home/mohammad/Desktop/Data/';             arcpy.Select_analysis('@input[0]','@output[0].shp','')"}
+    },
+    
+    {
+      "id": "http://www.co-ode.org/ontologies/ont.owl#select_P_P_Rat",
+      "label": "select_point_point_ratio",
+      "taxonomyOperations": [
+        "http://www.co-ode.org/ontologies/ont.owl#select"
+      ],
+      "inputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RatioA"
+          ]
+        }
+    
+      ],
+      "outputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RatioA"
+          ]
+        }
+      ],
+      "implementation": {
+          "code": "import arcpy;arcpy.env.workspace = '/home/mohammad/Desktop/Data/';             arcpy.Select_analysis('@input[0]','@output[0].shp','')"}
+    },
+    
+    {
+      "id": "http://www.co-ode.org/ontologies/ont.owl#select_P_P_Bool",
+      "label": "select_point_point_boolean",
+      "taxonomyOperations": [
+        "http://www.co-ode.org/ontologies/ont.owl#select"
+      ],
+      "inputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#BooleanA"
+          ]
+        }
+    
+      ],
+      "outputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#BooleanA"
+          ]
+        }
+      ],
+      "implementation": {
+          "code": "import arcpy;arcpy.env.workspace = '/home/mohammad/Desktop/Data/';             arcpy.Select_analysis('@input[0]','@output[0].shp','')"}
+    },
+    
+    {
+      "id": "http://www.co-ode.org/ontologies/ont.owl#select_L_L_Nom",
+      "label": "select_line_line_nominal",
+      "taxonomyOperations": [
+        "http://www.co-ode.org/ontologies/ont.owl#select"
+      ],
+      "inputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#LineA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+        }
+    
+      ],
+      "outputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#LineA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+        }
+      ],
+      "implementation": {
+          "code": "import arcpy;arcpy.env.workspace = '/home/mohammad/Desktop/Data/';             arcpy.Select_analysis('@input[0]','@output[0].shp','')"}
+    },
+    
+    {
+      "id": "http://www.co-ode.org/ontologies/ont.owl#select_R_R_Nom",
+      "label": "select_region_region_nominal",
+      "taxonomyOperations": [
+        "http://www.co-ode.org/ontologies/ont.owl#select"
+      ],
+      "inputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+        }
+    
+      ],
+      "outputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+        }
+      ],
+      "implementation": {
+          "code": "import arcpy;arcpy.env.workspace = '/home/mohammad/Desktop/Data/';             arcpy.Select_analysis('@input[0]','@output[0].shp','')"}
+    },
+    
+    {
+      "id": "http://www.co-ode.org/ontologies/ont.owl#v.select_RR_R_Ord",
+      "label": "v.select_region_region_region_ordinal",
+      "taxonomyOperations": [
+        "http://www.co-ode.org/ontologies/ont.owl#v.select"
+      ],
+      "inputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#OrdinalA"
+          ]
+        },
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#OrdinalA"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#OrdinalA"
+          ]
+        }
+      ],
+      "implementation": {
+          "code": "qgis_process run grass7:v.select --ainput='@input[0]'  --binput='@input[1]'  --output='@output[0].shp' --operator='3' "}
+    },
+    
+    {
+      "id": "http://www.co-ode.org/ontologies/ont.owl#v.select_RR_R_Nom",
+      "label": "v.select_region_region_region_nominal",
+      "taxonomyOperations": [
+        "http://www.co-ode.org/ontologies/ont.owl#v.select"
+      ],
+      "inputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+        },
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+        }
+      ],
+      "implementation": {
+          "code": "qgis_process run grass7:v.select --ainput='@input[0]'  --binput='@input[1]'  --output='@output[0].shp' --operator='3' "}
+    },
+    
+    {
+      "id": "http://www.co-ode.org/ontologies/ont.owl#v.select_RR_R_Bool",
+      "label": "v.select_region_region_region_boolean",
+      "taxonomyOperations": [
+        "http://www.co-ode.org/ontologies/ont.owl#v.select"
+      ],
+      "inputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#BooleanA"
+          ]
+        },
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#BooleanA"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#BooleanA"
+          ]
+        }
+      ],
+      "implementation": {
+          "code": "qgis_process run grass7:v.select --ainput='@input[0]'  --binput='@input[1]'  --output='@output[0].shp' --operator='3' "}
+    },
+    
+    {
+      "id": "http://www.co-ode.org/ontologies/ont.owl#v.select_RR_R_Cou",
+      "label": "v.select_region_region_region_count",
+      "taxonomyOperations": [
+        "http://www.co-ode.org/ontologies/ont.owl#v.select"
+      ],
+      "inputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#CountA"
+          ]
+        },
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#CountA"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#CountA"
+          ]
+        }
+      ],
+      "implementation": {
+          "code": "qgis_process run grass7:v.select --ainput='@input[0]'  --binput='@input[1]'  --output='@output[0].shp' --operator='3' "}
+    },
+    
+    {
+      "id": "http://www.co-ode.org/ontologies/ont.owl#v.select_RR_R_Rat",
+      "label": "v.select_region_region_region_ratio",
+      "taxonomyOperations": [
+        "http://www.co-ode.org/ontologies/ont.owl#v.select"
+      ],
+      "inputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RatioA"
+          ]
+        },
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RatioA"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#RatioA"
+          ]
+        }
+      ],
+      "implementation": {
+          "code": "qgis_process run grass7:v.select --ainput='@input[0]'  --binput='@input[1]'  --output='@output[0].shp' --operator='3' "}
+    },
+    
+    {
+      "id": "http://www.co-ode.org/ontologies/ont.owl#v.select_LL_L_Nom",
+      "label": "v.select_line_line_line_nominal",
+      "taxonomyOperations": [
+        "http://www.co-ode.org/ontologies/ont.owl#v.select"
+      ],
+      "inputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#LineA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+        },
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#LineA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+          
+        }
+      ],
+      "outputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#LineA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+        }
+      ],
+      "implementation": {
+          "code": "qgis_process run grass7:v.select --ainput='@input[0]'  --binput='@input[1]'  --output='@output[0].shp' --operator='3' "}
+    },
+    
+    {
+      "id": "http://www.co-ode.org/ontologies/ont.owl#v.select_RL_R_Nom",
+      "label": "v.select_region_line_region_nominal",
+      "taxonomyOperations": [
+        "http://www.co-ode.org/ontologies/ont.owl#v.select"
+      ],
+      "inputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+        },
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#LineA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+          
+        }
+      ],
+      "outputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+        }
+      ],
+      "implementation": {
+          "code": "qgis_process run grass7:v.select --ainput='@input[0]'  --binput='@input[1]'  --output='@output[0].shp' --operator='3' "}
+    },
+    
+    {
+      "id": "http://www.co-ode.org/ontologies/ont.owl#v.select_LR_L_Nom",
+      "label": "v.select_line_region_line_nominal",
+      "taxonomyOperations": [
+        "http://www.co-ode.org/ontologies/ont.owl#v.select"
+      ],
+      "inputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#LineA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+        },
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+          
+        }
+      ],
+      "outputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#LineA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+        }
+      ],
+      "implementation": {
+          "code": "qgis_process run grass7:v.select --ainput='@input[0]'  --binput='@input[1]'  --output='@output[0].shp' --operator='3' "}
+    },
+    
+    {
+      "id": "http://www.co-ode.org/ontologies/ont.owl#v.select_RP_R_Nom",
+      "label": "v.select_region_point_region_nominal",
+      "taxonomyOperations": [
+        "http://www.co-ode.org/ontologies/ont.owl#v.select"
+      ],
+      "inputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+        },
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+          
+        }
+      ],
+      "outputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+        }
+      ],
+      "implementation": {
+          "code": "qgis_process run grass7:v.select --ainput='@input[0]'  --binput='@input[1]'  --output='@output[0].shp' --operator='3' "}
+    },
+    
+    {
+      "id": "http://www.co-ode.org/ontologies/ont.owl#v.select_PR_P_Nom",
+      "label": "v.select_point_region_point_nominal",
+      "taxonomyOperations": [
+        "http://www.co-ode.org/ontologies/ont.owl#v.select"
+      ],
+      "inputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+        },
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+          
+        }
+      ],
+      "outputs": [
+        {
+          "CoreConceptQ": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"
+          ],
+          "LayerA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointA"
+          ],
+          "NominalA": [
+            "http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"
+          ]
+        }
+      ],
+      "implementation": {
+          "code": "qgis_process run grass7:v.select --ainput='@input[0]'  --binput='@input[1]'  --output='@output[0].shp' --operator='3' "}
+    }
+    
+  ]
+}

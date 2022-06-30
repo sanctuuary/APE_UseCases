@@ -1,0 +1,910 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <Prefix name="" IRI="#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#ArcGIS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Buffer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#OGC_Web_Processing_Service"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Extracttoolset"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Technical"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Vector_functionality_class"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#MultipleRingBuffer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Intersect"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Windows"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Unary"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Egenhofer_operators"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Linux"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#v.overlay"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Legacy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#ObjectVector_to_ObjectVector"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#v.buffer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Available_online"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Available_in_operating_system"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Geodata"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Formal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#select"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Modeling_suitability_and_movement_and_interaction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Binary"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#GRASS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Vector_keywords"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Pragmatic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Geooperator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Overlay"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#OverlayG"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#AnalysisToolbox"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#ArcGIS_online"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Modeling_paths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#ObjectVector"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#v.select"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Proximitytoolset"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Transport_route_planning"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Geoinformatics"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Overlaytoolset"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorA"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#BooleanA"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#LayerA"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectDS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#NetworkQ"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#Line"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#PatchDS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/AnalysisData.rdf#Quality"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#RelationalDS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#AmountDS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldDS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#PlainIntervalA"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#AmountRasterDS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/AnalysisData.rdf#Spatial"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#Raster"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#Tessellation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#CountA"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#PlainNominalA"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#MatrixQ"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoverageDS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#RelationalQ"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#RasterA"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#LineA"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#Point"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#PlainVectorRegionA"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#PlainRatioA"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/ExtensiveMeasures.rdf#IRA"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/ExtensiveMeasures.rdf#ERA"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#QualityValue"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#TrackDS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointMeasuresDS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#EventDS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#OrdinalA"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/AnalysisData.rdf#SpatialDataSet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#AmountVectorDS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#RatioA"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorTessellationA"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#Attribute"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointDataSet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptQ"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#Region"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#TessellationA"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorTessellation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#IntervalA"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#AmountQ"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#RegionA"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointA"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#LineMeasuresDS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptDataSet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#PlainOrdinalA"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldRasterDS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#MatrixDS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#NetworkDS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#RegionDataSet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#LatticeDS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#EventQ"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#BoundedPhen"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#DType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#ContourDS"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/AnalysisData.rdf#Quality"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#DType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/AnalysisData.rdf#SpatialDataSet"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#DType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#AmountDS"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptDataSet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#AmountQ"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptQ"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#AmountRasterDS"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#AmountDS"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#AmountVectorDS"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#AmountDS"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#Attribute"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#DType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#BooleanA"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#BoundedPhen"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#Attribute"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#ContourDS"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoverageDS"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptDataSet"/>
+        <Class IRI="http://geographicknowledge.de/vocab/AnalysisData.rdf#SpatialDataSet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptQ"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#Attribute"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#CountA"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#RatioA"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoverageDS"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldDS"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#EventDS"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptDataSet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#EventQ"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptQ"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldDS"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptDataSet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptQ"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldRasterDS"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldDS"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#IntervalA"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#OrdinalA"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#LatticeDS"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectDS"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#LayerA"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#Attribute"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#Line"/>
+        <Class IRI="http://geographicknowledge.de/vocab/AnalysisData.rdf#Spatial"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#LineA"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorA"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#LineMeasuresDS"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldDS"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#MatrixDS"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#RelationalDS"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#MatrixQ"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#RelationalQ"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#NetworkDS"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#RelationalDS"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#NetworkQ"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#RelationalQ"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#Attribute"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectDS"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptDataSet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptQ"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#OrdinalA"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#PatchDS"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldDS"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#PlainIntervalA"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#IntervalA"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#PlainNominalA"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#PlainOrdinalA"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#OrdinalA"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#PlainRatioA"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#RatioA"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#PlainVectorRegionA"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#RegionA"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#PlainVectorRegionA"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorA"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#PlainVectorRegionA"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#Point"/>
+        <Class IRI="http://geographicknowledge.de/vocab/AnalysisData.rdf#Spatial"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointA"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorA"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointMeasuresDS"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldDS"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#QualityValue"/>
+        <Class IRI="http://geographicknowledge.de/vocab/AnalysisData.rdf#Quality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#Raster"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#Tessellation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#RasterA"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#TessellationA"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#RatioA"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#IntervalA"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#Region"/>
+        <Class IRI="http://geographicknowledge.de/vocab/AnalysisData.rdf#Spatial"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#RegionA"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#LayerA"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#RelationalDS"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptDataSet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#RelationalQ"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptQ"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#Tessellation"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#RegionDataSet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#TessellationA"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#RegionA"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#TrackDS"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#EventDS"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#TrackDS"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointDataSet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorA"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#LayerA"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#RegionA"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorA"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorTessellation"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#Tessellation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorTessellationA"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#TessellationA"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorTessellationA"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorA"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorTessellationA"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/ExtensiveMeasures.rdf#ERA"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#RatioA"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://geographicknowledge.de/vocab/ExtensiveMeasures.rdf#IRA"/>
+        <Class IRI="http://geographicknowledge.de/vocab/CoreConceptData.rdf#RatioA"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#AnalysisToolbox"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#ArcGIS"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#ArcGIS"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Legacy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#ArcGIS_online"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Available_online"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Available_in_operating_system"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Technical"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Available_online"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Technical"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Binary"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Formal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Buffer"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Modeling_paths"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Buffer"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#OGC_Web_Processing_Service"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Buffer"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#ObjectVector"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Buffer"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#ObjectVector_to_ObjectVector"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Buffer"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Proximitytoolset"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Buffer"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Transport_route_planning"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Buffer"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Unary"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Buffer"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Windows"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Egenhofer_operators"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Geoinformatics"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Extracttoolset"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#AnalysisToolbox"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Formal"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Geooperator"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#GRASS"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Legacy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Geodata"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Geooperator"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Geoinformatics"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Geooperator"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Intersect"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#ObjectVector"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Intersect"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#ObjectVector_to_ObjectVector"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Intersect"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Overlay"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Intersect"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Overlaytoolset"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Legacy"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Geooperator"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Linux"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Available_in_operating_system"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Modeling_paths"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Modeling_suitability_and_movement_and_interaction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Modeling_suitability_and_movement_and_interaction"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Pragmatic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#MultipleRingBuffer"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#ObjectVector"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#MultipleRingBuffer"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#ObjectVector_to_ObjectVector"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#MultipleRingBuffer"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Proximitytoolset"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#MultipleRingBuffer"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Transport_route_planning"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#OGC_Web_Processing_Service"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Available_online"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#ObjectVector"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Geodata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#ObjectVector_to_ObjectVector"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Geodata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Overlay"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Pragmatic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#OverlayG"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Geoinformatics"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Overlaytoolset"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#AnalysisToolbox"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Pragmatic"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Geooperator"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Proximitytoolset"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#AnalysisToolbox"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Technical"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Geooperator"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Transport_route_planning"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Modeling_suitability_and_movement_and_interaction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Unary"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Formal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Vector_functionality_class"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#GRASS"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Vector_keywords"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#GRASS"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Windows"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Available_in_operating_system"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#select"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#ArcGIS_online"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#select"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Extracttoolset"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#select"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Modeling_paths"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#select"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#ObjectVector"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#select"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#ObjectVector_to_ObjectVector"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#select"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Transport_route_planning"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#select"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Unary"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#select"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Windows"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#v.buffer"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#ObjectVector"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#v.buffer"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#ObjectVector_to_ObjectVector"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#v.buffer"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Transport_route_planning"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#v.buffer"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Vector_functionality_class"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#v.buffer"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Vector_keywords"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#v.overlay"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Binary"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#v.overlay"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Egenhofer_operators"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#v.overlay"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Linux"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#v.overlay"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Modeling_paths"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#v.overlay"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#OGC_Web_Processing_Service"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#v.overlay"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#ObjectVector"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#v.overlay"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#ObjectVector_to_ObjectVector"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#v.overlay"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#OverlayG"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#v.overlay"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Transport_route_planning"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#v.overlay"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Vector_functionality_class"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#v.overlay"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Windows"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#v.select"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Binary"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#v.select"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Egenhofer_operators"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#v.select"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Linux"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#v.select"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Modeling_paths"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#v.select"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#OGC_Web_Processing_Service"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#v.select"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#ObjectVector"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#v.select"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#ObjectVector_to_ObjectVector"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#v.select"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#OverlayG"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#v.select"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Transport_route_planning"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#v.select"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Vector_functionality_class"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#v.select"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Vector_keywords"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#v.select"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Windows"/>
+    </SubClassOf>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

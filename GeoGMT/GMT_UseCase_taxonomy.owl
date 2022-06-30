@@ -416,7 +416,15 @@
 
     <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Layer3">
         <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Layers"/>
-        <rdfs:comment>Layer used for annotating the map (writing text, ploting dots and lines, mape frame and grid, etc.)</rdfs:comment>
+        <rdfs:comment>Layer used for annotating the map ( mape frame and grid, etc.)</rdfs:comment>
+    </owl:Class>
+    
+    
+     <!-- http://www.co-ode.org/ontologies/ont.owl#Layer4 -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Layer4">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Layers"/>
+        <rdfs:comment>Layer used for annotating the map (writing text, ploting dots and lines)</rdfs:comment>
     </owl:Class>
     
 
@@ -597,7 +605,7 @@
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Layer3"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Layer4"/>
                     <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Plot_creation"/>
                 </owl:intersectionOf>
             </owl:Class>

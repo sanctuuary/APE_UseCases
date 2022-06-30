@@ -1,0 +1,224 @@
+{
+    "constraints": [
+      {
+        "constraintid": "ite_m",
+        "parameters": [
+	{"ToolsTaxonomy" : ["Modules_with_xyz_file_output"]},
+	{"ToolsTaxonomy" : ["Modules_with_xyz_file_input"]}
+     ]
+      },
+      {
+        "constraintid": "ite_m",
+        "parameters": [
+	{"ToolsTaxonomy" : ["Modules_with_grid_file_output"]},
+	{"ToolsTaxonomy" : ["Modules_with_grid_file_input"]}
+     ]
+      },
+      {
+        "constraintid": "ite_m",
+        "parameters": [
+	{"ToolsTaxonomy" : ["Modules_with_color_palette_output"]},
+	{"ToolsTaxonomy" : ["Modules_with_color_palette_input"]}
+     ]
+      },
+      {
+        "constraintid": "itn_m",
+        "parameters": [
+	{"ToolsTaxonomy" : ["Data_generation"]},
+	{"ToolsTaxonomy" : ["Adding_data"]}
+     ]
+      },
+      {
+        "constraintid": "itn_m",
+        "parameters": [
+	{"ToolsTaxonomy" : ["Data_processing"]},
+	{"ToolsTaxonomy" : ["Adding_data"]}
+     ]
+      },
+      {
+        "constraintid": "itn_m",
+        "parameters": [
+	{"ToolsTaxonomy" : ["Data_processing"]},
+	{"ToolsTaxonomy" : ["Data_generation"]}
+     ]
+      },
+      {
+        "constraintid": "itn_m",
+        "parameters": [
+	{"ToolsTaxonomy" : ["Plot_creation"]},
+	{"ToolsTaxonomy" : ["Adding_data"]}
+     ]
+      },
+      {
+        "constraintid": "itn_m",
+        "parameters": [
+	{"ToolsTaxonomy" : ["Plot_creation"]},
+	{"ToolsTaxonomy" : ["Data_generation"]}
+     ]
+      },
+      {
+        "constraintid": "itn_m",
+        "parameters": [
+	{"ToolsTaxonomy" : ["Plot_creation"]},
+	{"ToolsTaxonomy" : ["Data_processing"]}
+     ]
+      },
+      {
+        "constraintid": "itn_m",
+        "parameters": [
+	{"ToolsTaxonomy" : ["Data_presentation"]},
+	{"ToolsTaxonomy" : ["Adding_data"]}
+     ]
+      },
+      {
+        "constraintid": "itn_m",
+        "parameters": [
+	{"ToolsTaxonomy" : ["Data_presentation"]},
+	{"ToolsTaxonomy" : ["Data_generation"]}
+     ]
+      },
+      {
+        "constraintid": "itn_m",
+        "parameters": [
+	{"ToolsTaxonomy" : ["Data_presentation"]},
+	{"ToolsTaxonomy" : ["Data_processing"]}
+     ]
+      },
+      {
+        "constraintid": "itn_m",
+        "parameters": [
+	{"ToolsTaxonomy" : ["Data_presentation"]},
+	{"ToolsTaxonomy" : ["Plot_creation"]}
+     ]
+      },
+      {
+        "constraintid": "itn_m",
+        "parameters": [
+	{"ToolsTaxonomy" : ["Layer2"]},
+	{"ToolsTaxonomy" : ["Layer1"]}
+     ]
+      },
+      {
+        "constraintid": "itn_m",
+        "parameters": [
+	{"ToolsTaxonomy" : ["Layer3"]},
+	{"ToolsTaxonomy" : ["Layer1"]}
+     ]
+      },
+      {
+        "constraintid": "itn_m",
+        "parameters": [
+	{"ToolsTaxonomy" : ["Layer3"]},
+	{"ToolsTaxonomy" : ["Layer2"]}
+     ]
+      },
+      {
+        "constraintid": "itn_m",
+        "parameters": [
+	{"ToolsTaxonomy" : ["Layer4"]},
+	{"ToolsTaxonomy" : ["Layer1"]}
+     ]
+      },
+      {
+        "constraintid": "itn_m",
+        "parameters": [
+	{"ToolsTaxonomy" : ["Layer4"]},
+	{"ToolsTaxonomy" : ["Layer2"]}
+     ]
+      },
+      {
+        "constraintid": "itn_m",
+        "parameters": [
+	{"ToolsTaxonomy" : ["Layer4"]},
+	{"ToolsTaxonomy" : ["Layer3"]}
+     ]
+      },
+      {
+        "constraintid": "itn_m",
+        "parameters": [
+	{"ToolsTaxonomy" : ["gs"]},
+	{"ToolsTaxonomy" : ["gs"]}
+     ]
+      },
+      {
+        "constraintid": "next_m",
+        "parameters": [
+	{"ToolsTaxonomy" : ["initGMT"]},
+	{"ToolsTaxonomy" : ["Plot_creation"]}
+     ]
+      },
+      {
+        "constraintid": "use_t",
+        "parameters": [{"TypesTaxonomy" : ["Plots"]}]
+      },
+      {
+        "constraintid": "nuse_m",
+        "parameters": [{"ToolsTaxonomy" : ["3D_surfaces"]}]
+      },
+      {
+        "constraintid": "use_m",
+        "parameters": [
+	{"ToolsTaxonomy" : ["Draw_political_borders"]}
+     ]
+      },
+      {
+        "constraintid": "use_m",
+        "parameters": [
+	{"ToolsTaxonomy" : ["Draw_boundary_frame"]}
+     ]
+      },
+      {
+        "constraintid": "use_m",
+        "parameters": [
+	{"ToolsTaxonomy" : ["Write_title"]}
+     ]
+      },
+      {
+        "constraintid": "use_m",
+        "parameters": [
+	{"ToolsTaxonomy" : ["Draw_time_stamp_logo"]}
+     ]
+      },
+   {
+        "constraintid": "operation_input",
+        "parameters": [
+        {"ToolsTaxonomy" : ["Draw_lines"]},
+        {"TypesTaxonomy": ["XYZ_table_file"],
+          "APE_label": ["cities"]
+        }
+        ]
+      },
+	{
+        "constraintid": "operation_input",
+        "parameters": [
+        {"ToolsTaxonomy" : ["Draw_points"]},
+        {"TypesTaxonomy": ["XYZ_table_file"],
+          "APE_label": ["birds"]
+        }
+        ]
+      },
+    {
+        "constraintid": "operation_input",
+        "parameters": [
+        {"ToolsTaxonomy" : ["Draw_points"]},
+        {"TypesTaxonomy": ["XYZ_table_file"],
+          "APE_label": ["cities"]
+        }
+        ]
+      },
+     {
+        "constraintid": "use_m",
+        "parameters": [
+	{"ToolsTaxonomy" : ["Adding_table"]}
+     ]
+      },
+       {
+        "constraintid": "connected_op",
+        "parameters": [
+	{"ToolsTaxonomy" : ["Color_palette_generation"]},
+	{"ToolsTaxonomy" : ["2D_surfaces"]}
+     ]
+      }
+    ]
+}
+

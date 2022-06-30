@@ -1,0 +1,44 @@
+{
+  "solutions_path": "./lexi_arcgis/sat_solutions.txt",
+  "ontologyPrexifIRI": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#",
+  "solution_graphs_folder": "./lexi_arcgis/figs",
+  "tool_annotations_path": "./lexi_arcgis/Rowland_ArcGIS_ToolDescriptions.json",
+  "ontology_path": "./lexi_arcgis/GISTaxonomy.rdf",  
+  "constraints_path": "./lexi_arcgis/constraints.json",
+  "toolsTaxonomyRoot": "http://geographicknowledge.de/vocab/GISTools.rdf#Tool",
+  "dataTaxonomyRoot": "Attribute",
+  "dataSubTaxonomyRoot": [
+    "CoreConceptQ",
+    "LayerA",
+	"NominalA"
+  ],
+  "shared_memory": "true",
+  "solution_min_length": "1",
+  "solution_max_length": "10",
+  "max_solutions": "20",
+  "number_of_execution_scripts": "0",
+  "number_of_generated_graphs": "20",
+  "inputs": [
+    {
+	"CoreConceptQ": ["ObjectQ"], 
+    "LayerA": ["VectorTessellationA"],
+	"NominalA": ["CountA"]      
+    },
+    {
+	"CoreConceptQ": ["ObjectQ"],
+    "LayerA": ["VectorTessellationA"],
+	"NominalA": ["PlainNominalA"]    
+    }
+  ],
+  "outputs": [
+    {
+    "CoreConceptQ": ["ObjectQ"], 
+    "LayerA": ["VectorTessellationA"],
+	"NominalA": ["PlainRatioA"] 
+    }
+  ],
+  "debug_mode": "true",
+  "use_workflow_input": "all",
+  "use_all_generated_data": "one"
+}
+

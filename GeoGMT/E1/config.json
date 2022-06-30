@@ -5,17 +5,27 @@
   "dataDimensionsTaxonomyRoots": ["TypesTaxonomy"],
   "tool_annotations_path": "./GeoGMT/tool_annotations.json",
   "strict_tool_annotations": "false",
-  "constraints_path": "./GeoGMT/E1/constraints_e1.json",
-  "timeout_sec": "20",
+  "constraints_path": "./GeoGMT/E1/constraints_e1_SLTLx_e1.1-3.json",
+  "timeout_sec": "3600",
   "solutions_dir_path": "./GeoGMT/E1/",
-  "solution_length": { "min": 1, "max": 18 },
-  "solutions": "100",
-  "number_of_execution_scripts": "6",
+  "solution_length": { "min": 15, "max": 18 },
+  "solutions": "20",
+  "number_of_execution_scripts": "1",
   "number_of_generated_graphs": "10",
   "tool_seq_repeat": "false",
   "inputs": [
     {
-      "TypesTaxonomy": ["XYZ_table_file"]
+      "TypesTaxonomy": ["XYZ_table_file"],
+      "APE_label": ["cities"]
+    },
+    {
+      "TypesTaxonomy": ["XYZ_table_file"],
+      "APE_label": ["birds"]
+    }
+  ],
+  "outputs": [
+ {
+      "TypesTaxonomy": ["PostScript"]
     }
   ],
   "debug_mode": "false",

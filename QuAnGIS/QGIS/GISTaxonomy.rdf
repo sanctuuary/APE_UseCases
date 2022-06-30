@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldDS">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptDataSet"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorTessellation">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#Tessellation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#RatioA">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#IntervalA"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#DistanceNetwork">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://flowmap.geo.uu.nl/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#PatchDS">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldDS"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#RelationalDS">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptDataSet"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#FlowAssignment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://flowmap.geo.uu.nl/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/AnalysisData.rdf#SpatialDataSet">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#DType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#Attribute">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#DType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#MeasureSize">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://flowmap.geo.uu.nl/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#RelationalQ">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptQ"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#OrdinalA">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#FlowSummation">
+    <rdfs:subClassOf rdf:resource="http://flowmap.geo.uu.nl/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#PlainNominalA">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#LatticeDS">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectDS"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#Tessellation">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#RegionDataSet"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#BooleanA">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#QualityValue">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/AnalysisData.rdf#Quality"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#TradeArea">
+    <rdfs:subClassOf rdf:resource="http://flowmap.geo.uu.nl/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointMeasuresDS">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldDS"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#Attribute"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#AmountQ">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptQ"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#CatchmentArea">
+    <rdfs:subClassOf rdf:resource="http://flowmap.geo.uu.nl/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#MatrixDS">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#RelationalDS"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/ExtensiveMeasures.rdf#IRA">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#RatioA"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#ContourDS">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoverageDS"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#EventQ">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptQ"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#MatrixQ">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#RelationalQ"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#PlainOrdinalA">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#OrdinalA"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#DistanceMatrix">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://flowmap.geo.uu.nl/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#FlowMatrixDoubly">
+    <rdfs:subClassOf rdf:resource="http://flowmap.geo.uu.nl/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorTessellationA">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorA"/>
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#TessellationA"/>
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#PlainVectorRegionA">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorA"/>
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#RegionA"/>
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#RasterA">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#TessellationA"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/ExtensiveMeasures.rdf#ERA">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#RatioA"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#CountA">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#RatioA"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#TessellationA">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#RegionA"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#LineA">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorA"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#AmountDS">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptDataSet"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#LineMeasuresDS">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldDS"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#NetworkAnalysis">
+    <rdfs:subClassOf rdf:resource="http://flowmap.geo.uu.nl/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#AccessibilityAnalysis">
+    <rdfs:subClassOf rdf:resource="http://flowmap.geo.uu.nl/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptQ">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#Attribute"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#TrackDS">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointDataSet"/>
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#EventDS"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#FunctionalClustering">
+    <rdfs:subClassOf rdf:resource="http://flowmap.geo.uu.nl/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#PlainRatioA">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#RatioA"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#Raster">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#Tessellation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointA">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorA"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#AmountVectorDS">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#AmountDS"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptQ"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#FlowMatrixSingly">
+    <rdfs:subClassOf rdf:resource="http://flowmap.geo.uu.nl/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorRegionA">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#RegionA"/>
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorA"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoverageDS">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldDS"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/AnalysisData.rdf#Quality">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#DType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://flowmap.geo.uu.nl/">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#Tool"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#NetworkDS">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#RelationalDS"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#ThresholdDistance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://flowmap.geo.uu.nl/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#BoundedPhen">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#Attribute"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#Point">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/AnalysisData.rdf#Spatial"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#Region">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/AnalysisData.rdf#Spatial"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#Line">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/AnalysisData.rdf#Spatial"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#ThresholdAmount">
+    <rdfs:subClassOf rdf:resource="http://flowmap.geo.uu.nl/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#EventDS">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptDataSet"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptDataSet">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/AnalysisData.rdf#SpatialDataSet"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#TripLengthAnalysis">
+    <rdfs:subClassOf rdf:resource="http://flowmap.geo.uu.nl/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptQ"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#AmountRasterDS">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#AmountDS"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#PlainIntervalA">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#IntervalA"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#RegionA">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#LayerA"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#LayerA">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#Attribute"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#IntervalA">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#OrdinalA"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldRasterDS">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldDS"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorA">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#LayerA"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#NetworkQ">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#RelationalQ"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectDS">
+    <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptDataSet"/>
+  </rdf:Description>
+</rdf:RDF>

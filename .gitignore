@@ -1,60 +1,6 @@
-### ImageMagic ###
-ImageMagick/Example1/solutions.txt
-ImageMagick/Example1/Figures/*
-ImageMagick/Example1/Executables/*
-!ImageMagick/Example1/Executables/input.jpg
-
-ImageMagick/Example2/solutions.txt
-ImageMagick/Example2/Figures/*
-ImageMagick/Example2/Executables/*
-!ImageMagick/Example2/Executables/input.jpg
-
-### MassSpectometry ###
-
-MassSpectometry/No1/solutions.txt
-MassSpectometry/No1/Figures/*
-MassSpectometry/No1/Executables/*
-MassSpectometry/No2/solutions.txt
-MassSpectometry/No2/Figures/*
-MassSpectometry/No2/Executables/*
-MassSpectometry/No3/solutions.txt
-MassSpectometry/No3/Figures/*
-MassSpectometry/No3/Executables/*
-MassSpectometry/No4/solutions.txt
-MassSpectometry/No4/Figures/*
-MassSpectometry/No4/Executables/*
-MassSpectometry/Cluster_Genetics/solutions.txt
-MassSpectometry/Cluster_Genetics/Figures/*
-MassSpectometry/Cluster_Genetics/Executables/*
-MassSpectometry/Cluster_Genetic_variation/solutions.txt
-MassSpectometry/Cluster_Genetic_variation/Figures/*
-MassSpectometry/Cluster_Genetic_variation/Executables/*
-MassSpectometry/Cluster_Proteomics/solutions.txt
-MassSpectometry/Cluster_Proteomics/Figures/*
-MassSpectometry/Cluster_Proteomics/Executables/*
-MassSpectometry/Update
-
-### GeoGMT ###
-
-GeoGMT/E0/solutions.txt
-GeoGMT/E0/Figures/*
-GeoGMT/E0/Executables/*
-!GeoGMT/E0/Executables/move.txt
-!GeoGMT/E0/Executables/run.sh
-
-GeoGMT/E1/solutions.txt
-GeoGMT/E1/Figures/*
-GeoGMT/E1/Executables/*
-!GeoGMT/E1/Executables/move.txt
-!GeoGMT/E1/Executables/run.sh
-
-### QuAnGIS ###
-QuAnGIS/No1/solutions.txt
-QuAnGIS/No1/Figures/*
-
 ###Local files###
 clean_workflows.sh
-APE*
+###APE*
 
 ### Linux ###
 *~

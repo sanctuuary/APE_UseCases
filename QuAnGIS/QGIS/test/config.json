@@ -1,0 +1,37 @@
+{
+ "ontologyPrexifIRI": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#",
+  "solutions_dir_path": "./QuAnGIS/QGIS/test/", 
+  "tool_annotations_path": "./QuAnGIS/QGIS/FlowmapDescription.json",
+  "strict_tool_annotations": "false",
+  "ontology_path": "./QuAnGIS/QGIS/GISTaxonomy.rdf",  
+  "constraints_path": "./QuAnGIS/QGIS/test/constraints.json",
+  "toolsTaxonomyRoot": "http://geographicknowledge.de/vocab/GISTools.rdf#Tool",    
+  "dataDimensionsTaxonomyRoots": [
+    "CoreConceptQ",
+    "LayerA",
+	"NominalA"
+  ],
+  "timeout_sec": "300",
+  "solution_length": { "min": 6, "max": 10 },
+  "max_solutions": "1",
+  "number_of_execution_scripts": "0",
+  "number_of_generated_graphs": "5",
+  "inputs": [    
+	{
+	"CoreConceptQ": ["ObjectQ"],
+    "LayerA": ["VectorTessellationA"],
+	"NominalA": ["OrdinalA"]    
+    }
+  ],
+  "outputs": [
+	{
+	"CoreConceptQ": ["NetworkQ"],
+    "LayerA": ["VectorTessellationA"],
+	"NominalA": ["OrdinalA"]    
+    }	
+  ],
+  "debug_mode": "false",
+  "use_workflow_input": "all",
+  "use_all_generated_data": "one",
+  "tool_seq_repeat": "false"
+}

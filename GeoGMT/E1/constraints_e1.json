@@ -115,6 +115,27 @@
       {
         "constraintid": "itn_m",
         "parameters": [
+	{"ToolsTaxonomy" : ["Layer4"]},
+	{"ToolsTaxonomy" : ["Layer1"]}
+     ]
+      },
+      {
+        "constraintid": "itn_m",
+        "parameters": [
+	{"ToolsTaxonomy" : ["Layer4"]},
+	{"ToolsTaxonomy" : ["Layer2"]}
+     ]
+      },
+      {
+        "constraintid": "itn_m",
+        "parameters": [
+	{"ToolsTaxonomy" : ["Layer4"]},
+	{"ToolsTaxonomy" : ["Layer3"]}
+     ]
+      },
+      {
+        "constraintid": "itn_m",
+        "parameters": [
 	{"ToolsTaxonomy" : ["gs"]},
 	{"ToolsTaxonomy" : ["gs"]}
      ]
@@ -151,19 +172,7 @@
       {
         "constraintid": "use_m",
         "parameters": [
-	{"ToolsTaxonomy" : ["Display_PostScript_files"]}
-     ]
-      },
-      {
-        "constraintid": "use_m",
-        "parameters": [
 	{"ToolsTaxonomy" : ["Draw_lines"]}
-     ]
-      },
-      {
-        "constraintid": "use_m",
-        "parameters": [
-	{"ToolsTaxonomy" : ["Draw_points"]}
      ]
       },
       {
@@ -183,6 +192,33 @@
         "parameters": [
 	{"ToolsTaxonomy" : ["Draw_time_stamp_logo"]}
      ]
+      },
+     {
+        "constraintid": "operation_input",
+        "parameters": [
+        {"ToolsTaxonomy" : ["Draw_lines"]},
+        {"TypesTaxonomy": ["XYZ_table_file"],
+          "APE_label": ["cities"]
+        }
+        ]
+      },
+	{
+        "constraintid": "operation_input",
+        "parameters": [
+        {"ToolsTaxonomy" : ["Draw_points"]},
+        {"TypesTaxonomy": ["XYZ_table_file"],
+          "APE_label": ["birds"]
+        }
+        ]
+      },
+    {
+        "constraintid": "operation_input",
+        "parameters": [
+        {"ToolsTaxonomy" : ["Draw_points"]},
+        {"TypesTaxonomy": ["XYZ_table_file"],
+          "APE_label": ["cities"]
+        }
+        ]
       }
     ]
 }

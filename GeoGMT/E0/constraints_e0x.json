@@ -1,0 +1,28 @@
+{
+    "constraints": [
+     {
+        "constraintid": "operation_input",
+        "parameters": [
+        {"ToolsTaxonomy" : ["psxy_p"]},
+        {"TypesTaxonomy": ["XYZ_table_file"],
+          "APE_label": ["cities"]
+    }
+        ]
+      },
+     {
+        "constraintid": "connected_op",
+        "parameters": [
+	{"ToolsTaxonomy" : ["initGMT"]},
+	{"ToolsTaxonomy" : ["2D_surfaces"]}
+     ]
+      },
+      {
+        "constraintid": "connected_op",
+        "parameters": [
+	{"ToolsTaxonomy" : ["pstext"]},
+	{"ToolsTaxonomy" : ["psxy_p"]}
+     ]
+      }
+    ]
+}
+

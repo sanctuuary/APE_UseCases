@@ -1,0 +1,49 @@
+{
+ "ontologyPrexifIRI": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#",
+  "solutions_dir_path": "./GeoEvents/Spec1/", 
+  "tool_annotations_path": "./GeoEvents/GeooperatorsAnnotation.json",
+  "strict_tool_annotations": "false",
+  "ontology_path": "./GeoEvents/GeoTaxonomy.owl",  
+  "constraints_path": "./GeoEvents/Spec1/constraints.json",
+  "toolsTaxonomyRoot": "http://www.co-ode.org/ontologies/ont.owl#Geooperator",    
+  "dataDimensionsTaxonomyRoots": [
+    	"CoreConceptQ",
+    	"LayerA",
+    	"NominalA"
+  ],
+  "shared_memory": "true",
+  "solution_length": { "min": 1, "max": 10 },
+  "max_solutions": "40",
+  "number_of_execution_scripts": "1",
+  "number_of_generated_graphs": "40",
+  "inputs": [    
+	{
+	"CoreConceptQ": ["http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"],
+         "LayerA": ["http://geographicknowledge.de/vocab/CoreConceptData.rdf#LineA"],
+	 "NominalA": ["http://geographicknowledge.de/vocab/CoreConceptData.rdf#CountA"]    
+  },
+  {
+	"CoreConceptQ": ["http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ"],
+         "LayerA": ["http://geographicknowledge.de/vocab/CoreConceptData.rdf#LineA"],
+	 "NominalA": ["http://geographicknowledge.de/vocab/CoreConceptData.rdf#CountA"]    
+  },
+  {
+  "CoreConceptQ": ["http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"],
+         "LayerA": ["http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorTessellationA"],
+	 "NominalA": ["http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"] 
+  }
+  
+  ],
+  "outputs": [
+    {
+	"CoreConceptQ": ["http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ"],
+         "LayerA": ["http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorTessellationA"],
+	 "NominalA": ["http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"] 
+    }
+  ],
+  "debug_mode": "false",
+  "use_workflow_input": "all",
+  "use_all_generated_data": "one",
+  "tool_seq_repeat": "false",
+  "timeout_sec": "60"
+}
