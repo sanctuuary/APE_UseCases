@@ -5,7 +5,7 @@
   "dataDimensionsTaxonomyRoots": ["TypesTaxonomy"],
   "tool_annotations_path": "./GeoGMT/tool_annotations.json",
   "strict_tool_annotations": "false",
-  "constraints_paths": "./GeoGMT/E0/constraints_e0.json",
+  "constraints_path": "./GeoGMT/E0/constraints_e0.json",
   "timeout_sec": "20",
   "solutions_dir_path": "./GeoGMT/E0/",
   "solution_length": { "min": 1, "max": 20 },
