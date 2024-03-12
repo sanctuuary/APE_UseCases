@@ -1,0 +1,32 @@
+{
+  "ontologyPrefixIRI": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#",
+  "solutions_dir_path": "./OriginalQuanGIS/Q4",
+  "tool_annotations_path": "./OriginalQuanGIS/ToolDescription_ct.json",
+  "ontology_path": "./OriginalQuanGIS/GISTaxonomy.rdf",
+  "constraints_path": "./OriginalQuanGIS/Q4/constraints.json",
+  "toolsTaxonomyRoot": "Tool",
+  "dataDimensionsTaxonomyRoots": "DType",
+  "shared_memory": "true",
+  "timeout_sec": "300",
+  "solution_length": { "min": 1, "max": 8 },
+  "solutions": "20",
+    "number_of_execution_scripts": "0",
+  "number_of_generated_graphs": "20",
+  "inputs": [
+    {
+      "DType": ["Contour"]
+    },
+    {
+      "DType": ["LatticeVectorA"]
+    }
+  ],
+  "outputs": [
+    {
+      "DType": ["LatticeOrdinalAVectorA"]
+    }
+  ],
+  "debug_mode": "false",
+  "use_workflow_input": "all",
+  "use_all_generated_data": "one",
+  "tool_seq_repeat": "false"
+}

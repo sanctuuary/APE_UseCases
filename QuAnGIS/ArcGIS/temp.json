@@ -15,7 +15,7 @@
   "shared_memory": "true",
   "solution_min_length": "1",
   "solution_max_length": "10",
-  "max_solutions": "20",
+  "solutions": "20",
   "number_of_execution_scripts": "0",
   "number_of_generated_graphs": "20",
   "inputs": [

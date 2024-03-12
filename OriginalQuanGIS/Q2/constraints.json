@@ -1,0 +1,14 @@
+{
+  "constraints": [
+  	{
+        "constraintid": "SLTLx",
+        "formula": "! F (Exists (?x1) <'Transform'(;?x1)> F <'Transform'(?x1;)> true)"
+        },
+        
+        {
+        "constraintid": "SLTLx",
+        "formula": "! F (Exists (?x1) <'Transform'(?x1;)> F <'Transform'(?x1;)> true)"
+        }
+        ]
+}
+

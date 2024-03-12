@@ -9,7 +9,7 @@
   "shared_memory": "true",
   "solutions_dir_path": "./MassSpectometry/Cluster_Genetics/",
   "solution_length": { "min": 4, "max": 10 },
-  "max_solutions": "10",
+  "solutions": "10",
   "number_of_execution_scripts": "0",
   "number_of_generated_graphs": "10",
   "debug_mode": "true",

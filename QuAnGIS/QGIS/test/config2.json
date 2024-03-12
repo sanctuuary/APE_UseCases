@@ -26,7 +26,7 @@
         "max": 10
     },
     "use_workflow_input": "all",
-    "max_solutions": 5,
+    "solutions": 5,
     "toolsTaxonomyRoot": "http://geographicknowledge.de/vocab/GISTools.rdf#Tool",
     "timeout_sec": 10,
     "tool_seq_repeat": false,

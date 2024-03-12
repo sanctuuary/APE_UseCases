@@ -13,7 +13,7 @@
   ],
   "shared_memory": "true",
   "solution_length": { "min": 1, "max": 10 },
-  "max_solutions": "40",
+  "solutions": "40",
   "number_of_execution_scripts": "1",
   "number_of_generated_graphs": "40",
   "inputs": [    
