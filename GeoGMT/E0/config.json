@@ -5,18 +5,29 @@
   "dataDimensionsTaxonomyRoots": ["TypesTaxonomy"],
   "tool_annotations_path": "./GeoGMT/tool_annotations.json",
   "strict_tool_annotations": "false",
-  "constraints_path": "./GeoGMT/E0/constraints_e0.json",
+  "constraints_paths": "./GeoGMT/E0/constraints_e0.json",
   "timeout_sec": "20",
   "solutions_dir_path": "./GeoGMT/E0/",
-  "solution_length": { "min": 1, "max": 10 },
-  "solutions": "130",
+  "solution_length": { "min": 1, "max": 20 },
+  "solutions": "100",
   "number_of_execution_scripts": "1",
-  "number_of_generated_graphs": "5",
+  "number_of_generated_graphs": "10",
   "number_of_cwl_files": "1",
-  "tool_seq_repeat": "true",
+  "tool_seq_repeat": "false",
   "inputs": [
     {
-      "TypesTaxonomy": ["XYZ_table_file"]
+      "TypesTaxonomy": ["XYZ_table_file"],
+      "APE_label": ["cities"]
+    },
+    {
+      "TypesTaxonomy": ["XYZ_table_file"],
+      "APE_label": ["birds"]
+    },
+     {
+      "TypesTaxonomy": ["PostScript"]
+    },
+    {
+      "TypesTaxonomy": ["PostScript"]
     }
   ],
   "outputs": [
@@ -24,7 +35,7 @@
       "TypesTaxonomy": ["PostScript"]
     }
   ],
-  "debug_mode": "true",
+  "debug_mode": "false",
   "use_workflow_input": "all",
   "use_all_generated_data": "all"
 }

@@ -1,0 +1,48 @@
+{
+ "ontologyPrexifIRI": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#",
+  "solutions_dir_path": "./QuAnGIS/ArcGIS/No1/", 
+  "tool_annotations_path": "./QuAnGIS/ArcGIS/ArcGIStools.json",
+  "strict_tool_annotations": "false",
+  "ontology_path": "./QuAnGIS/ArcGIS/GISTaxonomy.rdf",  
+  "constraints_pathx": "./QuAnGIS/ArcGIS/No1/constraints10.json",
+  "toolsTaxonomyRoot": "http://geographicknowledge.de/vocab/GISTools.rdf#Tool",    
+  "dataDimensionsTaxonomyRoots": [
+    "CoreConceptQ",
+    "LayerA",
+   "NominalA"
+  ],
+  "timeout_sec": "300",
+  "solution_length": { "min": 1, "max": 10 },
+  "solutions": "20",
+  "number_of_execution_scripts": "0",
+  "number_of_generated_graphs": "20",
+  "inputs": [
+    {
+          "CoreConceptQ": [
+            "FieldQ"
+          ],
+          "LayerA": [
+            "PointA"
+          ],
+          "NominalA": [
+            "IntervalA"
+          ]
+    },
+    {
+	"CoreConceptQ": ["ObjectQ"],
+        "LayerA": ["VectorTessellationA"],
+	"NominalA": ["PlainNominalA"]    
+    }
+  ],
+  "outputs": [
+    {
+    "CoreConceptQ": ["ObjectQ"], 
+    "LayerA": ["VectorTessellationA"],
+	"NominalA": ["PlainIntervalA"] 
+    }
+  ],
+  "debug_mode": "true",
+  "use_workflow_input": "all",
+  "use_all_generated_data": "one",
+  "tool_seq_repeat": "false"
+}

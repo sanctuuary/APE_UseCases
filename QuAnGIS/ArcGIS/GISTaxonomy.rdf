@@ -1,0 +1,1554 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/AnalysisData.rdf#Spatial -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/AnalysisData.rdf#Spatial"/>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/AnalysisData.rdf#SpatialDataSet -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/AnalysisData.rdf#SpatialDataSet">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#DType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/AnalysisData.rdf#ValueList -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/AnalysisData.rdf#ValueList">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#DType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/CoreConceptData.rdf#AmountDS -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#AmountDS">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptDataSet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/CoreConceptData.rdf#AmountRasterDS -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#AmountRasterDS">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#AmountDS"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/CoreConceptData.rdf#AmountVectorDS -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#AmountVectorDS">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#AmountDS"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/CoreConceptData.rdf#Attribute -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#Attribute"/>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/CoreConceptData.rdf#BooleanA -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#BooleanA">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/CoreConceptData.rdf#BoundedPhen -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#BoundedPhen">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#Attribute"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/CoreConceptData.rdf#ContourDS -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#ContourDS">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoverageDS"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptDataSet -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptDataSet">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/AnalysisData.rdf#SpatialDataSet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptQ -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptQ">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#Attribute"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/CoreConceptData.rdf#CountA -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#CountA">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#RatioA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoverageDS -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoverageDS">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldDS"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/CoreConceptData.rdf#EventDS -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#EventDS">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptDataSet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/CoreConceptData.rdf#EventQ -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#EventQ">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptQ"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldDS -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldDS">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptDataSet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldQ">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptQ"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldRasterDS -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldRasterDS">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldDS"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/CoreConceptData.rdf#IntervalA -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#IntervalA">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#OrdinalA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/CoreConceptData.rdf#LatticeDS -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#LatticeDS">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectDS"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/CoreConceptData.rdf#LayerA -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#LayerA">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#Attribute"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/CoreConceptData.rdf#Line -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#Line">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/AnalysisData.rdf#Spatial"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/CoreConceptData.rdf#LineA -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#LineA">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/CoreConceptData.rdf#LineMeasuresDS -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#LineMeasuresDS">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldDS"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/CoreConceptData.rdf#NetworkDS -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#NetworkDS">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptDataSet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/CoreConceptData.rdf#NetworkQ -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#NetworkQ">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptQ"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#Attribute"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectDS -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectDS">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptDataSet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#ObjectQ">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#CoreConceptQ"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/CoreConceptData.rdf#OrdinalA -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#OrdinalA">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/CoreConceptData.rdf#PatchDS -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#PatchDS">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldDS"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/CoreConceptData.rdf#PlainIntervalA -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#PlainIntervalA">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#IntervalA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/CoreConceptData.rdf#PlainNominalA -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#PlainNominalA">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#NominalA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/CoreConceptData.rdf#PlainOrdinalA -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#PlainOrdinalA">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#OrdinalA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/CoreConceptData.rdf#PlainRatioA -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#PlainRatioA">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#RatioA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/CoreConceptData.rdf#PlainVectorRegionA -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#PlainVectorRegionA">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#RegionA"/>
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/CoreConceptData.rdf#Point -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#Point">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/AnalysisData.rdf#Spatial"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointA -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointA">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointDataSet -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointDataSet"/>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointMeasuresDS -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointMeasuresDS">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#FieldDS"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/CoreConceptData.rdf#Raster -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#Raster">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#Tessellation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/CoreConceptData.rdf#RasterA -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#RasterA">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#TessellationA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/CoreConceptData.rdf#RatioA -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#RatioA">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#IntervalA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/CoreConceptData.rdf#Region -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#Region">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/AnalysisData.rdf#Spatial"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/CoreConceptData.rdf#RegionA -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#RegionA">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#LayerA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/CoreConceptData.rdf#RegionDataSet -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#RegionDataSet"/>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/CoreConceptData.rdf#Tessellation -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#Tessellation">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#RegionDataSet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/CoreConceptData.rdf#TessellationA -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#TessellationA">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#RegionA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/CoreConceptData.rdf#TrackDS -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#TrackDS">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#EventDS"/>
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#PointDataSet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorA -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorA">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#LayerA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorTessellation -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorTessellation">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#Tessellation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorTessellationA -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorTessellationA">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#TessellationA"/>
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#VectorA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/ExtensiveMeasures.rdf#ERA -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/ExtensiveMeasures.rdf#ERA">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#IntervalA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/ExtensiveMeasures.rdf#IRA -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/ExtensiveMeasures.rdf#IRA">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/CoreConceptData.rdf#IntervalA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#AddArea -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#AddArea">
+        <rdfs:subClassOf rdf:resource="https://pro.arcgis.com/en/pro-app/tool-reference/data-management/add-geometry-attributes.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#AddCalculateObjectFieldCount -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#AddCalculateObjectFieldCount">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#FullAddCalculateField"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#AddCalculateObjectFieldInterval -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#AddCalculateObjectFieldInterval">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#FullAddCalculateField"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#AddCalculateObjectFieldRatio -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#AddCalculateObjectFieldRatio">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#FullAddCalculateField"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#AddCalculateRasterFieldInterval -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#AddCalculateRasterFieldInterval">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#FullAddCalculateField"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#AddCalculateRasterFieldNominal -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#AddCalculateRasterFieldNominal">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#FullAddCalculateField"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#AddCalculateRasterFieldOrdinal -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#AddCalculateRasterFieldOrdinal">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#FullAddCalculateField"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#AddCalculateRasterFieldRatio -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#AddCalculateRasterFieldRatio">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#FullAddCalculateField"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#AddFieldObjectVector -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#AddFieldObjectVector">
+        <rdfs:subClassOf rdf:resource="https://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/add-field.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#AddFieldRaster -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#AddFieldRaster">
+        <rdfs:subClassOf rdf:resource="https://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/add-field.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#AddLine -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#AddLine">
+        <rdfs:subClassOf rdf:resource="https://pro.arcgis.com/en/pro-app/tool-reference/data-management/add-geometry-attributes.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#AddPoint -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#AddPoint">
+        <rdfs:subClassOf rdf:resource="https://pro.arcgis.com/en/pro-app/tool-reference/data-management/add-geometry-attributes.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#ArealInterpolationAverage -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#ArealInterpolationAverage">
+        <rdfs:subClassOf rdf:resource="https://desktop.arcgis.com/en/arcmap/latest/extensions/geostatistical-analyst/using-areal-interpolation-to-predict-to-new-polygons.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#ArealInterpolationRate -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#ArealInterpolationRate">
+        <rdfs:subClassOf rdf:resource="https://desktop.arcgis.com/en/arcmap/latest/extensions/geostatistical-analyst/using-areal-interpolation-to-predict-to-new-polygons.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#ContourToFieldRaster -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#ContourToFieldRaster">
+        <rdfs:subClassOf rdf:resource="https://pro.arcgis.com/en/pro-app/tool-reference/conversion/polygon-to-raster.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#CopyFeatures -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#CopyFeatures">
+        <rdfs:subClassOf rdf:resource="https://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/copy-features.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#CoverageToFieldRaster -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#CoverageToFieldRaster">
+        <rdfs:subClassOf rdf:resource="https://pro.arcgis.com/en/pro-app/tool-reference/conversion/polygon-to-raster.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#DType -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#DType"/>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#DissolveCount -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#DissolveCount">
+        <rdfs:subClassOf rdf:resource="https://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/dissolve.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#DissolveMeanCount -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#DissolveMeanCount">
+        <rdfs:subClassOf rdf:resource="https://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/dissolve.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#DissolveMeanInterval -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#DissolveMeanInterval">
+        <rdfs:subClassOf rdf:resource="https://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/dissolve.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#DissolveMeanRatio -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#DissolveMeanRatio">
+        <rdfs:subClassOf rdf:resource="https://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/dissolve.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#DissolveSumCount -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#DissolveSumCount">
+        <rdfs:subClassOf rdf:resource="https://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/dissolve.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#DissolveSumInterval -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#DissolveSumInterval">
+        <rdfs:subClassOf rdf:resource="https://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/dissolve.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#DissolveSumRatio -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#DissolveSumRatio">
+        <rdfs:subClassOf rdf:resource="https://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/dissolve.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#EqualTo -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#EqualTo">
+        <rdfs:subClassOf rdf:resource="https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/equal-to.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#EuclideanDistanceExistenceRaster -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#EuclideanDistanceExistenceRaster">
+        <rdfs:subClassOf rdf:resource="https://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/euclidean-distance.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#EuclideanDistanceObjectVector -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#EuclideanDistanceObjectVector">
+        <rdfs:subClassOf rdf:resource="https://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/euclidean-distance.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#ExistenceRasterToObjectLineBoolean -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#ExistenceRasterToObjectLineBoolean">
+        <rdfs:subClassOf rdf:resource="https://pro.arcgis.com/en/pro-app/tool-reference/conversion/raster-to-polyline.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#ExistenceRasterToObjectPointBoolean -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#ExistenceRasterToObjectPointBoolean">
+        <rdfs:subClassOf rdf:resource="https://pro.arcgis.com/en/pro-app/tool-reference/conversion/raster-to-point.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#ExtractFieldRasterValuestoObjectPointBoolean -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#ExtractFieldRasterValuestoObjectPointBoolean">
+        <rdfs:subClassOf rdf:resource="https://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/extract-values-to-points.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#ExtractFieldRasterValuestoObjectPointInterval -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#ExtractFieldRasterValuestoObjectPointInterval">
+        <rdfs:subClassOf rdf:resource="https://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/extract-values-to-points.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#ExtractFieldRasterValuestoObjectPointNominal -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#ExtractFieldRasterValuestoObjectPointNominal">
+        <rdfs:subClassOf rdf:resource="https://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/extract-values-to-points.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#ExtractFieldRasterValuestoObjectPointOrdinal -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#ExtractFieldRasterValuestoObjectPointOrdinal">
+        <rdfs:subClassOf rdf:resource="https://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/extract-values-to-points.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#ExtractFieldRasterValuestoObjectPointRatio -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#ExtractFieldRasterValuestoObjectPointRatio">
+        <rdfs:subClassOf rdf:resource="https://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/extract-values-to-points.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#ExtractFieldRasterValuestoPointMeasuresBoolean -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#ExtractFieldRasterValuestoPointMeasuresBoolean">
+        <rdfs:subClassOf rdf:resource="https://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/extract-values-to-points.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#ExtractFieldRasterValuestoPointMeasuresInterval -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#ExtractFieldRasterValuestoPointMeasuresInterval">
+        <rdfs:subClassOf rdf:resource="https://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/extract-values-to-points.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#ExtractFieldRasterValuestoPointMeasuresNominal -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#ExtractFieldRasterValuestoPointMeasuresNominal">
+        <rdfs:subClassOf rdf:resource="https://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/extract-values-to-points.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#ExtractFieldRasterValuestoPointMeasuresOrdinal -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#ExtractFieldRasterValuestoPointMeasuresOrdinal">
+        <rdfs:subClassOf rdf:resource="https://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/extract-values-to-points.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#ExtractFieldRasterValuestoPointMeasuresRatio -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#ExtractFieldRasterValuestoPointMeasuresRatio">
+        <rdfs:subClassOf rdf:resource="https://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/extract-values-to-points.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#FocalStatisticsExistenceRaster -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#FocalStatisticsExistenceRaster">
+        <rdfs:subClassOf rdf:resource="https://pro.arcgis.com/en/pro-app/help/data/imagery/focal-statistics-function.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#FocalStatisticsMeanCount -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#FocalStatisticsMeanCount">
+        <rdfs:subClassOf rdf:resource="https://desktop.arcgis.com/en/arcmap/10.3/tools/spatial-analyst-toolbox/focal-statistics.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#FocalStatisticsMeanInterval -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#FocalStatisticsMeanInterval">
+        <rdfs:subClassOf rdf:resource="https://desktop.arcgis.com/en/arcmap/10.3/tools/spatial-analyst-toolbox/focal-statistics.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#FocalStatisticsMeanRatio -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#FocalStatisticsMeanRatio">
+        <rdfs:subClassOf rdf:resource="https://desktop.arcgis.com/en/arcmap/10.3/tools/spatial-analyst-toolbox/focal-statistics.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#FocalStatisticsSumCount -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#FocalStatisticsSumCount">
+        <rdfs:subClassOf rdf:resource="https://desktop.arcgis.com/en/arcmap/10.3/tools/spatial-analyst-toolbox/focal-statistics.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#FocalStatisticsSumRatio -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#FocalStatisticsSumRatio">
+        <rdfs:subClassOf rdf:resource="https://desktop.arcgis.com/en/arcmap/10.3/tools/spatial-analyst-toolbox/focal-statistics.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#FocalStatisticsVarietyInterval -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#FocalStatisticsVarietyInterval">
+        <rdfs:subClassOf rdf:resource="https://desktop.arcgis.com/en/arcmap/10.3/tools/spatial-analyst-toolbox/focal-statistics.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#FullAddCalculateField -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#FullAddCalculateField">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#FullLeastCostPath -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#FullLeastCostPath">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#FullSelectLayerByAttribute -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#FullSelectLayerByAttribute">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#FullSelectLayerByLocation -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#FullSelectLayerByLocation">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#IDWInterval -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#IDWInterval">
+        <rdfs:subClassOf rdf:resource="https://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/idw.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#Identity -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#Identity">
+        <rdfs:subClassOf rdf:resource="https://desktop.arcgis.com/en/arcmap/latest/tools/analysis-toolbox/identity.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#JoinFieldObjectVectorInterval -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#JoinFieldObjectVectorInterval">
+        <rdfs:subClassOf rdf:resource="https://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/join-field.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#JoinFieldObjectVectorNominal -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#JoinFieldObjectVectorNominal">
+        <rdfs:subClassOf rdf:resource="https://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/join-field.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#JoinFieldObjectVectorOrdinal -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#JoinFieldObjectVectorOrdinal">
+        <rdfs:subClassOf rdf:resource="https://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/join-field.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#JoinFieldObjectVectorRatio -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#JoinFieldObjectVectorRatio">
+        <rdfs:subClassOf rdf:resource="https://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/join-field.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#JoinFieldRasterInterval -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#JoinFieldRasterInterval">
+        <rdfs:subClassOf rdf:resource="https://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/join-field.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#JoinFieldRasterRatio -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#JoinFieldRasterRatio">
+        <rdfs:subClassOf rdf:resource="https://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/join-field.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#JoinToZonalStatisticsTable -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#JoinToZonalStatisticsTable">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#KernelDensity -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#KernelDensity">
+        <rdfs:subClassOf rdf:resource="https://desktop.arcgis.com/en/arcmap/10.3/tools/spatial-analyst-toolbox/kernel-density.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#KrigingCount -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#KrigingCount">
+        <rdfs:subClassOf rdf:resource="https://pro.arcgis.com/en/pro-app/tool-reference/3d-analyst/kriging.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#KrigingInterval -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#KrigingInterval">
+        <rdfs:subClassOf rdf:resource="https://pro.arcgis.com/en/pro-app/tool-reference/3d-analyst/kriging.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#KrigingRatio -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#KrigingRatio">
+        <rdfs:subClassOf rdf:resource="https://pro.arcgis.com/en/pro-app/tool-reference/3d-analyst/kriging.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#LeastCostPathRasterRatio -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#LeastCostPathRasterRatio">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#FullLeastCostPath"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#LocalMapAlgebraMultiplyCountCount -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#LocalMapAlgebraMultiplyCountCount">
+        <rdfs:subClassOf rdf:resource="https://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/raster-calculator.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#LocalMapAlgebraMultiplyCountRatio -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#LocalMapAlgebraMultiplyCountRatio">
+        <rdfs:subClassOf rdf:resource="https://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/raster-calculator.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#LocalMapAlgebraMultiplyRatioCount -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#LocalMapAlgebraMultiplyRatioCount">
+        <rdfs:subClassOf rdf:resource="https://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/raster-calculator.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#LocalMapAlgebraMultiplyRatioRatio -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#LocalMapAlgebraMultiplyRatioRatio">
+        <rdfs:subClassOf rdf:resource="https://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/raster-calculator.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#MergeExistenceVectorToObjectVector -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#MergeExistenceVectorToObjectVector">
+        <rdfs:subClassOf rdf:resource="https://pro.arcgis.com/en/pro-app/help/editing/merge-features-into-one-feature.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#ObjectLineToExistenceRaster -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#ObjectLineToExistenceRaster">
+        <rdfs:subClassOf rdf:resource="https://pro.arcgis.com/en/pro-app/tool-reference/conversion/feature-to-raster.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#ObjectPointToExistenceRaster -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#ObjectPointToExistenceRaster">
+        <rdfs:subClassOf rdf:resource="https://pro.arcgis.com/en/pro-app/tool-reference/conversion/feature-to-raster.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#ObjectRegionToExistenceRaster -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#ObjectRegionToExistenceRaster">
+        <rdfs:subClassOf rdf:resource="https://pro.arcgis.com/en/pro-app/tool-reference/conversion/feature-to-raster.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#ObjectVectorToExistenceRaster -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#ObjectVectorToExistenceRaster">
+        <rdfs:subClassOf rdf:resource="https://pro.arcgis.com/en/pro-app/tool-reference/conversion/feature-to-raster.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#RasterToContour -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#RasterToContour">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#RasterToContourInterval -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#RasterToContourInterval">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#RasterToContour"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#RasterToCoverageBoolean -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#RasterToCoverageBoolean">
+        <rdfs:subClassOf rdf:resource="https://pro.arcgis.com/en/pro-app/tool-reference/conversion/raster-to-polygon.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#RasterToCoverageNominal -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#RasterToCoverageNominal">
+        <rdfs:subClassOf rdf:resource="https://pro.arcgis.com/en/pro-app/tool-reference/conversion/raster-to-polygon.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#RasterToCoverageOrdinal -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#RasterToCoverageOrdinal">
+        <rdfs:subClassOf rdf:resource="https://pro.arcgis.com/en/pro-app/tool-reference/conversion/raster-to-polygon.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#ReclassifyFieldRasterToBoolean -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#ReclassifyFieldRasterToBoolean">
+        <rdfs:subClassOf rdf:resource="https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/reclassify.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#SelectFeaturesContourToExistenceVector -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#SelectFeaturesContourToExistenceVector">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#FullSelectLayerByAttribute"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#SelectFeaturesCoverageToExistenceVector -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#SelectFeaturesCoverageToExistenceVector">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#FullSelectLayerByAttribute"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#SelectLayerByAttributeObjects -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#SelectLayerByAttributeObjects">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#FullSelectLayerByAttribute"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#SelectLayerByLocationObjects -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#SelectLayerByLocationObjects">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#FullSelectLayerByLocation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#Slope -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#Slope">
+        <rdfs:subClassOf rdf:resource="https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/slope.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#SpatialJoinCountTess -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#SpatialJoinCountTess">
+        <rdfs:subClassOf rdf:resource="https://pro.arcgis.com/en/pro-app/tool-reference/analysis/spatial-join.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#SpatialJoinMeanTessCount -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#SpatialJoinMeanTessCount">
+        <rdfs:subClassOf rdf:resource="https://pro.arcgis.com/en/pro-app/tool-reference/analysis/spatial-join.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#SpatialJoinMeanTessInterval -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#SpatialJoinMeanTessInterval">
+        <rdfs:subClassOf rdf:resource="https://pro.arcgis.com/en/pro-app/tool-reference/analysis/spatial-join.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#SpatialJoinMeanTessRatio -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#SpatialJoinMeanTessRatio">
+        <rdfs:subClassOf rdf:resource="https://pro.arcgis.com/en/pro-app/tool-reference/analysis/spatial-join.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#SpatialJoinSumTessCount -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#SpatialJoinSumTessCount">
+        <rdfs:subClassOf rdf:resource="https://pro.arcgis.com/en/pro-app/tool-reference/analysis/spatial-join.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#SpatialJoinSumTessRatio -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#SpatialJoinSumTessRatio">
+        <rdfs:subClassOf rdf:resource="https://pro.arcgis.com/en/pro-app/tool-reference/analysis/spatial-join.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#ThiessenPolygonsBoolean -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#ThiessenPolygonsBoolean">
+        <rdfs:subClassOf rdf:resource="https://pro.arcgis.com/en/pro-app/tool-reference/analysis/create-thiessen-polygons.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#ThiessenPolygonsCount -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#ThiessenPolygonsCount">
+        <rdfs:subClassOf rdf:resource="https://pro.arcgis.com/en/pro-app/tool-reference/analysis/create-thiessen-polygons.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#ThiessenPolygonsInterval -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#ThiessenPolygonsInterval">
+        <rdfs:subClassOf rdf:resource="https://pro.arcgis.com/en/pro-app/tool-reference/analysis/create-thiessen-polygons.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#ThiessenPolygonsNominal -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#ThiessenPolygonsNominal">
+        <rdfs:subClassOf rdf:resource="https://pro.arcgis.com/en/pro-app/tool-reference/analysis/create-thiessen-polygons.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#ThiessenPolygonsOrdinal -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#ThiessenPolygonsOrdinal">
+        <rdfs:subClassOf rdf:resource="https://pro.arcgis.com/en/pro-app/tool-reference/analysis/create-thiessen-polygons.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#ThiessenPolygonsRatio -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#ThiessenPolygonsRatio">
+        <rdfs:subClassOf rdf:resource="https://pro.arcgis.com/en/pro-app/tool-reference/analysis/create-thiessen-polygons.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#Tool -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#Tool"/>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#Transformation -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#Transformation">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#ZonalStatisticsMajorityBoolean -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#ZonalStatisticsMajorityBoolean">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#JoinToZonalStatisticsTable"/>
+        <rdfs:subClassOf rdf:resource="https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/zonal-statistics-as-table.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#ZonalStatisticsMajorityNominal -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#ZonalStatisticsMajorityNominal">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#JoinToZonalStatisticsTable"/>
+        <rdfs:subClassOf rdf:resource="https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/zonal-statistics-as-table.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#ZonalStatisticsMeanCount -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#ZonalStatisticsMeanCount">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#JoinToZonalStatisticsTable"/>
+        <rdfs:subClassOf rdf:resource="https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/zonal-statistics-as-table.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#ZonalStatisticsMeanInterval -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#ZonalStatisticsMeanInterval">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#JoinToZonalStatisticsTable"/>
+        <rdfs:subClassOf rdf:resource="https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/zonal-statistics-as-table.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#ZonalStatisticsMeanIntervalIRA -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#ZonalStatisticsMeanIntervalIRA">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#JoinToZonalStatisticsTable"/>
+        <rdfs:subClassOf rdf:resource="https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/zonal-statistics-as-table.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#ZonalStatisticsMeanRatio -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#ZonalStatisticsMeanRatio">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#JoinToZonalStatisticsTable"/>
+        <rdfs:subClassOf rdf:resource="https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/zonal-statistics-as-table.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#ZonalStatisticsMeanRatioIRA -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#ZonalStatisticsMeanRatioIRA">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#JoinToZonalStatisticsTable"/>
+        <rdfs:subClassOf rdf:resource="https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/zonal-statistics-as-table.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#ZonalStatisticsMedOrdinal -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#ZonalStatisticsMedOrdinal">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#JoinToZonalStatisticsTable"/>
+        <rdfs:subClassOf rdf:resource="https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/zonal-statistics-as-table.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#ZonalStatisticsSumCount -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#ZonalStatisticsSumCount">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#JoinToZonalStatisticsTable"/>
+        <rdfs:subClassOf rdf:resource="https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/zonal-statistics-as-table.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geographicknowledge.de/vocab/GISTools.rdf#ZonalStatisticsSumRatio -->
+
+    <owl:Class rdf:about="http://geographicknowledge.de/vocab/GISTools.rdf#ZonalStatisticsSumRatio">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#JoinToZonalStatisticsTable"/>
+        <rdfs:subClassOf rdf:resource="https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/zonal-statistics-as-table.htm"/>
+    </owl:Class>
+    
+
+
+    <!-- https://desktop.arcgis.com/en/arcmap/10.3/tools/spatial-analyst-toolbox/focal-statistics.htm -->
+
+    <owl:Class rdf:about="https://desktop.arcgis.com/en/arcmap/10.3/tools/spatial-analyst-toolbox/focal-statistics.htm">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- https://desktop.arcgis.com/en/arcmap/10.3/tools/spatial-analyst-toolbox/kernel-density.htm -->
+
+    <owl:Class rdf:about="https://desktop.arcgis.com/en/arcmap/10.3/tools/spatial-analyst-toolbox/kernel-density.htm">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- https://desktop.arcgis.com/en/arcmap/latest/extensions/geostatistical-analyst/using-areal-interpolation-to-predict-to-new-polygons.htm -->
+
+    <owl:Class rdf:about="https://desktop.arcgis.com/en/arcmap/latest/extensions/geostatistical-analyst/using-areal-interpolation-to-predict-to-new-polygons.htm">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- https://desktop.arcgis.com/en/arcmap/latest/tools/analysis-toolbox/identity.htm -->
+
+    <owl:Class rdf:about="https://desktop.arcgis.com/en/arcmap/latest/tools/analysis-toolbox/identity.htm">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- https://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/add-field.htm -->
+
+    <owl:Class rdf:about="https://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/add-field.htm">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- https://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/copy-features.htm -->
+
+    <owl:Class rdf:about="https://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/copy-features.htm">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- https://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/dissolve.htm -->
+
+    <owl:Class rdf:about="https://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/dissolve.htm">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- https://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/join-field.htm -->
+
+    <owl:Class rdf:about="https://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/join-field.htm">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/equal-to.htm -->
+
+    <owl:Class rdf:about="https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/equal-to.htm">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/reclassify.htm -->
+
+    <owl:Class rdf:about="https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/reclassify.htm">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/slope.htm -->
+
+    <owl:Class rdf:about="https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/slope.htm">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/zonal-statistics-as-table.htm -->
+
+    <owl:Class rdf:about="https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/zonal-statistics-as-table.htm">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- https://pro.arcgis.com/en/pro-app/help/data/imagery/focal-statistics-function.htm -->
+
+    <owl:Class rdf:about="https://pro.arcgis.com/en/pro-app/help/data/imagery/focal-statistics-function.htm">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- https://pro.arcgis.com/en/pro-app/help/editing/merge-features-into-one-feature.htm -->
+
+    <owl:Class rdf:about="https://pro.arcgis.com/en/pro-app/help/editing/merge-features-into-one-feature.htm">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- https://pro.arcgis.com/en/pro-app/tool-reference/3d-analyst/kriging.htm -->
+
+    <owl:Class rdf:about="https://pro.arcgis.com/en/pro-app/tool-reference/3d-analyst/kriging.htm">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#Transformation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://pro.arcgis.com/en/pro-app/tool-reference/analysis/create-thiessen-polygons.htm -->
+
+    <owl:Class rdf:about="https://pro.arcgis.com/en/pro-app/tool-reference/analysis/create-thiessen-polygons.htm">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- https://pro.arcgis.com/en/pro-app/tool-reference/analysis/spatial-join.htm -->
+
+    <owl:Class rdf:about="https://pro.arcgis.com/en/pro-app/tool-reference/analysis/spatial-join.htm">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- https://pro.arcgis.com/en/pro-app/tool-reference/conversion/feature-to-raster.htm -->
+
+    <owl:Class rdf:about="https://pro.arcgis.com/en/pro-app/tool-reference/conversion/feature-to-raster.htm">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- https://pro.arcgis.com/en/pro-app/tool-reference/conversion/polygon-to-raster.htm -->
+
+    <owl:Class rdf:about="https://pro.arcgis.com/en/pro-app/tool-reference/conversion/polygon-to-raster.htm">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- https://pro.arcgis.com/en/pro-app/tool-reference/conversion/raster-to-point.htm -->
+
+    <owl:Class rdf:about="https://pro.arcgis.com/en/pro-app/tool-reference/conversion/raster-to-point.htm">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- https://pro.arcgis.com/en/pro-app/tool-reference/conversion/raster-to-polygon.htm -->
+
+    <owl:Class rdf:about="https://pro.arcgis.com/en/pro-app/tool-reference/conversion/raster-to-polygon.htm">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- https://pro.arcgis.com/en/pro-app/tool-reference/conversion/raster-to-polyline.htm -->
+
+    <owl:Class rdf:about="https://pro.arcgis.com/en/pro-app/tool-reference/conversion/raster-to-polyline.htm">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- https://pro.arcgis.com/en/pro-app/tool-reference/data-management/add-geometry-attributes.htm -->
+
+    <owl:Class rdf:about="https://pro.arcgis.com/en/pro-app/tool-reference/data-management/add-geometry-attributes.htm">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- https://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/euclidean-distance.htm -->
+
+    <owl:Class rdf:about="https://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/euclidean-distance.htm">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- https://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/extract-values-to-points.htm -->
+
+    <owl:Class rdf:about="https://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/extract-values-to-points.htm">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- https://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/idw.htm -->
+
+    <owl:Class rdf:about="https://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/idw.htm">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#Transformation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/raster-calculator.htm -->
+
+    <owl:Class rdf:about="https://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/raster-calculator.htm">
+        <rdfs:subClassOf rdf:resource="http://geographicknowledge.de/vocab/GISTools.rdf#Tool"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

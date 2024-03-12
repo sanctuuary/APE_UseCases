@@ -9,7 +9,7 @@ input.yml
 
 ###Local files###
 clean_workflows.sh
-APE*
+###APE*
 
 ### Linux ###
 *~

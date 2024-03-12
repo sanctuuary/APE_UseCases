@@ -1,0 +1,13 @@
+{
+  "constraints": [
+  {
+      "constraintid": "use_m",
+	  "description": "", 
+      "parameters": [
+       {
+        "http://geographicknowledge.de/vocab/GISTools.rdf#Tool": [ "http://geographicknowledge.de/vocab/GISTools.rdf#DistanceNetwork[tool]"]
+        }		
+	]
+  }
+ ]
+}

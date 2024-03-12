@@ -149,7 +149,7 @@
       },
       {
         "label": "grdview_2",
-        "id": "grdview",
+        "id": "grdview2",
         "taxonomyOperations": ["grdview"],
         "inputs": [
           {
@@ -171,7 +171,7 @@
       },
       {
         "label": "grdview_3",
-        "id": "grdview",
+        "id": "grdview3",
         "taxonomyOperations": ["grdview"],
         "inputs": [
           {
@@ -196,7 +196,7 @@
       },
       {
         "label": "grdimage_2",
-        "id": "grdimage",
+        "id": "grdimage2",
         "taxonomyOperations": ["grdimage"],
         "inputs": [
           {
@@ -218,7 +218,7 @@
       },
       {
         "label": "grdimage_3",
-        "id": "grdimage",
+        "id": "grdimage3",
         "taxonomyOperations": ["grdimage"],
         "inputs": [
           {

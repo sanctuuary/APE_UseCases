@@ -115,6 +115,27 @@
       {
         "constraintid": "itn_m",
         "parameters": [
+	{"ToolsTaxonomy" : ["Layer4"]},
+	{"ToolsTaxonomy" : ["Layer1"]}
+     ]
+      },
+      {
+        "constraintid": "itn_m",
+        "parameters": [
+	{"ToolsTaxonomy" : ["Layer4"]},
+	{"ToolsTaxonomy" : ["Layer2"]}
+     ]
+      },
+      {
+        "constraintid": "itn_m",
+        "parameters": [
+	{"ToolsTaxonomy" : ["Layer4"]},
+	{"ToolsTaxonomy" : ["Layer3"]}
+     ]
+      },
+      {
+        "constraintid": "itn_m",
+        "parameters": [
 	{"ToolsTaxonomy" : ["gs"]},
 	{"ToolsTaxonomy" : ["gs"]}
      ]
@@ -146,12 +167,6 @@
         "constraintid": "use_m",
         "parameters": [
 	{"ToolsTaxonomy" : ["Draw_political_borders"]}
-     	]
-      },
-      {
-        "constraintid": "use_m",
-        "parameters": [
-	{"ToolsTaxonomy" : ["Points_and_lines"]}
      	]
       }
     ]
