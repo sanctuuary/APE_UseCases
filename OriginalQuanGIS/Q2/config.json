@@ -1,6 +1,6 @@
 {
   "ontologyPrefixIRI": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#",
-  "solutions_dir_path": "./OriginalQuanGIS/Q2",
+  "solutions_dir_path": "./OriginalQuanGIS/Q2/v2",
   "tool_annotations_path": "./OriginalQuanGIS/ToolDescription_ct.json",
   "ontology_path": "./OriginalQuanGIS/GISTaxonomy.rdf",
   "constraints_path": "./OriginalQuanGIS/Q2/constraints.json",
@@ -25,7 +25,7 @@
       "DType": ["LatticeRatioAVectorAIRA"]
     }
   ],
-  "debug_mode": "true",
+  "debug_mode": "false",
   "use_workflow_input": "all",
   "use_all_generated_data": "one",
   "tool_seq_repeat": "false"

@@ -1,6 +1,6 @@
 {
   "ontologyPrefixIRI": "http://geographicknowledge.de/vocab/CoreConceptData.rdf#",
-  "solutions_dir_path": "./OriginalQuanGIS/Q4",
+  "solutions_dir_path": "./OriginalQuanGIS/Q4/v2",
   "tool_annotations_path": "./OriginalQuanGIS/ToolDescription_ct.json",
   "ontology_path": "./OriginalQuanGIS/GISTaxonomy.rdf",
   "constraints_path": "./OriginalQuanGIS/Q4/constraints.json",

@@ -1,9 +1,9 @@
 {
   "constraints": [
-      {
-        "constraintid": "SLTLx",
-        "formula": " F <'euclideandistancehtm'(;)> true)"
-        },
+    {
+        "constraintid": "use_m",
+        "parameters": [{"Tool" : ["https://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/euclidean-distance.htm"]}]
+      },
       {
         "constraintid": "SLTLx",
         "formula": "! F (Exists (?x1) <'Transform'(;?x1)> F <'Transform'(?x1;)> true)"

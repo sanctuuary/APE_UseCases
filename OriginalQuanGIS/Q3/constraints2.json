@@ -1,8 +1,0 @@
-{
-  "constraints": [
-    {
-        "constraintid": "use_m",
-        "parameters": [{"Tool" : ["https://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/euclidean-distance.htm"]}]
-      }
-  ]
-}
